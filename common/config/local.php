@@ -14,6 +14,7 @@ return
 		'import'=>array(
 				'common.components.*',
 				'common.models.db.*',
+				'common.extensions.mongodb.*',
 		),
 	// application components
 	'components'=>array(
@@ -24,6 +25,14 @@ return
 			'password' => '123456',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
+		),
+		'mongodb' => array(
+			'class'            => 'EMongoDB',
+			'connectionString' => 'mongodb://localhost',
+			'dbName'           => 'fan2clip',
+			'fsyncFlag'        => true,
+			'safeFlag'         => true,
+			'useCursor'        => false
 		),
 	),
 );
