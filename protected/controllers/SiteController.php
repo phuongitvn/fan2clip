@@ -1,6 +1,7 @@
 <?php
 class SiteController extends FrontendController
 {
+    public $layout = 'column1';
 	/**
 	 * Declares class-based actions.
 	 */
@@ -25,17 +26,10 @@ class SiteController extends FrontendController
 	 */
 	public function actionIndex()
 	{
-		$user = new UsersMongo();
-		$user->name="Phương";
-		$user->login="phuongnv";
-		$user->pass="123";
-		$res = $user->save(false);
-		var_dump($res);
-		$users = UsersMongo::model()->findAll();
-		foreach($users as $user){
-			echo $user->name."<br />";
-		}
-		$this->render('index');
+		$video = TubeVideo::model()->findAll();
+		$this->render('index', array(
+            'data'=>$video
+        ));
 	}
 	/**
 	 * page html dynamic

@@ -1,7 +1,7 @@
 <?php
 
 // change the following paths if necessary
-include_once '../common/config/define.php';
+include_once '../define.php';
 $config=dirname(__FILE__).'/protected/config/backend.php';
 
 // remove the following lines when in production mode

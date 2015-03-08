@@ -9,7 +9,7 @@ return CMap::mergeArray(
 	require_once dirname(__FILE__).'../../../common/config/common.php',
 	array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Thông Tin Quản Lý',
+	'name'=>'Video Hot',
 	'theme'=>'salefly',
 	// preloading 'log' component
 	'preload'=>array('log'),

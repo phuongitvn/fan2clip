@@ -5,7 +5,7 @@
  */
 
 // change the following paths if necessary
-include_once '../common/config/define.php';
+include_once '../define.php';
 
 error_reporting(E_ALL | E_STRICT);
 ini_set('display_errors','On');
