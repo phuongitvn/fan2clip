@@ -5,7 +5,7 @@
  */
 class TubeVideo extends EMongoDocument
 {
-	public $id;
+	public $_id;
 	public $name;
 	public $code;
 	public $description;
@@ -57,7 +57,7 @@ class TubeVideo extends EMongoDocument
 			array('created_datetime, updated_datetime', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, code, description, link_id, cat_id, status, created_datetime, updated_datetime, created_by', 'safe', 'on'=>'search'),
+			array('_id, name, code, description, link_id, cat_id, status, created_datetime, updated_datetime, created_by', 'safe', 'on'=>'search'),
 		);
 	}
 
