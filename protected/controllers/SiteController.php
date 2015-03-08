@@ -26,7 +26,14 @@ class SiteController extends FrontendController
 	 */
 	public function actionIndex()
 	{
-		$video = TubeVideo::model()->findAll();
+        $c = array(
+            'conditions'=>array(
+                'status'=>array('equals' => 1)
+            ),
+            'sort'=>array('_id'=>EMongoCriteria::SORT_DESC),
+            'limit'=>10
+        );
+		$video = TubeVideo::model()->findAll($c);
 		$this->render('index', array(
             'data'=>$video
         ));
