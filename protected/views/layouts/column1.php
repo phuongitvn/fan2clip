@@ -14,7 +14,7 @@
             <div id="logo">
                 <div class="wrr-header wrr-s">
                     <div class="logo col-3">
-                        <a href="#"><img width="155" src="/images/logo.png" /></a>
+                        <a href="/"><img width="155" src="/images/logo.png" /></a>
                     </div>
                     <div class="search col-7">
                         <div class="wrr-search">
