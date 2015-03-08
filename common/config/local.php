@@ -5,6 +5,7 @@ Yii::setPathOfAlias('root', dirname(dirname(dirname(__FILE__))));
 Yii::setPathOfAlias('common', dirname(dirname(dirname(__FILE__))) . DS . 'common');
 Yii::setPathOfAlias('frontend', dirname(dirname(dirname(__FILE__))) . DS . 'protected');
 Yii::setPathOfAlias('backend', dirname(dirname(dirname(__FILE__))) . DS . 'backend');
+Yii::setPathOfAlias('console', dirname(dirname(dirname(__FILE__))) . DS . 'console');
 //Yii::setPathOfAlias('system', dirname(dirname(dirname(__FILE__))) . DS . 'common'.DS.'libs'.DS.'framework');
 
 // This is the main Web application configuration. Any writable
@@ -14,12 +15,13 @@ return
 		'import'=>array(
 				'common.components.*',
 				'common.models.db.*',
+                'common.models.mongo.*',
 				'common.extensions.mongodb.*',
 		),
 	// application components
 	'components'=>array(
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=ahpproject',
+			'connectionString' => 'mysql:host=localhost;dbname=fan2clip',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '123456',
