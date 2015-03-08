@@ -156,3 +156,9 @@ ul.items-listview li .vil-info{
 #media-player{
     height: 400px;
 }
+.description{
+    font-size: 13px;
+}
+.clear{
+    clear: both;
+}
