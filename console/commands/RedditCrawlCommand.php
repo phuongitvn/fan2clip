@@ -16,7 +16,7 @@ class RedditCrawlCommand extends CConsoleCommand
             foreach ($html->find('#siteTable .thing a.title') as $e) {
                 $link = urldecode(trim($e->href));
                 if(strpos(strtolower($link),'youtube.com')!==false || strpos(strtolower($link),'youtu.be')!==false){
-                    preg_match("/v=(\w+\-)/", $link, $match);
+                    preg_match("/v=(\w+)/", $link, $match);
                     $code='';
                     if (!empty($match)) {
                         $sl = explode('=', $match[0]);
