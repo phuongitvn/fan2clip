@@ -16,13 +16,16 @@ class RedditCrawlCommand extends CConsoleCommand
             foreach ($html->find('#siteTable .thing a.title') as $e) {
                 $link = urldecode(trim($e->href));
                 if(strpos(strtolower($link),'youtube.com')!==false || strpos(strtolower($link),'youtu.be')!==false){
-                    preg_match("/v=(\w+)/", $link, $match);
+                    if(strpos($link,'http://youtu.be/')!==false){
+                        $link = str_replace('http://youtu.be/','v=',$link);
+                        preg_match("/v=(\w+)/", $link, $match);
+                    }else {
+                        preg_match("/v=(\w+)/", $link, $match);
+                    }
                     $code='';
                     if (!empty($match)) {
                         $sl = explode('=', $match[0]);
                         $code = $sl[1];
-                    }elseif(strpos($link,'http://youtu.be/')!==false){
-                        $code = str_replace('http://youtu.be/','',$link);
                     }
                     if($code!='' && !$this->isExistsCode($code)) {
                         $title = $e->plaintext;
