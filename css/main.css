@@ -2,7 +2,7 @@ body
 {
 	margin: 0;
 	padding: 0;
-	color: #555;
+	color: #333;
 	font: normal x-small verdana,arial,helvetica,sans-serif;
 }
 a{
@@ -16,7 +16,7 @@ a{
     top: 0;
 }
 #main-body{
-    margin-top: 100px;
+    margin-top: 75px;
     min-height: 200px;
 }
 .wrr-header{
@@ -83,16 +83,22 @@ a{
 }
 .search .wrr-search form{
     position: relative;
+    padding-right: 100px;
 }
 .search .wrr-search input[type="text"]{
     width: 100%;
     padding: 5px 0 5px 5px;
+    outline: none;
 }
 .search .wrr-search input[type="submit"]{
     position: absolute;
-    right: 0;
-    top: 0;
-    background: url(../images/search.png) no-repeat;
+    right: 55px;
+    top: -1px;
+    background: url(../images/search.png) no-repeat center center;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    text-indent: -1000px;
 }
 .wrr-page-content .col-66 .wr-col-c{
     padding: 10px;
@@ -127,7 +133,7 @@ ul.items-listview li .wrr-thumb{
 ul.items-listview li .vil-info{
     font-size: 13px;
 }
-ul.items-listview li .vil-info .see{
+.see{
     display: block;
     background: #fff url(../images/see.png) no-repeat;
     width: 16px;
@@ -146,4 +152,7 @@ ul.items-listview li .vil-info .see{
 .nar-title h1{
     font-size: 24px;
     border-bottom: 2px solid #ff4d29;
+}
+#media-player{
+    height: 400px;
 }
