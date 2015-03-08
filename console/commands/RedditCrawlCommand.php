@@ -17,8 +17,8 @@ class RedditCrawlCommand extends CConsoleCommand
                 $link = urldecode(trim($e->href));
                 if(strpos(strtolower($link),'youtube.com')!==false || strpos(strtolower($link),'youtu.be')!==false){
                     if(strpos($link,'http://youtu.be/')!==false){
-                        $link = str_replace('http://youtu.be/','v=',$link);
-                        preg_match("/v=(\w+)/", $link, $match);
+                        $linkR = str_replace('http://youtu.be/','v=',$link);
+                        preg_match("/v=(\w+)/", $linkR, $match);
                     }else {
                         preg_match("/v=(\w+)/", $link, $match);
                     }
