@@ -38,6 +38,7 @@
                     <div class="col-33">
                         <div class="wr-col-r"><?php echo $this->clips['sidebar-r'];?></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
             </div>
         </div>
