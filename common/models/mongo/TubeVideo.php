@@ -54,7 +54,6 @@ class TubeVideo extends EMongoDocument
 			array('name', 'length', 'max'=>255),
 			array('code', 'length', 'max'=>100),
 			array('link_id', 'length', 'max'=>100),
-			array('description', 'length', 'max'=>1000),
 			array('created_datetime, updated_datetime', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
