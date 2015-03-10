@@ -26,16 +26,21 @@ class SiteController extends FrontendController
 	 */
 	public function actionIndex()
 	{
+        $page = Yii::app()->request->getParam('page',1);
+        $limit = 20;
+        $offset = ($page-1)*$limit;
         $c = array(
             'conditions'=>array(
                 'status'=>array('equals' => 1)
             ),
             'sort'=>array('_id'=>EMongoCriteria::SORT_DESC),
-            'limit'=>10
+            'limit'=> $limit,
+            'offset'=> $offset
         );
 		$video = TubeVideo::model()->findAll($c);
 		$this->render('index', array(
-            'data'=>$video
+            'data'=>$video,
+            'page'=>$page
         ));
 	}
 	/**

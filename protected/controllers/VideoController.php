@@ -8,6 +8,10 @@
 class VideoController extends FrontendController
 {
     public $layout = 'column1';
+    public function actionIndex()
+    {
+        //
+    }
     public function actionView()
     {
         $id = Yii::app()->request->getParam('id');
