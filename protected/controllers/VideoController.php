@@ -20,6 +20,12 @@ class VideoController extends FrontendController
         if(!$video){
             throw new CHttpException('404','Your request is not found');
         }
+        if(!isset(Yii::app()->session['visit.'.$id]) || (time() - Yii::app()->session['visit.'.$id])>300) {
+            $video->views = intval($video->views + 1);
+            if ($video->save()) {
+                Yii::app()->session['visit.' . $id] = time();
+            }
+        }
         $c = array(
             'conditions'=>array(
                 'status'=>array('equals' => 1)
