@@ -38,9 +38,11 @@ class SiteController extends FrontendController
             'offset'=> $offset
         );
 		$video = TubeVideo::model()->findAll($c);
+        $videoHot = WebTubeVideo::model()->getHotVideo();
 		$this->render('index', array(
             'data'=>$video,
-            'page'=>$page
+            'page'=>$page,
+            'videoHot'=>$videoHot
         ));
 	}
 	/**
