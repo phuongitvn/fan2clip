@@ -14,7 +14,7 @@ if(!empty($data)){
         <li class="video-item-list">
             <div class="vil-thumb col-66">
                 <div class="wrr-thumb">
-                    <a href="<?php echo $link;?>"><img alt="<?php echo $video->name;?>" width="100%" src="https://i.ytimg.com/vi/<?php echo $video->code;?>/mqdefault.jpg" /></a>
+                    <a href="<?php echo $link;?>"><img alt="<?php echo $video->name;?>" width="100%" src="https://i.ytimg.com/vi/<?php echo $video->code;?>/hqdefault.jpg" /></a>
                 </div>
             </div>
             <div class="vil-info col-33">
