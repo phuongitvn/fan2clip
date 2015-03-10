@@ -28,7 +28,7 @@ class RedditCrawlCommand extends CConsoleCommand
                         $code = $sl[1];
                     }
                     if($code!='' && !$this->isExistsCode($code)) {
-                        $title = $e->innertext;
+                        $title = $e->plaintext;
                         echo '-----------' . "\n";
                         echo 'title: ' . $e->plaintext . "\n";
                         echo 'link: ' . $e->href . "\n";
