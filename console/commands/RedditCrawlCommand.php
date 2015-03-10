@@ -73,7 +73,7 @@ class RedditCrawlCommand extends CConsoleCommand
                         echo "\n";
                         echo 'desc:'.$description = $html->find('#eow-description', 0)->innertext;
                         // The Regular Expression filter
-                        $reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+                        /*$reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
                         $reg_exUrl2 = "/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
                         $reg_exTag = "/<a ?.*>(.*)<\/a>/";
                         //remove tag a in description
@@ -89,8 +89,7 @@ class RedditCrawlCommand extends CConsoleCommand
                         if(preg_match($reg_exUrl, $description, $url)) {
                             // make the urls hyper links
                             $description = preg_replace($reg_exUrl, '<a href="http://fan2clip.com/">Fan2Clip.com</a> ', $description);
-
-                        }
+                        }*/
                         $tubeVideo = new TubeVideo();
                         $tubeVideo->name = $tube->title;
                         $tubeVideo->code = $tube->code;
