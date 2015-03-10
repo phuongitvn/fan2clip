@@ -78,7 +78,7 @@ class RedditCrawlCommand extends CConsoleCommand
                         $reg_exTag = "/<a ?.*>(.*)<\/a>/";
                         //remove tag a in description
                         if(preg_match($reg_exUrl2, $description, $tag)){
-                            preg_replace($reg_exUrl2, 'http://fan2clip.com ', $text);
+                            preg_replace($reg_exUrl2, 'http://fan2clip.com ', $description);
                         }
 
                         if(preg_match($reg_exTag, $description, $tag)){
