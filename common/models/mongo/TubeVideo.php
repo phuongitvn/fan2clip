@@ -12,6 +12,7 @@ class TubeVideo extends EMongoDocument
 	public $link_id;
 	public $cat_id;
 	public $status;
+	public $views;
 	public $created_datetime;
 	public $updated_datetime;
 	public $created_by;
@@ -49,7 +50,7 @@ class TubeVideo extends EMongoDocument
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cat_id, status, created_by', 'numerical', 'integerOnly'=>true),
+			array('cat_id, views, status, created_by', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>255),
 			array('code', 'length', 'max'=>100),
 			array('link_id', 'length', 'max'=>100),
