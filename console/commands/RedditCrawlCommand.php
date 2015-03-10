@@ -103,6 +103,8 @@ class RedditCrawlCommand extends CConsoleCommand
                         $tubeVideo->updated_datetime = date('Y-m-d H:i:s');
                         $tubeVideo->created_by = 1;
                         $res = $tubeVideo->save();
+                        $errors = $tubeVideo->getErrors();
+                        echo '<pre>';print_r($errors);
                         echo "\n";
                         var_dump($res);
 
