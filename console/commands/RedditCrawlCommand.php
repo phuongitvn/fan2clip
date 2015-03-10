@@ -69,9 +69,9 @@ class RedditCrawlCommand extends CConsoleCommand
                     echo $link = 'https://www.youtube.com/watch?v=' . $tube->code;
                     $html = file_get_html($link);
                     if(is_object($html)) {
-                        echo 'name:'.$name = $html->find('#eow-title', 0)->plaintext;
+                        echo 'name:'.$name = $html->find('#eow-title', 0)->innertext;
                         echo "\n";
-                        echo 'desc:'.$description = $html->find('#eow-description', 0)->plaintext;
+                        echo 'desc:'.$description = $html->find('#eow-description', 0)->innertext;
                         $tubeVideo = new TubeVideo();
                         $tubeVideo->name = $name;
                         $tubeVideo->code = $tube->code;
