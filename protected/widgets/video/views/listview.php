@@ -20,7 +20,7 @@ if(!empty($data)){
             <div class="vil-info col-33">
                 <h1><a href="<?php echo $link;?>"><?php echo $video->name;?></a></h1>
                 <div>
-                    <span class="see">1298</span>
+                    <span class="see"><?php echo $video->views;?></span>
                 </div>
             </div>
         </li>
