@@ -3,7 +3,7 @@
     <p>There doesn't seem to be anything here!</p>
 <?php }else{?>
 <?php $this->widget('application.widgets.video.ListviewWidget', array('data'=>$data));?>
-    <?php if(!count($data)<$limit){?>
+    <?php if(count($data)>=$limit){?>
     <div class="pagination"><div class="wr-paging">
             <?php
                 $prevLink = ($page>1)?Yii::app()->createUrl('/search/index', array('key'=>$keyword,'page'=>$page-1)):Yii::app()->createUrl('/search/index',array('key'=>$keyword,'page'=>1));
