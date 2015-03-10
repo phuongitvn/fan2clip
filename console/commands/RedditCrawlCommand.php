@@ -78,17 +78,17 @@ class RedditCrawlCommand extends CConsoleCommand
                         $reg_exTag = "/<a ?.*>(.*)<\/a>/";
                         //remove tag a in description
                         if(preg_match($reg_exUrl2, $description, $tag)){
-                            preg_replace($reg_exUrl2, 'http://fan2clip.com ', $description);
+                            $description = preg_replace($reg_exUrl2, 'http://fan2clip.com ', $description);
                         }
 
                         if(preg_match($reg_exTag, $description, $tag)){
-                            preg_replace($reg_exTag, 'http://fan2clip.com ', $description);
+                            $description = preg_replace($reg_exTag, 'http://fan2clip.com ', $description);
                         }
 
                         // Check if there is a url in the text
                         if(preg_match($reg_exUrl, $description, $url)) {
                             // make the urls hyper links
-                            preg_replace($reg_exUrl, '<a href="http://fan2clip.com/">Fan2Clip.com</a> ', $description);
+                            $description = preg_replace($reg_exUrl, '<a href="http://fan2clip.com/">Fan2Clip.com</a> ', $description);
 
                         }
                         $tubeVideo = new TubeVideo();
