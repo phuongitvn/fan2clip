@@ -50,7 +50,7 @@ class RedditCrawlCommand extends CConsoleCommand
             echo $e->getMessage();
         }
     }
-    //php E:\source\gcms\fan2clip\trunk\console.php test view
+    //php E:\source\gcms\fan2clip\trunk\console.php RedditCrawl view
     public function actionView()
     {
         try{
@@ -72,12 +72,27 @@ class RedditCrawlCommand extends CConsoleCommand
                         echo 'name:'.$name = $html->find('#eow-title', 0)->plaintext;
                         echo "\n";
                         echo 'desc:'.$description = $html->find('#eow-description', 0)->innertext;
+                        // The Regular Expression filter
+                        $reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+                        $reg_exTag = "/<a ?.*>(.*)<\/a>/";
+                        //remove tag a in description
+                        if(preg_match($reg_exTag, $description, $tag)){
+                            echo preg_replace($reg_exTag, 'http://fan2clip.com ', $description);
+                        }
+
+                        // Check if there is a url in the text
+                        if(preg_match($reg_exUrl, $description, $url)) {
+                            // make the urls hyper links
+                            echo preg_replace($reg_exUrl, '<a href="http://fan2clip.com/">Fan2Clip.com</a> ', $description);
+
+                        }
                         $tubeVideo = new TubeVideo();
                         $tubeVideo->name = $tube->title;
                         $tubeVideo->code = $tube->code;
                         $tubeVideo->description = $description;
                         $tubeVideo->status = 1;
                         $tubeVideo->cat_id = 1;
+                        $tubeVideo->views = 0;
                         $tubeVideo->link_id = $tube->_id;
                         $tubeVideo->created_datetime = date('Y-m-d H:i:s');
                         $tubeVideo->updated_datetime = date('Y-m-d H:i:s');
