@@ -18,8 +18,8 @@
                     </div>
                     <div class="search col-7">
                         <div class="wrr-search">
-                            <form action="" method="get">
-                                <input type="text" name="key_word" value="" />
+                            <form action="/search" method="get">
+                                <input type="text" id="keyword" name="key" value="<?php echo isset($_GET['key'])?$_GET['key']:'';?>" />
                                 <input type="submit" value="Search" />
                             </form>
                         </div>

@@ -8,10 +8,12 @@
 if(!empty($data)){
     echo '<div class="listview">';
     echo '<ul class="items-listview items-listview-'.$this->layout.'">';
+    $i=0;
     foreach($data as $video){
+        $i++;
         $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id,'url_key'=>Common::makeFriendlyUrl($video->name)));
 ?>
-        <li class="video-item-list">
+        <li class="video-item-list <?php if($i==count($data)) echo 'last_item';?>">
             <div class="vil-thumb col-3">
                 <div class="wrr-thumb">
                     <a href="<?php echo $link;?>"><img alt="<?php echo $video->name;?>" width="100%" src="https://i.ytimg.com/vi/<?php echo $video->code;?>/default.jpg" /></a>
