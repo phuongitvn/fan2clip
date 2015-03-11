@@ -9,6 +9,7 @@
     <script type="text/javascript" src="/js/jquery.min.js"></script>
 </head>
 <body>
+<?php include_once("analyticstracking.php") ?>
 	<div id="main"><?php echo $content;?></div>
 </body>
 </html>
