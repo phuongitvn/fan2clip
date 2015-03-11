@@ -27,7 +27,7 @@ class SiteController extends FrontendController
 	public function actionIndex()
 	{
         $page = Yii::app()->request->getParam('page',1);
-        $limit = 20;
+        $limit = 10;
         $offset = ($page-1)*$limit;
         $c = array(
             'conditions'=>array(
