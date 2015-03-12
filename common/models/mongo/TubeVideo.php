@@ -8,6 +8,8 @@ class TubeVideo extends EMongoDocument
 	public $_id;
 	public $name;
 	public $code;
+	public $thumb;
+	public $type;
 	public $description;
 	public $link_id;
 	public $cat_id;

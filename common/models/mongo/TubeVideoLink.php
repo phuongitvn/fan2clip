@@ -10,6 +10,7 @@ class TubeVideoLink extends EMongoDocument
 	public $code;
 	public $link;
 	public $thumb;
+	public $type;
 	public $cat_id;
 	public $status;
 	public $created_datetime;
