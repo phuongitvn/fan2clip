@@ -12,11 +12,16 @@ if(!empty($data)){
     foreach($data as $video){
         $i++;
         $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id, 'url_key'=>Common::makeFriendlyUrl($video->name)));
+        if(isset($video->type) && $video->type=='vimeo'){
+            $thumb = $video->thumb;
+        }else{
+            $thumb = 'https://i.ytimg.com/vi/'.$video->code.'hqdefault.jpg';
+        }
 ?>
         <li class="video-item-list <?php if($i==count($data)) echo 'last_item';?>">
             <div class="vil-thumb col-66">
                 <div class="wrr-thumb">
-                    <a href="<?php echo $link;?>"><img alt="<?php echo $video->name;?>" width="100%" src="https://i.ytimg.com/vi/<?php echo $video->code;?>/hqdefault.jpg" /></a>
+                    <a href="<?php echo $link;?>"><img alt="<?php echo $video->name;?>" width="100%" src="<?php echo $thumb;?>" /></a>
                 </div>
             </div>
             <div class="vil-info col-33">
