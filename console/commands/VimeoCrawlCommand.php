@@ -55,23 +55,28 @@ class VimeoCrawlCommand extends CConsoleCommand
             $tubeLink = TubeVideoLink::model()->findAll($array);
             foreach ($tubeLink as $vimeo) {
                 if ($vimeo->code != '' && !empty($vimeo->link)) {
-                    $html = file_get_html('https://vimeo.com'.$vimeo->link);
-                    $description = $html->find('#info p.first',0)->plaintext;
+                    echo $url = 'https://vimeo.com'.$vimeo->link;
+                    echo "\n";
+                    $html = file_get_html($url);
+                    if(is_object($html)) {
+                        $description = $html->find('#info p.first', 0)->plaintext;
 
-                    $tubeVideo = new TubeVideo();
-                    $tubeVideo->name = $vimeo->title;
-                    $tubeVideo->code = $vimeo->code;
-                    $tubeVideo->type = $vimeo->type;
-                    $tubeVideo->thumb = $vimeo->thumb;
-                    $tubeVideo->description = trim($description);
-                    $tubeVideo->status = 1;
-                    $tubeVideo->cat_id = 1;
-                    $tubeVideo->views = 0;
-                    $tubeVideo->link_id = $vimeo->_id;
-                    $tubeVideo->created_datetime = date('Y-m-d H:i:s');
-                    $tubeVideo->updated_datetime = date('Y-m-d H:i:s');
-                    $tubeVideo->created_by = 1;
-                    $res = $tubeVideo->save();
+                        $tubeVideo = new TubeVideo();
+                        $tubeVideo->name = $vimeo->title;
+                        $tubeVideo->code = $vimeo->code;
+                        $tubeVideo->type = $vimeo->type;
+                        $tubeVideo->thumb = $vimeo->thumb;
+                        $tubeVideo->description = trim($description);
+                        $tubeVideo->status = 1;
+                        $tubeVideo->cat_id = 1;
+                        $tubeVideo->views = 0;
+                        $tubeVideo->link_id = $vimeo->_id;
+                        $tubeVideo->created_datetime = date('Y-m-d H:i:s');
+                        $tubeVideo->updated_datetime = date('Y-m-d H:i:s');
+                        $tubeVideo->created_by = 1;
+                        $res = $tubeVideo->save();
+                        var_dump($res);
+                    }
                 }
                 //update tube link
                 $tubeLinkUpdate = TubeVideoLink::model()->findByPk($vimeo->_id);
