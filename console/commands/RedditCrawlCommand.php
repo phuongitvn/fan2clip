@@ -37,6 +37,7 @@ class RedditCrawlCommand extends CConsoleCommand
                         $tubeLink->title = $title;
                         $tubeLink->link = $link;
                         $tubeLink->status = 0;
+                        $tubeLink->type = 'youtube';
                         $tubeLink->created_datetime = date('Y-m-d H:i:s');
                         $tubeLink->code=$code;
                         $res = $tubeLink->save();
@@ -93,7 +94,9 @@ class RedditCrawlCommand extends CConsoleCommand
                         $tubeVideo = new TubeVideo();
                         $tubeVideo->name = $tube->title;
                         $tubeVideo->code = $tube->code;
+                        $tubeVideo->thumb = $tube->thumb;
                         $tubeVideo->description = $description;
+                        $tubeVideo->type = $tube->type;
                         $tubeVideo->status = 1;
                         $tubeVideo->cat_id = 1;
                         $tubeVideo->views = 0;
