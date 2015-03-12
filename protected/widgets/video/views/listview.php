@@ -15,7 +15,7 @@ if(!empty($data)){
         if(isset($video->type) && $video->type=='vimeo'){
             $thumb = $video->thumb;
         }else{
-            $thumb = 'https://i.ytimg.com/vi/'.$video->code.'hqdefault.jpg';
+            $thumb = 'https://i.ytimg.com/vi/'.$video->code.'/hqdefault.jpg';
         }
 ?>
         <li class="video-item-list <?php if($i==count($data)) echo 'last_item';?>">
