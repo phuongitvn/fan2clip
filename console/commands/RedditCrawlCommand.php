@@ -12,7 +12,8 @@ class RedditCrawlCommand extends CConsoleCommand
         try {
             $url = 'http://www.reddit.com/r/videos/';
             $html = file_get_html($url);
-
+            $i=0;
+            $f=0;
             foreach ($html->find('#siteTable .thing a.title') as $e) {
                 $link = urldecode(trim($e->href));
                 if(strpos(strtolower($link),'youtube.com')!==false || strpos(strtolower($link),'youtu.be')!==false){
@@ -41,11 +42,17 @@ class RedditCrawlCommand extends CConsoleCommand
                         $tubeLink->created_datetime = date('Y-m-d H:i:s');
                         $tubeLink->code=$code;
                         $res = $tubeLink->save();
+                        if($res){
+                            $i++;
+                        }else{
+                            $f++;
+                        }
                         var_dump($res);
                     }
                 }
 
             }
+            echo $i.' videos added success, '.$f.' videos fail';
         }catch (Exception $e)
         {
             echo $e->getMessage();
@@ -65,6 +72,8 @@ class RedditCrawlCommand extends CConsoleCommand
                 'sort'=>array('_id'=>EMongoCriteria::SORT_ASC),
             );
             $tubeLink = TubeVideoLink::model()->findAll($array);
+            $i=0;
+            $f=0;
             foreach ($tubeLink as $tube) {
                 if($tube->code!='') {
                     echo $link = 'https://www.youtube.com/watch?v=' . $tube->code;
@@ -105,6 +114,11 @@ class RedditCrawlCommand extends CConsoleCommand
                         $tubeVideo->updated_datetime = date('Y-m-d H:i:s');
                         $tubeVideo->created_by = 1;
                         $res = $tubeVideo->save();
+                        if($res){
+                            $i++;
+                        }else{
+                            $f++;
+                        }
                         $errors = $tubeVideo->getErrors();
                         echo '<pre>';print_r($errors);
                         echo "\n";
@@ -121,6 +135,7 @@ class RedditCrawlCommand extends CConsoleCommand
                 $res2 = $tubeLinkUpdate->save();
                 var_dump($res2);
             }
+            echo $i.' videos added success, '.$f.' videos fail';
 
         }catch (Exception $e)
         {

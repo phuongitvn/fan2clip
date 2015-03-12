@@ -13,6 +13,8 @@ class VimeoCrawlCommand extends CConsoleCommand
         try{
             $url = 'https://vimeo.com/channels/staffpicks/videos/sort:date/format:thumbnail';
             $html = file_get_html($url);
+            $i=0;
+            $f=0;
             foreach ($html->find('#browse_content ol.browse_videos li') as $e) {
                 if(is_object($e)) {
                     $link = $e->find("a", 0)->href;
@@ -30,10 +32,16 @@ class VimeoCrawlCommand extends CConsoleCommand
                         $tubeLink->status = 0;
                         $tubeLink->created_datetime = date('Y-m-d H:i:s');
                         $res = $tubeLink->save();
+                        if($res){
+                            $i++;
+                        }else{
+                            $f++;
+                        }
                         $errors = $tubeLink->getErrors();
                     }
                 }
             }
+            echo $i.' videos added success, '.$f.' videos fail';
         }catch (Exception $e)
         {
             echo $e->getMessage();
@@ -53,6 +61,8 @@ class VimeoCrawlCommand extends CConsoleCommand
                 'sort'=>array('_id'=>EMongoCriteria::SORT_ASC),
             );
             $tubeLink = TubeVideoLink::model()->findAll($array);
+            $i=0;
+            $f=0;
             foreach ($tubeLink as $vimeo) {
                 if ($vimeo->code != '' && !empty($vimeo->link)) {
                     echo $url = 'https://vimeo.com'.$vimeo->link;
@@ -75,7 +85,11 @@ class VimeoCrawlCommand extends CConsoleCommand
                         $tubeVideo->updated_datetime = date('Y-m-d H:i:s');
                         $tubeVideo->created_by = 1;
                         $res = $tubeVideo->save();
-                        var_dump($res);
+                        if($res){
+                            $i++;
+                        }else{
+                            $f++;
+                        }
                     }
                 }
                 //update tube link
@@ -85,6 +99,7 @@ class VimeoCrawlCommand extends CConsoleCommand
                 $res2 = $tubeLinkUpdate->save();
                 var_dump($res2);
             }
+            echo $i.' videos added success, '.$f.' videos fail';
         }catch (Exception $e)
         {
             echo $e->getMessage();
