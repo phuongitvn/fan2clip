@@ -214,8 +214,8 @@ ul.items-listview li .vil-info{
 }
 .btn2{
     padding: 8px 25px;
-    background: #fff;
-    border: 1px solid #ccc;
+    background: #F48805;
+    border: 1px solid #fff;
     border-radius: 0;
     text-transform: uppercase;
     display: inline-block;
@@ -231,6 +231,7 @@ a.next, a.prev {
 }
 .pagination a:hover{
     border: 1px solid #888;
+    box-shadow: 1px 2px 3px #ccc;
 }
 span.icon-arr{
     width: 7px;
@@ -250,4 +251,7 @@ span.icon-arr-l{
 }
 .loadmore{
     width: 100%;
+}
+.wr-paging{
+    text-align: center;
 }
