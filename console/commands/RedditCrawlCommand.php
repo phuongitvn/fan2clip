@@ -39,6 +39,7 @@ class RedditCrawlCommand extends CConsoleCommand
                         $tubeLink->link = $link;
                         $tubeLink->status = 0;
                         $tubeLink->type = 'youtube';
+                        $tubeLink->genre = 'news';
                         $tubeLink->created_datetime = date('Y-m-d H:i:s');
                         $tubeLink->code=$code;
                         $res = $tubeLink->save();
@@ -101,11 +102,12 @@ class RedditCrawlCommand extends CConsoleCommand
                             $description = preg_replace($reg_exUrl, '<a href="http://fan2clip.com/">Fan2Clip.com</a> ', $description);
                         }*/
                         $tubeVideo = new TubeVideo();
-                        $tubeVideo->name = $tube->title;
-                        $tubeVideo->code = $tube->code;
+                        $tubeVideo->name = trim($tube->title);
+                        $tubeVideo->code = trim($tube->code);
                         $tubeVideo->thumb = $tube->thumb;
-                        $tubeVideo->description = $description;
+                        $tubeVideo->description = trim($description);
                         $tubeVideo->type = $tube->type;
+                        $tubeVideo->genre = 'news';
                         $tubeVideo->status = 1;
                         $tubeVideo->cat_id = 1;
                         $tubeVideo->views = 0;
