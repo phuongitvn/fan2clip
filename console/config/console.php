@@ -15,6 +15,7 @@ return CMap::mergeArray(
 	        'console.components.*',
 	    	'console.components.crawl._base.*',
 	    	'console.components.crawl.*',
+	    	'console.models.*',
 	    ),
 	)
 );
