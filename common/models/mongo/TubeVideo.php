@@ -13,6 +13,8 @@ class TubeVideo extends EMongoDocument
 	public $description;
 	public $link_id;
 	public $cat_id;
+    public $tags;
+    public $genre;
 	public $status;
 	public $views;
 	public $created_datetime;
