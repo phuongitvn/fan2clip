@@ -31,7 +31,8 @@ class SiteController extends FrontendController
         $offset = ($page-1)*$limit;
         $c = array(
             'conditions'=>array(
-                'status'=>array('equals' => 1)
+                'status'=>array('==' => 1),
+                'genre'=>array('notExists'),
             ),
             'sort'=>array('_id'=>EMongoCriteria::SORT_DESC),
             'limit'=> $limit,

@@ -7,7 +7,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/">Sports</a></li>
                         <li><a href="/">Music</a></li>
-                        <li><a href="/">Kids</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('/kids');?>">Kids</a></li>
                     </ul>
                 </div>
             </div>
