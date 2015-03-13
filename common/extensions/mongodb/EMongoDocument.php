@@ -995,7 +995,8 @@ abstract class EMongoDocument extends EMongoEmbeddedDocument
 			return $this->getCollection()->remove($criteria->getConditions(), array(
 				'justOne'=>false,
 				'fsync'=>$this->getFsyncFlag(),
-				'safe'=>$this->getSafeFlag()
+				//'safe'=>$this->getSafeFlag()
+                'w'=>1
 			));
 		else
 			return $this->getCollection()->remove($criteria->getConditions(), false);
