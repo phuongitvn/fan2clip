@@ -8,10 +8,25 @@
 //php E:\source\gcms\fan2clip\trunk\console.php YoutubeCrawl
 class YoutubeCrawlCommand extends CConsoleCommand
 {
-    public static $_limit_related = 4;
-    public function actionIndex($code='')
+    public static $_limit_related = 5;
+    public function actionIndex($code='', $type='funny')
     {
         try{
+            switch($type)
+            {
+                case 'funny':
+                    $genre = 'funny';
+                    $tags = 'funny,troll,fail';
+                    break;
+                case 'kids':
+                    $genre = 'kids';
+                    $tags = 'music,barbie';
+                    break;
+                default:
+                    $genre = 'news';
+                    $tags = 'hot news';
+                    break;
+            }
             if(empty($code)){
                 $array = array(
                     'conditions'=>array(
@@ -44,8 +59,8 @@ class YoutubeCrawlCommand extends CConsoleCommand
                         $tubeLink->title = trim($title);
                         $tubeLink->code = $code;
                         $tubeLink->status = 0;
-                        $tubeLink->genre = 'kids';
-                        $tubeLink->tags = 'music,barbie';
+                        $tubeLink->genre = $genre;
+                        $tubeLink->tags = $tags;
                         $tubeLink->type = 'youtube';
                         $tubeLink->link = 'https://www.youtube.com/watch?v=' . $code;
                         $tubeLink->related = 1;
@@ -81,8 +96,8 @@ class YoutubeCrawlCommand extends CConsoleCommand
                                 $tubeLink->code = $code;
                                 $tubeLink->status = 2;
                                 $tubeLink->type = 'youtube';
-                                $tubeLink->genre = 'kids';
-                                $tubeLink->tags = 'music,barbie';
+                                $tubeLink->genre = $genre;
+                                $tubeLink->tags = $tags;
                                 $tubeLink->link = 'https://www.youtube.com' . $link;
                                 $tubeLink->related = 1;
                                 $res = $tubeLink->add();
