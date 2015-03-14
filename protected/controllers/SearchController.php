@@ -16,17 +16,21 @@ class SearchController extends FrontendController
         $offset = ($page-1)*$limit;
         // Find all records witch have first name starring on a, b and c, case insensitive search
         $keyRegexPattern = WebTubeVideo::formatKeywordsPatternSearch($keyword);
-        $regexObj = new MongoRegex($keyRegexPattern);
+        if(empty($keyRegexPattern)){
+            $data=null;
+        }else {
+            $regexObj = new MongoRegex($keyRegexPattern);
 
-        $c = array(
-            'conditions'=>array(
-                'status'=>array('equals' => 1),
-                'name'=>array('equals'=>$regexObj)
-            ),
-            'limit'=> $limit,
-            'offset'=>$offset
-        );
-        $data = WebTubeVideo::model()->findAll($c);
+            $c = array(
+                'conditions' => array(
+                    'status' => array('equals' => 1),
+                    'name' => array('equals' => $regexObj)
+                ),
+                'limit' => $limit,
+                'offset' => $offset
+            );
+            $data = WebTubeVideo::model()->findAll($c);
+        }
         $videoHot = WebTubeVideo::model()->getHotVideo();
         $this->render('index', compact('data','page','videoHot','keyword','limit'));
     }

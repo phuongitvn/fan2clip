@@ -49,6 +49,7 @@ return CMap::mergeArray(
 				'<action:(login|logout|about|index)>' => 'site/<action>',
                 '<_c:\w+>/<genre_key:[a-zA-Z0-9-]+>' => '<_c>/genre',
                 '<_c:\w+>/<url_key:[a-zA-Z0-9-]+>,<id:\w+>' => '<_c>/view',
+                '<_c:\w+>' => '<_c>/index',
 				'<_c:\w+>/<_a:\w+>/<id:\w+>' => '<_c>/<_a>',
 				'<_c:\w+>/<_a:\w+>' => '<_c>/<_a>',
 			),
