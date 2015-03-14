@@ -12,7 +12,7 @@
     <div class="description">
         <p><?php echo $video->description;?></p>
     </div>
-    <div class="fb-comments" data-href="http://fan2clip.com/" data-numposts="5" data-colorscheme="light"></div>
+    <div class="fb-comments" data-href="<?php echo SITE_URL.Yii::app()->request->url;?>" data-numposts="5" data-colorscheme="light"></div>
 </div>
 <?php $this->beginWidget('system.web.widgets.CClipWidget', array('id'=>'sidebar-r')); ?>
 <?php $this->widget('application.widgets.video.VideoRelatedGenreWidget', array('meid'=>$video->_id,'keywors'=>$video->name,'genre'=>$video->genre));?>
