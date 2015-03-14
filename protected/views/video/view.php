@@ -7,6 +7,7 @@
         <?php }?>
     </div>
     <h1><?php echo $video->name;?></h1>
+    <div class="fb-like" data-href="<?php echo SITE_URL.Yii::app()->request->url;?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     <div><span class="see"><?php echo $video->views;?></span></div>
     <div class="description">
         <p><?php echo $video->description;?></p>
