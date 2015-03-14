@@ -27,6 +27,7 @@ class Common{
         $string = strtr($string, $charMap);
 
         $string = self::CleanUpSpecialChars($string, $allowUnder);
+        if(empty($string)) $string='fan-clip';
         return strtolower($string);
     }
     public static function CleanUpSpecialChars($string, $allowUnder = false){

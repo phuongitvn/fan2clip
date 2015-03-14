@@ -25,4 +25,35 @@ class WebTubeVideo extends TubeVideo
         }
         return self::model()->findAll($c);
     }
+    public function getRelatedVideo($keySearch,$genre='')
+    {
+        $c = array(
+            'conditions'=>array(
+                'status'=>array('equals' => 1),
+            ),
+            'sort'=>array('_id'=>EMongoCriteria::SORT_ASC),
+        );
+        if($genre!=''){
+            $c['conditions']['genre']=array('equals'=>$genre);
+        }
+
+        if($keySearch<>''){
+            $keyFilter = preg_replace('/[^\da-z\ ]/i', '', $keySearch);
+            $keyRegexPattern = explode(' ',$keyFilter);
+            $keyArr = array();
+            foreach($keyRegexPattern as $key){
+                if(strlen($key)>4){
+                    $keyArr[]=$key;
+                }
+            }
+            $keyArr = array_unique($keyArr);
+            if(count($keyArr)>0){
+                $keyArr = implode('|',$keyArr);
+                $keyword = '('.$keyArr.')';
+                $regexObj = new MongoRegex('/'.$keyword.'/i');
+                $c['conditions']['name'] = array('equals'=>$regexObj);
+            }
+        }
+        return self::model()->findAll($c);
+    }
 }

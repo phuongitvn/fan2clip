@@ -13,6 +13,5 @@
     </div>
 </div>
 <?php $this->beginWidget('system.web.widgets.CClipWidget', array('id'=>'sidebar-r')); ?>
-<div class="nar-title"><h1>Video Other</h1></div>
-<?php $this->widget('application.widgets.video.ListviewWidget', array('data'=>$data,'layout'=>'mini'));?>
+<?php $this->widget('application.widgets.video.VideoRelatedGenreWidget', array('keywors'=>$video->name));?>
 <?php $this->endWidget();?>

@@ -5,9 +5,9 @@
                 <div class="wr-menu wrr-s">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/">Sports</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'funny'));?>">Funny</a></li>
                         <li><a href="/">Music</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('/kids');?>">Kids</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'kids'));?>">Kids</a></li>
                     </ul>
                 </div>
             </div>

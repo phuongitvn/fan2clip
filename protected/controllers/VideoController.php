@@ -36,4 +36,26 @@ class VideoController extends FrontendController
         $data = TubeVideo::model()->findAll($c);
         $this->render('view', compact('video','data'));
     }
+    public function actionGenre()
+    {
+        $page = Yii::app()->request->getParam('page',1);
+        $genre = Yii::app()->request->getParam('genre_key','news');
+        $limit = 10;
+        $offset = ($page-1)*$limit;
+        $c = array(
+            'conditions'=>array(
+                'status'=>array('==' => 1),
+                'genre'=>array('equals'=>$genre),
+            ),
+            'sort'=>array('_id'=>EMongoCriteria::SORT_DESC),
+            'limit'=> $limit,
+            'offset'=> $offset
+        );
+        $video = TubeVideo::model()->findAll($c);
+        $this->render('genre', array(
+            'data'=>$video,
+            'page'=>$page,
+            'genre'=>$genre
+        ));
+    }
 }
