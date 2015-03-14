@@ -225,7 +225,7 @@ ul.items-listview li .vil-info{
 }
 a.next, a.prev {
     font-size: 12px;
-    color: #333;
+    color: #000;
     font-weight: bold;
     position: relative;
 }
