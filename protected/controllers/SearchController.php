@@ -12,7 +12,7 @@ class SearchController extends FrontendController
     {
         $keyword = Yii::app()->request->getParam('key','');
         $page = Yii::app()->request->getParam('page',1);
-        $limit = 5;
+        $limit = 10;
         $offset = ($page-1)*$limit;
         // Find all records witch have first name starring on a, b and c, case insensitive search
         $keyRegexPattern = WebTubeVideo::formatKeywordsPatternSearch($keyword);
