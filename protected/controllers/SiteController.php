@@ -32,7 +32,7 @@ class SiteController extends FrontendController
         $c = array(
             'conditions'=>array(
                 'status'=>array('==' => 1),
-                'genre'=>array('notExists'),
+                //'genre'=>array('notExists'),
             ),
             'sort'=>array('_id'=>EMongoCriteria::SORT_DESC),
             'limit'=> $limit,
