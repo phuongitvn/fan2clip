@@ -13,5 +13,5 @@
     </div>
 </div>
 <?php $this->beginWidget('system.web.widgets.CClipWidget', array('id'=>'sidebar-r')); ?>
-<?php $this->widget('application.widgets.video.VideoRelatedGenreWidget', array('keywors'=>$video->name));?>
+<?php $this->widget('application.widgets.video.VideoRelatedGenreWidget', array('keywors'=>$video->name,'genre'=>$video->genre));?>
 <?php $this->endWidget();?>
