@@ -25,13 +25,14 @@ class WebTubeVideo extends TubeVideo
         }
         return self::model()->findAll($c);
     }
-    public function getRelatedVideo($keySearch,$genre='')
+    public function getRelatedVideo($keySearch,$genre='',$limit=10)
     {
         $c = array(
             'conditions'=>array(
                 'status'=>array('equals' => 1),
             ),
             'sort'=>array('_id'=>EMongoCriteria::SORT_ASC),
+            'limit'=>$limit
         );
         if($genre!=''){
             $c['conditions']['genre']=array('equals'=>$genre);
