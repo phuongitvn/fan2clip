@@ -25,11 +25,12 @@ class WebTubeVideo extends TubeVideo
         }
         return self::model()->findAll($c);
     }
-    public function getRelatedVideo($keySearch,$genre='',$limit=10)
+    public function getRelatedVideo($meId,$keySearch,$genre='',$limit=10)
     {
         $c = array(
             'conditions'=>array(
                 'status'=>array('equals' => 1),
+                '_id'=>array('<>'=>new MongoId($meId))
             ),
             'sort'=>array('_id'=>EMongoCriteria::SORT_ASC),
             'limit'=>$limit

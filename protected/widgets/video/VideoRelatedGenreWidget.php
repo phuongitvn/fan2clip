@@ -7,6 +7,7 @@
  */
 class VideoRelatedGenreWidget extends CWidget
 {
+    public $meid;
     public $genre='';
     public $limit=10;
     public $title='Video Related';
@@ -14,7 +15,7 @@ class VideoRelatedGenreWidget extends CWidget
     public $layout = 'mini';
     public function run()
     {
-        $videoRelated = WebTubeVideo::model()->getRelatedVideo($this->keywors,$this->genre);
+        $videoRelated = WebTubeVideo::model()->getRelatedVideo($this->meid,$this->keywors,$this->genre);
         $title = $this->title;
         $this->render('video_related_by_genre', compact('videoRelated','title'));
     }
