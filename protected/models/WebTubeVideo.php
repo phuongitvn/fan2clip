@@ -44,6 +44,26 @@ class WebTubeVideo extends TubeVideo
         }
         return self::model()->findAll($c);
     }
+    public function getLastestNew($genre='',$meId,$limit=10)
+    {
+        $c = array(
+            'conditions'=>array(
+                'status'=>array('equals' => 1),
+            ),
+            'sort'=>array('_id'=>EMongoCriteria::SORT_DESC),
+            'limit'=> $limit,
+        );
+        if(!is_array($meId) && $meId<>''){
+            $meId = array($meId);
+            $c['conditions']['_id']=array('notIn'=>$meId);
+        }elseif(is_array($meId)){
+            $c['conditions']['_id']=array('notIn'=>$meId);
+        }
+        if($genre!=''){
+            $c['conditions']['genre']=array('equals'=>$genre);
+        }
+        return self::model()->findAll($c);
+    }
     public function getRelatedVideo($meId,$keySearch,$genre='',$limit=10)
     {
         $c = array(
