@@ -15,7 +15,8 @@ class SearchController extends FrontendController
         $limit = 5;
         $offset = ($page-1)*$limit;
         // Find all records witch have first name starring on a, b and c, case insensitive search
-        $regexObj = new MongoRegex('/'.$keyword.'/i');
+        $keyRegexPattern = WebTubeVideo::formatKeywordsPatternSearch($keyword);
+        $regexObj = new MongoRegex($keyRegexPattern);
 
         $c = array(
             'conditions'=>array(

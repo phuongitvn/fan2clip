@@ -7,7 +7,7 @@
  */
 class VideoHotGenreWidget extends CWidget
 {
-    public $genre='news';
+    public $genre='';
     public $limit=10;
     public $title='Video Hot';
     public function run()

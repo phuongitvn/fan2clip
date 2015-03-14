@@ -11,6 +11,25 @@ class WebTubeVideo extends TubeVideo
     {
         return parent::model($className);
     }
+    public static function formatKeywordsPatternSearch($keyword)
+    {
+        $keyFilter = preg_replace('/[^\da-z\ ]/i', '', $keyword);
+        $keyRegexPattern = explode(' ',$keyFilter);
+        $keyArr = array();
+        foreach($keyRegexPattern as $key){
+            if(strlen($key)>4){
+                $keyArr[]=$key;
+            }
+        }
+        $keyArr = array_unique($keyArr);
+        if(count($keyArr)>0) {
+            $keyArr = implode('|', $keyArr);
+            $regexPattern = '/(' . $keyArr . ')/i';
+        }else{
+            $regexPattern='';
+        }
+        return $regexPattern;
+    }
     public function getHotVideo($genre='',$limit=10)
     {
         $c = array(
@@ -38,23 +57,10 @@ class WebTubeVideo extends TubeVideo
         if($genre!=''){
             $c['conditions']['genre']=array('equals'=>$genre);
         }
-
-        if($keySearch<>''){
-            $keyFilter = preg_replace('/[^\da-z\ ]/i', '', $keySearch);
-            $keyRegexPattern = explode(' ',$keyFilter);
-            $keyArr = array();
-            foreach($keyRegexPattern as $key){
-                if(strlen($key)>4){
-                    $keyArr[]=$key;
-                }
-            }
-            $keyArr = array_unique($keyArr);
-            if(count($keyArr)>0){
-                $keyArr = implode('|',$keyArr);
-                $keyword = '('.$keyArr.')';
-                $regexObj = new MongoRegex('/'.$keyword.'/i');
+        $keyRegexPattern = self::formatKeywordsPatternSearch($keySearch);
+        if($keyRegexPattern<>''){
+                $regexObj = new MongoRegex($keyRegexPattern);
                 $c['conditions']['name'] = array('equals'=>$regexObj);
-            }
         }
         return self::model()->findAll($c);
     }

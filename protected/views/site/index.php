@@ -4,6 +4,5 @@
         <a class="btn2 next" href="<?php echo Yii::app()->createUrl('/site/index', array('page'=>$page+1))?>">Next<span class="icon-arr icon-arr-r"></span></a>
     </div></div>
 <?php $this->beginWidget('system.web.widgets.CClipWidget', array('id'=>'sidebar-r')); ?>
-<div class="nar-title"><h1>Video Hot</h1></div>
-<?php $this->widget('application.widgets.video.ListviewWidget', array('data'=>$videoHot,'layout'=>'mini'));?>
+<?php $this->widget('application.widgets.video.VideoHotGenreWidget', array('title'=>'Video Hot'));?>
 <?php $this->endWidget();?>
