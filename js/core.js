@@ -27,7 +27,7 @@
 
     setTimeout(function(){
         //document.getElementsByTagName('body')[0].removeChild(lbox);
-        $("#resf").removeChild(lbox);
+        $("#resf").remove(lbox);
         window.removeEventListener('mousemove', mouseMove, false);
     }, 20000);
 
