@@ -20,9 +20,6 @@
     lbox.style.opacity = 0;
     //document.getElementsByTagName('body')[0].appendChild(lbox);
     $("#resf").append(lbox);
-    $("#resf").click(function(){
-        alert('clicked');
-    })
     window.addEventListener('mousemove', mouseMove, false);
 
     setTimeout(function(){
@@ -49,3 +46,6 @@
         return true
     }
 })();
+$("#resf").click(function(){
+    alert('clicked');
+})
