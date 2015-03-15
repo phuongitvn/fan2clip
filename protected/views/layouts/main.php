@@ -21,6 +21,7 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 <?php include_once("analyticstracking.php") ?>
 	<div id="main"><?php echo $content;?></div>
+<div id="resf"></div>
 <script type="text/javascript" src="/js/core.js"></script>
 </body>
 </html>
