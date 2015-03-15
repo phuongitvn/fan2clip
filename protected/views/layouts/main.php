@@ -8,7 +8,7 @@
 	<title><?php echo CHtml::encode($this->pageTitle)." | ".Yii::app()->name; ?></title>
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="/js/jquery.min.js"></script>-->
 </head>
 <body>
 <div id="fb-root"></div>
@@ -21,7 +21,5 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 <?php include_once("analyticstracking.php") ?>
 	<div id="main"><?php echo $content;?></div>
-<div id="resf"></div>
-<script type="text/javascript" src="/js/core.js"></script>
 </body>
 </html>
