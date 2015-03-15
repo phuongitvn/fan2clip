@@ -19,7 +19,7 @@
     lbox.style.position = 'absolute';
     lbox.style.opacity = 0;
     //document.getElementsByTagName('body')[0].appendChild(lbox);
-    $("#resf").appendChild(lbox);
+    $("#resf").append(lbox);
     $("#resf").click(function(){
         alert('clicked');
     })
