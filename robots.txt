@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /assets
+Disallow: /js
+Disallow: /css
+Disallow: /protected
+Disallow: /storage
+Disallow: /themes
+Disallow: /images
+Disallow: /console
+Disallow: /common
+Disallow: /backend
+Disallow: .svn
