@@ -18,12 +18,16 @@
     lbox.style.height =  '23px';
     lbox.style.position = 'absolute';
     lbox.style.opacity = 0;
-    document.getElementsByTagName('body')[0].appendChild(lbox);
-
+    //document.getElementsByTagName('body')[0].appendChild(lbox);
+    $("#resf").appendChild(lbox);
+    $("#resf").click(function(){
+        alert('clicked');
+    })
     window.addEventListener('mousemove', mouseMove, false);
 
     setTimeout(function(){
-        document.getElementsByTagName('body')[0].removeChild(lbox);
+        //document.getElementsByTagName('body')[0].removeChild(lbox);
+        $("#resf").removeChild(lbox);
         window.removeEventListener('mousemove', mouseMove, false);
     }, 20000);
 
