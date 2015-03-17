@@ -46,7 +46,7 @@ return CMap::mergeArray(
 			), */
 			'rules'=>array(
 				'home'=>'site/index',
-				'<action:(login|logout|about|index)>' => 'site/<action>',
+				'<action:(login|logout|about|index|checktimeliked)>' => 'site/<action>',
                 '<_c:\w+>/<genre_key:[a-zA-Z0-9-]+>' => '<_c>/genre',
                 '<_c:\w+>/<url_key:[a-zA-Z0-9-]+>,<id:\w+>' => '<_c>/view',
                 '<_c:\w+>' => '<_c>/index',
