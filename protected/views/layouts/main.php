@@ -8,7 +8,8 @@
 	<title><?php echo CHtml::encode($this->pageTitle)." | ".Yii::app()->name; ?></title>
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    <!--<script type="text/javascript" src="/js/jquery.min.js"></script>-->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/like.js"></script>
 </head>
 <body>
 <div id="fb-root"></div>
