@@ -19,7 +19,25 @@ class SiteController extends FrontendController
 				'class'=>'CViewAction',
 			),
 		);
-	}	
+	}
+    public function actionChecktimeliked(){
+        $timeLiked = Yii::app()->session['last_time_liked'];
+        if($timeLiked && $timeLiked < (time() - 5)){
+            Yii::app()->session['last_time_liked']=time();
+            die('1');
+        }
+        die('0');
+        /*$memcache = new Memcache();
+        $memcache->connect("localhost", 11211);
+        $last_session_request = $memcache->get('last_time_liked');
+        if($last_session_request < (time() - 5)){
+            $memcache->set('last_time_liked', time());
+            $memcache->close();
+            die('1');
+        }
+        $memcache->close();
+        die('0');*/
+    }
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
