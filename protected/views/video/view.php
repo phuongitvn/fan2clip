@@ -18,9 +18,9 @@ $cs->registerMetaTag('Clip video hot, funny, news on World '.$video->name, NULL,
     <h1><?php echo $video->name;?></h1>
     <div class="fb-like" data-href="<?php echo SITE_URL.Yii::app()->request->url;?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     <div><span class="see"><?php echo $video->views;?></span></div>
-    <div class="description">
-        <p><?php echo $video->description;?></p>
-    </div>
+    <!--<div class="description">
+        <p><?php /*echo $video->description;*/?></p>
+    </div>-->
     <div class="fb-comments" data-href="<?php echo SITE_URL.Yii::app()->request->url;?>" data-numposts="5" data-colorscheme="light"></div>
 </div>
 <?php $this->beginWidget('system.web.widgets.CClipWidget', array('id'=>'sidebar-r')); ?>
