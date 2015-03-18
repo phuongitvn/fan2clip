@@ -77,7 +77,7 @@ class VimeoCrawlCommand extends CConsoleCommand
                         $tubeVideo->type = $vimeo->type;
                         $tubeVideo->thumb = $vimeo->thumb;
                         $tubeVideo->description = trim($description);
-                        $tubeVideo->status = 1;
+                        $tubeVideo->status = 3;
                         $tubeVideo->cat_id = 1;
                         $tubeVideo->views = 0;
                         $tubeVideo->link_id = $vimeo->_id;
