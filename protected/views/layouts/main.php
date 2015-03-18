@@ -10,6 +10,11 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/like.js"></script>
+    <?php
+    $cs = Yii::app()->getClientScript();
+    $cs->registerMetaTag('Video Hot, Video News, Funny', 'title', NULL);
+    $cs->registerMetaTag('Watching Video Hot, News, Funny, mini clip in the World', 'description', NULL);
+    ?>
 </head>
 <body>
 <div id="fb-root"></div>
