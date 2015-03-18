@@ -16,9 +16,10 @@ class ActiveDataCommand extends CConsoleCommand
                 $model = TubeVideo::model()->findByPk($video->_id);
                 $model->updated_datetime = date('Y-m-d H:i:s');
                 $model->status=1;
-                $res = $model->save(false);
+                $res = $model->save();
                 echo $res?"Update status success!":"Update fail";
                 echo "\n";
+                echo $video->_id;
             }
         }else{
             echo 'Not found content to active'."\n";
