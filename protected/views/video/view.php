@@ -1,6 +1,6 @@
 <?php
 if(isset($video->type) && $video->type=='vimeo') {
-    $thumb = $video->thumb;
+    $thumb = 'https://i.vimeocdn.com/video/'.$video->code.'_640.jpg';
 }else {
     $thumb = 'https://i.ytimg.com/vi/' . $video->code . '/hqdefault.jpg';
 }
