@@ -2,7 +2,8 @@
 $thumb = 'https://i.ytimg.com/vi/'.$video->code.'/hqdefault.jpg';
 $cs = Yii::app()->getClientScript();
 $cs->registerMetaTag('Fan2Clip', NULL, NULL, array('property'=>'og:site_name'));
-$cs->registerMetaTag('https://www.facebook.com/pages/Fan2Clip/1571931466409541', NULL, NULL, array('property'=>'fb:admins'));
+//$cs->registerMetaTag('https://www.facebook.com/pages/Fan2Clip/1571931466409541', NULL, NULL, array('property'=>'fb:admins'));
+$cs->registerMetaTag('417326001770427', NULL, NULL, array('property'=>'fb:app_id'));
 $cs->registerMetaTag(SITE_URL.Yii::app()->request->url, NULL, NULL, array('property' =>'og:url'));
 $cs->registerMetaTag($video->name, NULL, NULL, array('property'=>'og:title'));
 $cs->registerMetaTag('video.movie', NULL, NULL, array('property'=>'og:type'));
