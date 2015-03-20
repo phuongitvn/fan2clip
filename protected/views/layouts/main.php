@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
-    <link rel="canonical" href="www.fan2clip.com" />
+    <link rel="canonical" href="<?php echo SITE_URL.Yii::app()->request->url;?>" />
     <meta name="robots" content="follow, index" />
 	<title><?php echo CHtml::encode($this->pageTitle)." | ".Yii::app()->name; ?></title>
     <link rel="icon" href="/images/favicon.ico">
