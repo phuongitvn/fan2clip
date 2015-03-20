@@ -1,5 +1,9 @@
 <?php
-$thumb = 'https://i.ytimg.com/vi/'.$video->code.'/mqdefault.jpg';
+if(isset($video->type) && $video->type=='vimeo') {
+    $thumb = $video->thumb;
+}else {
+    $thumb = 'https://i.ytimg.com/vi/' . $video->code . '/hqdefault.jpg';
+}
 $cs = Yii::app()->getClientScript();
 $cs->registerMetaTag('Fan2Clip', NULL, NULL, array('property'=>'og:site_name'));
 //$cs->registerMetaTag('https://www.facebook.com/pages/Fan2Clip/1571931466409541', NULL, NULL, array('property'=>'fb:admins'));
