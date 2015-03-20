@@ -1,11 +1,11 @@
 .grid-view-loading
 {
-	background:url(loading.gif) no-repeat center 15px;
+	background:url(loading.gif) no-repeat center 0;
 }
 
 .grid-view
 {
-	padding: 15px 0;
+	padding: 0;
 }
 
 .grid-view table.items

@@ -12,6 +12,7 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+<h3 class="board-title"><?php echo $this->pageTitle;?></h3>
 <div class="search-form">
 <?php $this->renderPartial('_search', array(
 	'model' => $model,

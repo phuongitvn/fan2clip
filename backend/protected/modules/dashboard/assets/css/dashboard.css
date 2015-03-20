@@ -1,8 +1,8 @@
 .column { width: 308px; float: left; min-height: 55px;margin-left: 5px; }
 .dashboard-portlet { 
 	position: relative;
-	background: #EFEFEF!important;
-	padding: 3px;
+	background: #e2e4e6!important;
+	padding: 5px;
 	border-radius: 3px!important;
 	margin: 0 0 15px 0;
 	border: 0!important;
@@ -11,15 +11,16 @@
 	display: none;
 	}
 .dashboard-portlet-header { 
-	background: #FAFAFA!important;
+	background: transparent!important;
 	margin: 0;
 	border-top-left-radius: 1px!important;
 	border-top-right-radius: 1px!important;
-	border: 1px solid #D8D8D8;
+	border: none;
 	border-bottom: none;
 	padding: 8px 10px 9px 10px;
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 1.4;
+    color: #4d4d4d;
 }
 .dashboard-portlet-header .ui-icon { float: right; cursor: default; }
 .dashboard-portlet-content { 
@@ -36,9 +37,9 @@
 .ui-sortable-placeholder { border: 2px dashed #AAA!important; visibility: visible !important; height: 50px !important; }
 .ui-sortable-placeholder * { visibility: hidden; }
 .ui-corner-all{
-	-moz-border-radius: 0!important;
-	-webkit-border-radius: 0!important;
-	border-radius: 0!important;
+	-moz-border-radius: 3px!important;
+	-webkit-border-radius: 3px!important;
+	border-radius: 3px!important;
 }
 #jGrowl .ui-corner-all{
 	-moz-border-radius: 4px!important;
@@ -49,8 +50,8 @@
 	font-size: 11px;
 }
 .dashboard-portlet:hover{
-	-webkit-box-shadow: 0px 2px 4px #ccc;
-	box-shadow:	0px 2px 4px #ccc;
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.4);
+	box-shadow:	0 3px 6px rgba(0,0,0,.4);
 }
 #dashboard{
 	overflow: hidden;
@@ -59,4 +60,8 @@
 .ui-button-text-only .ui-button-text,
 #portlets-toggler-popup ul li{
 	font-size: 12px!important;
+}
+.yt-card{
+    background: transparent;
+    box-shadow: none;
 }

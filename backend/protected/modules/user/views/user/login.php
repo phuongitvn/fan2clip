@@ -1,20 +1,20 @@
 <div class="signin-container">
 
 		<!-- Left side -->
-		<div class="signin-info">
+		<!--<div class="signin-info">
 			<a href="index.html" class="logo">
-			<img width="150" class="logo" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo_g.png" />
-			</a> <!-- / .logo -->
+			<img width="150" class="logo" src="<?php /*echo Yii::app()->theme->baseUrl; */?>/images/logo_g.png" />
+			</a>
 			<div class="slogan">
 				Simple. Flexible. Powerful.
-			</div> <!-- / .slogan -->
+			</div>
 			<ul>
 				<li><i class="fa fa-sitemap signin-icon"></i> Flexible modular structure</li>
 				<li><i class="fa fa-file-text-o signin-icon"></i> LESS &amp; SCSS source files</li>
 				<li><i class="fa fa-outdent signin-icon"></i> RTL direction support</li>
 				<li><i class="fa fa-heart signin-icon"></i> Crafted with love</li>
-			</ul> <!-- / Info list -->
-		</div>
+			</ul>
+		</div>-->
 		<!-- / Left side -->
 
 		<!-- Right side -->
@@ -91,3 +91,4 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/pages.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/pixel-admin.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/themes.min.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/login.css" />
