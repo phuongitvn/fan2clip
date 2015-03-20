@@ -11,7 +11,7 @@
 	<link type="image/x-icon" rel="shortcut icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/system/images/favicon.ico" >	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
-<body class="theme-default page-signin">
+<body class="theme-default page-signin" style="background-color:rgb(14, 116, 175)">
 <?php echo $content; ?>
 </body>
 </html>

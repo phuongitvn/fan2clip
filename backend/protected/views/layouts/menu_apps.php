@@ -33,7 +33,7 @@ $controller = Yii::app()->controller->getId();
 			<li><a class="yt-valign <?php if($module=='settings' && $controller=='default') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/settings');?>"><i class="glyphicon glyphicon-cog"></i>&nbsp;<?php echo Yii::t('main','Settings')?></a>
 				<?php if($module=='settings'){?>
 				<ul class="sub-menu">
-					<li><a class="yt-valign <?php if($module =='settings' && $controller=='system') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/settings/system');?>"><?php echo Yii::t('main','General')?></a></li>
+					<li><a class="yt-valign <?php if($module =='settings' && $controller=='system') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/settings/system');?>"><?php echo Yii::t('main','General Setting')?></a></li>
 				</ul>
 				<?php }?>
 			</li>

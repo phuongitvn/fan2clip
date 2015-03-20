@@ -5,18 +5,6 @@ $action = Yii::app()->controller->action->id;
 <div class="toolbar-action">
 	<div class="ta-inner div-table">
 		<div class="div-row">
-			<div class="div-column-l" style="vertical-align: middle">
-			<h3 class="page-title">
-			<?php echo Yii::app()->controller->pageTitle;
-				if($action=='update'){
-					echo ' | '.Yii::t('main','Update');
-				}elseif($action=='create'){
-					echo ' | '.Yii::t('main','Create New');
-				}elseif($action=='view'){
-					echo ' | '.Yii::t('main','View Info');
-				}
-			?>
-			</h3></div>
 			<div class="div-column-r">
 				<?php if(empty($this->btnOptions)):?>
 					<?php 
