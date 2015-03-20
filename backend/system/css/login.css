@@ -49,3 +49,12 @@ hr{
 	border-bottom: 1px solid #E2E2E2;
 	margin: 8px 0;
 }
+.page-signin .signin-form{
+    border-radius: 3px!important;
+}
+.page-signin .signin-with{
+    border-radius: 0 0 3px 3px!important;
+}
+.page-signin .signin-container{
+    width: 500px!important;
+}
