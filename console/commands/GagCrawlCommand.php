@@ -23,25 +23,45 @@ class GagCrawlCommand extends CConsoleCommand
                 $html = file_get_html($link['link']);
                 $main = $html->find(".main",0);
                 foreach($main->find(".badge-grid-item") as $e){
-                    echo $title = $e->find(".item div.info a.title h4",0)->innertext."\n";
-                    echo $url = $e->find(".item div.info a",0)->href."\n";
-                    $model = new TubeVideoLink();
-                    $model->title = trim($title);
-                    $model->link = trim($url);
-                    $model->type = 'youtube';
-                    $model->genre = $link['genre'];
-                    $model->tags = $link['tags'];
-                    $model->created_datetime = date('Y-m-d H:i:s');
-                    $model->updated_datetime = date('Y-m-d H:i:s');
-                    $model->status=0;
-                    $res = $model->save();
-                    echo $res?"true":"false";
-                    echo "\n";
+                    $title = $e->find(".item div.info a.title h4",0)->innertext;
+                    $url = $e->find(".item div.info a",0)->href;
+                    $html2 = file_get_html($url);
+                    $attr = 'data-external-id';
+                    $tubeCode = $html2->find("#jsid-post-container",0)->$attr;
+                    $checkCode = $this->isExistsCode($tubeCode);
+                    if(!empty($tubeCode) && !$checkCode) {
+                        $model = new TubeVideoLink();
+                        $model->title = trim($title);
+                        $model->link = trim($url);
+                        $model->type = 'youtube';
+                        $model->code = $tubeCode;
+                        $model->genre = $link['genre'];
+                        $model->tags = $link['tags'];
+                        $model->created_datetime = date('Y-m-d H:i:s');
+                        $model->updated_datetime = date('Y-m-d H:i:s');
+                        $model->status = 0;
+                        $res = $model->save();
+                        echo $res ? "true" : "false";
+                        echo "\n";
+                    }else{
+                        echo 'Not found tube Code or exists code!'."\n";
+                    }
                 }
             }
         }catch (Exception $e)
         {
             echo $e->getMessage();
         }
+    }
+    private function isExistsCode($code)
+    {
+        $c = array(
+            'conditions'=>array(
+                'code'=>array('equals' => $code)
+            ),
+            'limit'=>1,
+        );
+        $video = TubeVideoLink::model()->find($c);
+        return $video?true:false;
     }
 }
