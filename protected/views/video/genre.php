@@ -1,7 +1,7 @@
 <?php
 $cs = Yii::app()->getClientScript();
-$description = 'You are looking at '.$genre->name.' Channel on Fan2Clip.com!';
-$keywords = 'fan2clip,tv,video,jokes,interesting,cool,fun collection,fun portfolio, admire,fun,humor,humour,have fun, just for fun '.$genre->name;
+$description = 'You are looking at '.$genre.' Channel on Fan2Clip.com!';
+$keywords = 'fan2clip,tv,video,jokes,interesting,cool,fun collection,fun portfolio, admire,fun,humor,humour,have fun, just for fun '.$genre;
 $cs->registerMetaTag($description, NULL, NULL, array('property'=>'description'));
 $cs->registerMetaTag($keywords, NULL, NULL, array('property'=>'keywords'));
 ?>
