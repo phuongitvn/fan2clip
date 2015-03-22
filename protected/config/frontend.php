@@ -46,8 +46,8 @@ return CMap::mergeArray(
 			), */
 			'rules'=>array(
 				'home'=>'site/index',
-				'<action:(login|logout|about|index|checktimeliked)>' => 'site/<action>',
-                '<_c:\w+>/<genre_key:[a-zA-Z0-9-]+>' => '<_c>/genre',
+				'<action:(login|logout|about|index|checktimeliked|yahoo)>' => 'site/<action>',
+                'video/<genre_key:[a-zA-Z0-9-]+>' => 'video/genre',
                 '<_c:\w+>/<url_key:[a-zA-Z0-9-]+>,<id:\w+>' => '<_c>/view',
                 '<_c:\w+>' => '<_c>/index',
 				'<_c:\w+>/<_a:\w+>/<id:\w+>' => '<_c>/<_a>',
