@@ -1,3 +1,10 @@
+<?php
+$cs = Yii::app()->getClientScript();
+$description = 'You are looking at '.$genre->name.' Channel on Fan2Clip.com!';
+$keywords = 'fan2clip,tv,video,jokes,interesting,cool,fun collection,fun portfolio, admire,fun,humor,humour,have fun, just for fun '.$genre->name;
+$cs->registerMetaTag($description, NULL, NULL, array('property'=>'description'));
+$cs->registerMetaTag($keywords, NULL, NULL, array('property'=>'keywords'));
+?>
 <?php $this->widget('application.widgets.video.ListviewWidget', array('data'=>$data));?>
     <div class="pagination"><div class="wr-paging">
             <a class="btn2 prev" href="<?php echo ($page>1)?Yii::app()->createUrl('/site/index', array('page'=>$page-1)):Yii::app()->createUrl('/site/index')?>">Prev<span class="icon-arr icon-arr-l"></span></a>
