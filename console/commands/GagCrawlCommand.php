@@ -46,7 +46,7 @@ class GagCrawlCommand extends CConsoleCommand
                     $attr = 'data-external-id';
                     $tubeCode = $html2->find("#jsid-post-container",0)->$attr;
                     $checkCode = $this->isExistsCode($tubeCode);
-                    echo 'Tube Code: '.$tubeCode;
+                    echo 'Tube Code: '.$tubeCode."\n";
                     if(!empty($tubeCode) && !$checkCode) {
                         $model = new TubeVideoLink();
                         $model->title = trim($title);
