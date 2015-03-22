@@ -107,6 +107,7 @@ class RedditCrawlCommand extends CConsoleCommand
                         $tubeVideo->thumb = $tube->thumb;
                         $tubeVideo->description = trim($description);
                         $tubeVideo->type = $tube->type;
+                        $tubeVideo->tags = $tube->tags;
                         $tubeVideo->genre = isset($tube->genre)?$tube->genre:'news';
                         $tubeVideo->status = 3;
                         $tubeVideo->cat_id = 1;
