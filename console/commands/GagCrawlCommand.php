@@ -35,6 +35,8 @@ class GagCrawlCommand extends CConsoleCommand
             );
             foreach($links as $link)
             {
+                echo '-----------------------'."\n";
+                echo 'Link:'.$link['link']."\n";
                 $html = file_get_html($link['link']);
                 $main = $html->find(".main",0);
                 foreach($main->find(".badge-grid-item") as $e){
@@ -44,6 +46,7 @@ class GagCrawlCommand extends CConsoleCommand
                     $attr = 'data-external-id';
                     $tubeCode = $html2->find("#jsid-post-container",0)->$attr;
                     $checkCode = $this->isExistsCode($tubeCode);
+                    echo 'Tube Code: '.$tubeCode;
                     if(!empty($tubeCode) && !$checkCode) {
                         $model = new TubeVideoLink();
                         $model->title = trim($title);
