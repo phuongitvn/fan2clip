@@ -6,8 +6,8 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'funny'));?>">Funny</a></li>
-                        <li><a href="/">Music</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'kids'));?>">Kids</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'music'));?>">Music</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'game'));?>">Game</a></li>
                     </ul>
                 </div>
             </div>
