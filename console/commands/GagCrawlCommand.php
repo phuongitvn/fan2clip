@@ -32,6 +32,11 @@ class GagCrawlCommand extends CConsoleCommand
                     'genre'=>'music',
                     'tags'=>'music,funny'
                 ),
+                4=>array(
+                    'link'=>'http://9gag.tv/channel/movie-and-tv',
+                    'genre'=>'tv',
+                    'tags'=>'movie,tv,film,trailer'
+                ),
             );
             foreach($links as $link)
             {
@@ -40,8 +45,14 @@ class GagCrawlCommand extends CConsoleCommand
                 $html = file_get_html($link['link']);
                 $main = $html->find(".main",0);
                 foreach($main->find(".badge-grid-item") as $e){
-                    $title = $e->find(".item div.info a.title h4",0)->innertext;
-                    $url = $e->find(".item div.info a",0)->href;
+                    $etitle = $e->find(".item div.info a.title h4",0);
+                    if($etitle){
+                        $title = $etitle->innertext;
+                        $url = $e->find(".item div.info a",0)->href;
+                    }else{
+                        continue;
+                    }
+
                     $html2 = file_get_html($url);
                     $attr = 'data-external-id';
                     $tubeCode = $html2->find("#jsid-post-container",0)->$attr;
