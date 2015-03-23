@@ -273,6 +273,7 @@ span.icon-arr-l{
     color: #333333;
     border: 1px solid #D0D0D0;
     box-shadow: 1px 1px #888;
+    font-size: 11px;
 }
 .paging .yiiPager li a:hover,
 .paging .yiiPager li.selected a{
