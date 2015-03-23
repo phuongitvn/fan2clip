@@ -1,4 +1,5 @@
 <?php
+include_once 'E:\source\gcms\fan2clip\trunk\console\components\simple_html_dom.php';
 class SiteController extends FrontendController
 {
     public $layout = 'column1';
@@ -20,6 +21,33 @@ class SiteController extends FrontendController
 			),
 		);
 	}
+    public function actionYahoo()
+    {
+        $string = '<p><a href="http://news.yahoo.com/former-us-air-force-mechanic-charged-trying-join-190151585--abc-news-topstories.html"><img src="http://l3.yimg.com/bt/api/res/1.2/DbiH4vUk47AqjEQpx.Wvlw--/YXBwaWQ9eW5ld3M7Zmk9ZmlsbDtoPTg2O3E9NzU7dz0xMzA-/http://media.zenfs.com/en_us/gma/us.abcnews.go.com/gty_isis_lb_150220_16x9_992.jpg" width="130" height="86" alt="Former US Air Force Mechanic Charged With Trying to Join ISIS in Syria, Officials Say" align="left" title="Former US Air Force Mechanic Charged With Trying to Join ISIS in Syria, Officials Say" border="0" /></a>A veteran has been arrested by the FBI for allegedly trying to join ISIS, the brutal terrorist group wreaking havoc in Syria and Iraq.</p><br clear="all"/>';
+        $string = preg_replace ("/<a(.*?)>(.*?)<\/a>/i", "", $string);
+        $string = preg_replace ("/<br(.*?)>/i", "", $string);
+        echo $string = preg_replace ("/<style>(.*?)<\/style>/i", "", $string);
+        exit;
+        $url = 'http://news.yahoo.com/many-u-boards-lack-vision-just-tick-boxes-161106618--sector.html';
+        $html = file_get_html($url);
+        echo $title = $html->find(".header h1",0)->innertext;
+        echo $image = $html->find(".small-cover-wrap",0)->innertext;
+        //remove element
+        foreach ($html->find("#topics") as $e)
+        {
+            $e->outertext='';
+        }
+        //remove href tag a
+        foreach ($html->find("a") as $e)
+        {
+            $innerText = $e->plaintext;
+            //$e->outertext = $innerText;
+            $e->href = '#';
+        }
+
+        echo $body = $html->find(".body",0)->innertext;
+        exit;
+    }
     public function actionChecktimeliked(){
         $timeLiked = Yii::app()->session['last_time_liked'];
         if($timeLiked < (time() - 5)){
@@ -45,8 +73,21 @@ class SiteController extends FrontendController
 	public function actionIndex()
 	{
         $page = Yii::app()->request->getParam('page',1);
-        $limit = 10;
-        $offset = ($page-1)*$limit;
+
+        $c = array(
+            'conditions'=>array(
+                'status'=>array('==' => 1),
+                //'genre'=>array('notExists'),
+            ),
+        );
+        $total = TubeVideo::model()->count($c);
+        $pager = new CPagination($total);
+        $itemOnPaging = 5;
+        $pager->pageSize = 15;
+        $curr_page = $pager->getCurrentPage();
+
+        $limit = $pager->getLimit();
+        $offset = $pager->getOffset();
         $c = array(
             'conditions'=>array(
                 'status'=>array('==' => 1),
@@ -60,8 +101,9 @@ class SiteController extends FrontendController
         $videoHot = WebTubeVideo::model()->getHotVideo();
 		$this->render('index', array(
             'data'=>$video,
-            'page'=>$page,
-            'videoHot'=>$videoHot
+            'pager'=>$pager,
+            'videoHot'=>$videoHot,
+            'itemOnPaging'=>$itemOnPaging
         ));
 	}
 	/**
