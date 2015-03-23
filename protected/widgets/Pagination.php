@@ -15,7 +15,7 @@ class Pagination extends CLinkPager
 			$this->htmlOptions['id']=$this->getId();
 		if(!isset($this->htmlOptions['class']))
 			$this->htmlOptions['class']='yiiPager';
-		$this->cssFile = Yii::app()->theme->baseUrl.'/css/paper.css';
+		//$this->cssFile = Yii::app()->theme->baseUrl.'/css/paper.css';
 	}
 /**
 	 * Creates the page buttons.
