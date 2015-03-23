@@ -40,8 +40,18 @@ class VideoController extends FrontendController
     {
         $page = Yii::app()->request->getParam('page',1);
         $genre = Yii::app()->request->getParam('genre_key','news');
-        $limit = 10;
-        $offset = ($page-1)*$limit;
+        $c = array(
+            'conditions'=>array(
+                'status'=>array('==' => 1),
+                'genre'=>array('equals'=>$genre),
+            ),
+        );
+        $total = TubeVideo::model()->count($c);
+        $pager = new CPagination($total);
+        $itemOnPaging = 5;
+        $pager->pageSize = 15;
+        $limit = $pager->getLimit();
+        $offset = $pager->getOffset();
         $c = array(
             'conditions'=>array(
                 'status'=>array('==' => 1),
@@ -55,7 +65,9 @@ class VideoController extends FrontendController
         $this->render('genre', array(
             'data'=>$video,
             'page'=>$page,
-            'genre'=>$genre
+            'genre'=>$genre,
+            'pager'=>$pager,
+            'itemOnPaging'=>$itemOnPaging
         ));
     }
 }
