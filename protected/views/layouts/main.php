@@ -28,5 +28,10 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 <?php include_once("analyticstracking.php") ?>
 	<div id="main"><?php echo $content;?></div>
+    <div id="footer">
+        <div class="wrr-footer">
+            <div>&#169;2015 Fan2Clip.com</div>
+        </div>
+    </div>
 </body>
 </html>
