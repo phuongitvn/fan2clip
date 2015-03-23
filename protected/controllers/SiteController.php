@@ -1,5 +1,5 @@
 <?php
-include_once 'E:\source\gcms\fan2clip\trunk\console\components\simple_html_dom.php';
+//include_once 'E:\source\gcms\fan2clip\trunk\console\components\simple_html_dom.php';
 class SiteController extends FrontendController
 {
     public $layout = 'column1';
