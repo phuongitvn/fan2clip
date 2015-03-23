@@ -255,3 +255,28 @@ span.icon-arr-l{
 .wr-paging{
     text-align: center;
 }
+#footer .wrr-footer{
+    padding: 10px;
+    background: #f4f4f4;
+    border-top: 1px solid #ccc;
+}
+.paging .yiiPager{
+    margin: 0;
+    padding: 0;
+}
+.paging .yiiPager li{
+    display: inline-block;
+}
+.paging .yiiPager li a{
+    display: block;
+    padding: 5px 10px;
+    color: #333333;
+    border: 1px solid #D0D0D0;
+    box-shadow: 1px 1px #888;
+}
+.paging .yiiPager li a:hover,
+.paging .yiiPager li.selected a{
+    border: 1px solid #333;
+    background: #ccc;
+    box-shadow: 1px 1px #888;
+}
