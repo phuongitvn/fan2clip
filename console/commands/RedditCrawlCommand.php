@@ -16,9 +16,9 @@ class RedditCrawlCommand extends CConsoleCommand
             $f=0;
             $k=0;
             foreach ($html->find('#siteTable .thing a.title') as $e) {
-                if($k==5){
+                /*if($k==5){
                     exit;
-                }
+                }*/
                 $k++;
                 $link = urldecode(trim($e->href));
                 if(strpos(strtolower($link),'youtube.com')!==false || strpos(strtolower($link),'youtu.be')!==false){

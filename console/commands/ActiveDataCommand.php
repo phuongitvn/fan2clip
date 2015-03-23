@@ -7,7 +7,7 @@ class ActiveDataCommand extends CConsoleCommand
             'conditions'=>array(
                 'status'=>array('equals' => 3),
             ),
-            'limit'=>5,
+            'limit'=>10,
             'sort'=>array('_id'=>EMongoCriteria::SORT_ASC),
         );
         $data = TubeVideo::model()->findAll($array);
