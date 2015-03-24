@@ -1,16 +1,19 @@
 <?php
 class ActiveDataCommand extends CConsoleCommand
 {
-    public function actionIndex()
+    public function actionIndex($genre='')
     {
-        $array = array(
+        $crit = array(
             'conditions'=>array(
                 'status'=>array('equals' => 3),
             ),
             'limit'=>10,
             'sort'=>array('_id'=>EMongoCriteria::SORT_ASC),
         );
-        $data = TubeVideo::model()->findAll($array);
+        if($genre!=''){
+            $crit = $crit['conditions']['genre'] = array('equals' => $genre);
+        }
+        $data = TubeVideo::model()->findAll($crit);
         if($data){
             foreach($data as $video){
                 $model = TubeVideo::model()->findByPk($video->_id);
