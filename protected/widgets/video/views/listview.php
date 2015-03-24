@@ -21,11 +21,11 @@ if(!empty($data)){
         <li class="video-item-list <?php if($i==count($data)) echo 'last_item';?>">
             <div class="vil-thumb col-66">
                 <div class="wrr-thumb">
-                    <a href="<?php echo $link;?>"><img alt="<?php echo $video->name;?>" width="100%" src="<?php echo $thumb;?>" /></a>
+                    <a target="_blank" href="<?php echo $link;?>"><img alt="<?php echo $video->name;?>" width="100%" src="<?php echo $thumb;?>" /></a>
                 </div>
             </div>
             <div class="vil-info col-33">
-                <h1><a href="<?php echo $link;?>"><?php echo $video->name;?></a></h1>
+                <h1><a href="<?php echo $link;?>" target="_blank"><?php echo $video->name;?></a></h1>
                 <div>
                     <span class="see"><?php echo $video->views;?></span>
                 </div>
