@@ -11,7 +11,7 @@ class ActiveDataCommand extends CConsoleCommand
             'sort'=>array('_id'=>EMongoCriteria::SORT_ASC),
         );
         if($genre!=''){
-            $crit = $crit['conditions']['genre'] = array('equals' => $genre);
+            $crit['conditions']['genre'] = array('equals' => $genre);
         }
         $data = TubeVideo::model()->findAll($crit);
         if($data){
