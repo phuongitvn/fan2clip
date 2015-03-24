@@ -31,7 +31,7 @@ if(!empty($data)){
                         echo 'post by ';
                         echo '<span class="author-name">';
                         if(array_key_exists($video->created_by,$users)){
-                            echo $users[$video->created_by]->first_name.' '.$users[$video->created_by]->last_name;
+                            echo $users[$video->created_by]['first_name'].' '.$users[$video->created_by]['last_name'];
                         }else{
                             echo 'Fan2Clip';
                         }
