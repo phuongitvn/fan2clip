@@ -27,7 +27,6 @@ if(!empty($data)){
             <div class="vil-info col-33">
                 <h1><a href="<?php echo $link;?>" target="_blank"><?php echo $video->name;?></a></h1>
                 <div>
-
                     <span class="author"><?php
                         echo 'post by ';
                         echo '<span class="author-name">';

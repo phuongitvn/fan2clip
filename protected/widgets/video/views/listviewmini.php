@@ -27,6 +27,16 @@ if(!empty($data)){
             <div class="vil-info col-7">
                 <h1><a href="<?php echo $link;?>"><?php echo $video->name;?></a></h1>
                 <div>
+                    <span class="author"><?php
+                        echo 'post by ';
+                        echo '<span class="author-name">';
+                        if(array_key_exists($video->created_by,$users)){
+                            echo $users->first_name.' '.$users->last_name;
+                        }else{
+                            echo 'Fan2Clip';
+                        }
+                        echo '</span>';
+                        ?></span>
                     <span class="see"><?php echo $video->views;?></span>
                 </div>
             </div>
