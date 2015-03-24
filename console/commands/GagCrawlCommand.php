@@ -6,6 +6,8 @@
  * Time: 4:38 PM
  */
 #php E:\source\gcms\fan2clip\trunk\console.php GagCrawl FindLink
+ini_set('max_execution_time', 8640000);
+ini_set('memory_limit', -1);
 class GagCrawlCommand extends CConsoleCommand
 {
     public function actionFindLink()
@@ -81,6 +83,7 @@ class GagCrawlCommand extends CConsoleCommand
         {
             echo $e->getMessage();
         }
+        exit;
     }
     private function isExistsCode($code)
     {
