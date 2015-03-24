@@ -12,6 +12,7 @@ class ListviewWidget extends CWidget
     public function run()
     {
         $data = $this->data;
-        $this->render('listview'.$this->layout, compact('data'));
+        $users = WebUsers::model()->getAllUsers();
+        $this->render('listview'.$this->layout, compact('data','users'));
     }
 }
