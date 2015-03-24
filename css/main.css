@@ -284,3 +284,10 @@ span.icon-arr-l{
 .extra-info{
     margin-bottom: 20px;
 }
+.author{
+    font-size: 11px;
+}
+.author-name{
+    color: #2F61AE;
+    font-weight: bold;
+}
