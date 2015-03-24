@@ -29,6 +29,17 @@ if(!empty($data)){
                 <div>
                     <span class="see"><?php echo $video->views;?></span>
                 </div>
+                <div class="social">
+                    <span class="twitter">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo SITE_URL.$link;?>" data-text="<?php echo CHtml::encode($video->name);?>" data-size="large" data-count="none">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </span>
+                    <span>
+                        <a title="<?php echo CHtml::encode($video->name);?>" href="http://www.facebook.com/sharer.php?u=<?php echo urlencode(SITE_URL.$link);?>&amp;t=<?php echo urlencode($video->name);?>" target="_blank">
+                            <img style="vertical-align: top;" src="/images/facebook.png" heigh="30px"/>
+                        </a>
+                    </span>
+                </div>
             </div>
         </li>
 <?php
