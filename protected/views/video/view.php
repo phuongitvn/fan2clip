@@ -24,11 +24,18 @@ $cs->registerMetaTag('Clip video hot, funny, news on World '.$video->name, NULL,
         <?php }?>
     </div>
     <h1><?php echo $video->name;?></h1>
-    <div class="fb-like" data-href="<?php echo SITE_URL.Yii::app()->request->url;?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-    <div><span class="see"><?php echo $video->views;?></span></div>
-    <!--<div class="description">
-        <p><?php /*echo $video->description;*/?></p>
-    </div>-->
+    <div class="extra-info"><span class="see" style="float: right"><?php echo $video->views;?></span>
+    <!--<div class="fb-like" data-href="<?php /*echo SITE_URL.Yii::app()->request->url;*/?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
+        <span class="twitter">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo SITE_URL.$link;?>" data-text="<?php echo CHtml::encode($video->name);?>" data-size="large" data-count="none">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </span>
+        <span>
+            <a title="<?php echo CHtml::encode($video->name);?>" href="http://www.facebook.com/sharer.php?u=<?php echo urlencode(SITE_URL.$link);?>&amp;t=<?php echo urlencode($video->name);?>" target="_blank">
+                <img style="vertical-align: top;height: 28px" src="/images/facebook.png" />
+            </a>
+        </span>
+    </div>
     <div class="fb-comments" data-href="<?php echo SITE_URL.Yii::app()->request->url;?>" data-numposts="5" data-colorscheme="light" width="100%" data-width="100%"></div>
 </div>
 <?php $this->beginWidget('system.web.widgets.CClipWidget', array('id'=>'sidebar-r')); ?>
