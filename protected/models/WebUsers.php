@@ -39,7 +39,7 @@ class WebUsers extends EMongoDocument
      */
     public function getCollectionName()
     {
-        return 'tube_video';
+        return 'users';
     }
     public function getAllUsers()
     {
@@ -51,8 +51,8 @@ class WebUsers extends EMongoDocument
         $users = WebUsers::model()->findAll($c);
         $result = array();
         foreach($users as $user){
-            $result[$user->code]->frist_name = $user->first_name;
-            $result[$user->code]->last_name = $user->last_name;
+            $result[$user->code]['first_name'] = $user->first_name;
+            $result[$user->code]['last_name'] = $user->last_name;
         }
         return $result;
     }
