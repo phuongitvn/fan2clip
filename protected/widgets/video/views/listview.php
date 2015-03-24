@@ -36,7 +36,7 @@ if(!empty($data)){
                     </span>
                     <span>
                         <a title="<?php echo CHtml::encode($video->name);?>" href="http://www.facebook.com/sharer.php?u=<?php echo urlencode(SITE_URL.$link);?>&amp;t=<?php echo urlencode($video->name);?>" target="_blank">
-                            <img style="vertical-align: top;" src="/images/facebook.png" heigh="30px"/>
+                            <img style="vertical-align: top;" src="/images/facebook.png" style="height: 28px"/>
                         </a>
                     </span>
                 </div>
