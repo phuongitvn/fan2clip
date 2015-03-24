@@ -9,7 +9,7 @@
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/like.js"></script>
+    <script type="text/javascript" src="/js/core.js"></script>
     <?php
     $cs = Yii::app()->getClientScript();
     $cs->registerMetaTag('Video Hot, Video News, Funny', 'title', NULL);
