@@ -278,7 +278,7 @@ span.icon-arr-l{
 .paging .yiiPager li a:hover,
 .paging .yiiPager li.selected a{
     border: 1px solid #333;
-    background: #ccc;
+    background: #f90;
     box-shadow: 1px 1px #888;
 }
 .extra-info{
