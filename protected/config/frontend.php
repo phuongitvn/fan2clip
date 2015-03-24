@@ -10,7 +10,7 @@ return CMap::mergeArray(
 	array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Video Hot',
-	'theme'=>'salefly',
+	'theme'=>'fan2clip',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
