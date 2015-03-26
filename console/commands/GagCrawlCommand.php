@@ -39,6 +39,11 @@ class GagCrawlCommand extends CConsoleCommand
                     'genre'=>'tv',
                     'tags'=>'movie,tv,film,trailer'
                 ),
+				5=>array(
+                    'link'=>'http://9gag.tv/channel/cute',
+                    'genre'=>'funny',
+                    'tags'=>'comedy,cute,funny'
+                ),
             );
             foreach($links as $link)
             {
