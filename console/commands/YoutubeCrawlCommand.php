@@ -22,6 +22,10 @@ class YoutubeCrawlCommand extends CConsoleCommand
                     $genre = 'kids';
                     $tags = 'music,barbie';
                     break;
+                case 'music':
+                    $genre = 'music';
+                    $tags = 'music,barbie';
+                    break;
                 default:
                     $genre = 'news';
                     $tags = 'hot news';
