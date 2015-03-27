@@ -31,12 +31,12 @@
         <div id="main-body">
             <div class="wrap-inner container wrr-s">
                 <div class="wrr-page-content">
-                    <div class="col-66">
+                    <div class="col-66 col-f">
                         <div class="wr-col-c">
                             <?php echo $content; ?>
                         </div>
                     </div>
-                    <div class="col-33">
+                    <div class="col-33 col-hide">
                         <div class="wr-col-r"><?php echo $this->clips['sidebar-r'];?></div>
                     </div>
                     <div class="clear"></div>

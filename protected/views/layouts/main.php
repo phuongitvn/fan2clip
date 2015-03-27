@@ -3,6 +3,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta name="MobileOptimized" content="100" />
+
     <link rel="canonical" href="<?php echo SITE_URL.Yii::app()->request->url;?>" />
     <meta name="robots" content="follow, index" />
 	<title><?php echo CHtml::encode($this->pageTitle)." | ".Yii::app()->name; ?></title>
@@ -17,7 +20,36 @@
     $cs->registerMetaTag('fan2clip,tv,video,jokes,interesting,cool,fun collection, prank, admire,fun,humor,humour,just for fun.', 'keywords', NULL);
     ?>
 </head>
-<body>
+<body class="mobile-screen">
+<style>
+    @media (min-width: 0px) and (max-width: 600px)  {
+        .col-f{
+            width: 100%;
+        }
+        .col-hide{
+            display: none;
+        }
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px){
+        /* Styles */
+        .mobile-screen .wrr-s{
+            width: 100%
+        }
+        .mobile-screen .items-listview .video-item-list .col-66{
+            width: 40%
+        }
+        .mobile-screen .items-listview .video-item-list .col-33{
+            width: 58%
+        }
+        .col-f{
+            width: 100%;
+        }
+        .col-hide{
+            display: none;
+        }
+    }
+
+</style>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
