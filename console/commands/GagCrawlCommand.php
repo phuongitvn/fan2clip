@@ -68,25 +68,29 @@ class GagCrawlCommand extends CConsoleCommand
                     $html2 = file_get_html($url);
                     $attr = 'data-external-id';
                     $tubeCode = $html2->find("#jsid-post-container",0)->$attr;
-                    $checkCode = $this->isExistsCode($tubeCode);
-                    echo 'Tube Code: '.$tubeCode."\n";
-                    if(!empty($tubeCode) && !$checkCode) {
-                        $model = new TubeVideoLink();
-                        $model->title = trim($title);
-                        $model->link = trim($url);
-                        $model->type = 'youtube';
-                        $model->code = $tubeCode;
-                        $model->genre = $link['genre'];
-                        $model->tags = $link['tags'];
-                        $model->created_datetime = date('Y-m-d H:i:s');
-                        $model->updated_datetime = date('Y-m-d H:i:s');
-                        $model->status = 0;
-                        $res = $model->save();
-                        echo $res ? "true" : "false";
-                        echo "\n";
-                    }else{
-                        echo 'Not found tube Code or exists code!'."\n";
-                    }
+					if($html2){
+						$checkCode = $this->isExistsCode($tubeCode);
+						echo 'Tube Code: '.$tubeCode."\n";
+						if(!empty($tubeCode) && !$checkCode) {
+							$model = new TubeVideoLink();
+							$model->title = trim($title);
+							$model->link = trim($url);
+							$model->type = 'youtube';
+							$model->code = $tubeCode;
+							$model->genre = $link['genre'];
+							$model->tags = $link['tags'];
+							$model->created_datetime = date('Y-m-d H:i:s');
+							$model->updated_datetime = date('Y-m-d H:i:s');
+							$model->status = 0;
+							$res = $model->save();
+							echo $res ? "true" : "false";
+							echo "\n";
+						}else{
+							echo 'Not found tube Code or exists code!'."\n";
+						}
+					}else{
+						continue;
+					}
                 }
             }
         }catch (Exception $e)
