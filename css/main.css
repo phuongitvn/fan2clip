@@ -85,20 +85,20 @@ p{
     float: left;
 }
 .search .wrr-search{
-    padding: 8px 20px;
+    padding: 8px 0;
 }
 .search .wrr-search form{
     position: relative;
-    padding-right: 100px;
 }
 .search .wrr-search input[type="text"]{
-    width: 100%;
+    width: 70%;
     padding: 5px 0 5px 5px;
     outline: none;
+    float: right;
 }
 .search .wrr-search input[type="submit"]{
     position: absolute;
-    right: 55px;
+    right: 0;
     top: -1px;
     background: url(../images/search.png) no-repeat center center;
     border: 0;
