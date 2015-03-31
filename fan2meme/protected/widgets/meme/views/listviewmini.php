@@ -22,9 +22,9 @@ if(!empty($data)){
             </div>
             <div class="vil-info col-100">
                 <h1><a href="<?php echo $link;?>"><?php echo $video->title;?></a></h1>
-                <div>
+                <!--<div>
                     <span class="author"><?php
-                        echo 'post by ';
+/*                        echo 'post by ';
                         echo '<span class="author-name">';
                         if(array_key_exists($video->created_by,$users)){
                             echo $users[$video->created_by]['first_name'].' '.$users[$video->created_by]['last_name'];
@@ -32,9 +32,9 @@ if(!empty($data)){
                             echo 'Fan2Clip';
                         }
                         echo '</span>';
-                        ?></span>
-                    <span class="see"><?php echo $video->views;?></span>
-                </div>
+                        */?></span>
+                    <span class="see"><?php /*echo $video->views;*/?></span>
+                </div>-->
             </div>
         </li>
 <?php
