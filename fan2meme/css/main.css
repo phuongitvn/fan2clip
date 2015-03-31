@@ -165,9 +165,10 @@ ul.items-listview li .vil-info{
     padding-right: 5px;
     max-height: 215px;
     overflow: hidden;
+    margin-bottom: 5px;
 }
 .listview ul.items-listview-mini li h1 a{
-    font-size: 12px;
+    font-size: 15px;
 }
 .nar-title{
     background-color: #fff;
