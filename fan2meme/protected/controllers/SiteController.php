@@ -36,4 +36,12 @@ class SiteController extends Controller
             'itemOnPaging'=>$itemOnPaging
         ));
     }
+    public function actionChecktimeliked(){
+        $timeLiked = Yii::app()->session['last_time_liked'];
+        if($timeLiked < (time() - 5)){
+            Yii::app()->session['last_time_liked']=time();
+            die('1');
+        }
+        die('0');
+    }
 }
