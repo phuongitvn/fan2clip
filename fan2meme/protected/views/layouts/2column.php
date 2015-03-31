@@ -4,11 +4,8 @@
             <div id="menu">
                 <div class="wr-menu wrr-s">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'funny'));?>">Funny</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'music'));?>">Music</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'game'));?>">Game</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'tv'));?>">Movie & TV</a></li>
+                        <li><a href="/">Top</a></li>
+                        <li><a href="http://fan2clip.com/" target="_blank">Movie & TV</a></li>
                     </ul>
                 </div>
             </div>
