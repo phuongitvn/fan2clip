@@ -14,7 +14,11 @@ $link = Yii::app()->createUrl('/video/view', array('id'=>$meme->_id, 'url_key'=>
 ?>
 <div class="video-detail">
     <h1><?php echo $meme->title;?></h1>
-    <div><span class="author"><?php
+    <div class="video-info">
+        <img width="100%" src="<?php echo $image;?>" />
+    </div>
+    <div style="margin: 10px;">
+        <span class="author"><?php
             $users = WebUsers::model()->getAllUsers();
             echo 'post by ';
             echo '<span class="author-name">';
@@ -24,11 +28,10 @@ $link = Yii::app()->createUrl('/video/view', array('id'=>$meme->_id, 'url_key'=>
                 echo 'Fan2Meme';
             }
             echo '</span>';
-            ?></span></div>
-    <div class="video-info">
-        <img width="100%" src="<?php echo $image;?>" />
+            ?></span>
     </div>
-    <div class="extra-info"><span class="see" style="float: right"><?php echo $meme->views;?></span>
+    <div class="extra-info">
+        <span class="see" style="float: right"><?php echo $meme->views;?></span>
     <!--<div class="fb-like" data-href="<?php /*echo SITE_URL.Yii::app()->request->url;*/?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
         <span class="twitter">
             <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo SITE_URL.$link;?>" data-text="<?php echo CHtml::encode($meme->title);?>" data-size="large" data-count="none">Tweet</a>
