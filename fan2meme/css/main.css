@@ -87,6 +87,9 @@ p{
     float: left;
     min-height: 100px;
 }
+.col-100{
+    width: 100%;
+}
 .wr-col-r{
     padding: 10px;
 }
