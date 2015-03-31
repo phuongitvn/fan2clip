@@ -11,7 +11,7 @@ if(!empty($data)){
     $i=0;
     foreach($data as $video){
         $i++;
-        $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id,'url_key'=>Common::makeFriendlyUrl($video->title)));
+        $link = Yii::app()->createUrl('/meme/view', array('id'=>$video->_id,'url_key'=>Common::makeFriendlyUrl($video->title)));
         $image = Meme::model()->getAvatarUrl($video->content);
 ?>
         <li class="video-item-list <?php if($i==count($data)) echo 'last_item';?>">
