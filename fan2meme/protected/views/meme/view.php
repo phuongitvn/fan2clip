@@ -14,6 +14,17 @@ $link = Yii::app()->createUrl('/video/view', array('id'=>$meme->_id, 'url_key'=>
 ?>
 <div class="video-detail">
     <h1><?php echo $meme->title;?></h1>
+    <div><span class="author"><?php
+            $users = WebUsers::model()->getAllUsers();
+            echo 'post by ';
+            echo '<span class="author-name">';
+            if(array_key_exists($meme->created_by,$users)){
+                echo $users[$meme->created_by]['first_name'].' '.$users[$meme->created_by]['last_name'];
+            }else{
+                echo 'Fan2Meme';
+            }
+            echo '</span>';
+            ?></span></div>
     <div class="video-info">
         <img width="100%" src="<?php echo $image;?>" />
     </div>
