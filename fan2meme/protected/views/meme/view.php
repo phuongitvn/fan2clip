@@ -13,10 +13,10 @@ $cs->registerMetaTag($meme->title.Yii::app()->params['metaTags']['description'],
 $link = Yii::app()->createUrl('/video/view', array('id'=>$meme->_id, 'url_key'=>Common::makeFriendlyUrl($meme->title)));
 ?>
 <div class="video-detail">
+    <h1><?php echo $meme->title;?></h1>
     <div class="video-info">
         <img width="100%" src="<?php echo $image;?>" />
     </div>
-    <h1><?php echo $meme->title;?></h1>
     <div class="extra-info"><span class="see" style="float: right"><?php echo $meme->views;?></span>
     <!--<div class="fb-like" data-href="<?php /*echo SITE_URL.Yii::app()->request->url;*/?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
         <span class="twitter">
