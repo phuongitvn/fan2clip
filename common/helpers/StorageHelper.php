@@ -21,4 +21,17 @@ class StorageHelper{
 	
 		return $result;
 	}
+    public static function generalStoragePath($objId,$fileType='jpg',$storage,$isUrl=false)
+    {
+        $year = date('Y');
+        $month = date('m');
+        $day = date('d');
+        $sep = $isUrl?'/':DS;
+        $exPath = $year.$sep.$month.$sep.$day;
+        $filePath = $storage.$sep.$exPath;
+        $fileSystem = new Filesystem();
+        $res = $fileSystem->mkdirs($filePath,'0755');
+        return $filePath.$sep.$objId.'.'.$fileType;
+    }
+
 }

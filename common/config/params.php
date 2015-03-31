@@ -1,6 +1,10 @@
 <?php
 return array(
 	'params'=>array(
+        'storage'       =>'E:',
+        'temp'          =>'E:\tmp',
+        'meme_path'     =>'E:\meme',
+        'meme_url'      =>'http://cdn.fan2meme.com',
 		'site_url'		=>	SITE_URL,
 		'site_path'		=>	SITE_PATH,
 		'storage_path'	=>	SITE_PATH.DS.'storage',

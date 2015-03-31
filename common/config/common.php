@@ -8,7 +8,8 @@ return CMap::mergeArray(
 			'common.models.db.*',
 			'common.models.db._base.*',
 			'common.extensions.giix-components.*',
-			'common.helpers.*'
+			'common.helpers.*',
+            'common.components.*',
 		)
 	)
 );
