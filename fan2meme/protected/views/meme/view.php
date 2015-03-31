@@ -14,7 +14,7 @@ $link = Yii::app()->createUrl('/video/view', array('id'=>$meme->_id, 'url_key'=>
 ?>
 <div class="video-detail">
     <div class="video-info">
-        <img src="<?php echo $image;?>" />
+        <img width="100%" src="<?php echo $image;?>" />
     </div>
     <h1><?php echo $meme->title;?></h1>
     <div class="extra-info"><span class="see" style="float: right"><?php echo $meme->views;?></span>
