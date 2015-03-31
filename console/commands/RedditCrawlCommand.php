@@ -121,7 +121,7 @@ class RedditCrawlCommand extends CConsoleCommand
                         $tubeVideo->link_id = $tube->_id;
                         $tubeVideo->created_datetime = date('Y-m-d H:i:s');
                         $tubeVideo->updated_datetime = date('Y-m-d H:i:s');
-                        $author = rand(1,10);
+                        $author = rand(1,20);
                         $tubeVideo->created_by = $author;
                         $res = $tubeVideo->save();
                         if($res){
