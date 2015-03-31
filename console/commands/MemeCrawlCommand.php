@@ -43,6 +43,7 @@ class MemeCrawlCommand extends CConsoleCommand
                         $meme->type='image';
                         $meme->source = 'lolhappens.com';
                         $meme->status=0;
+                        $meme->created_datetime = date('Y-m-d H:i:s');
                         if($meme->save()){
                             //copy file
                             $storage = Yii::app()->params['meme_path'];
