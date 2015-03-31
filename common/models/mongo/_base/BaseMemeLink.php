@@ -16,6 +16,7 @@ class BaseMemeLink extends EMongoDocument
 	public $status;
 	public $views;
     public $source;
+    public $created_datetime;
 
 	/**
 	 * Returns the static model of the specified AR class.
