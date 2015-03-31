@@ -163,6 +163,8 @@ ul.items-listview li .vil-info{
 }
 .listview ul.items-listview-mini li .wrr-thumb{
     padding-right: 5px;
+    max-height: 215px;
+    overflow: hidden;
 }
 .listview ul.items-listview-mini li h1 a{
     font-size: 12px;
