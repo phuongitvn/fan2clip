@@ -9,6 +9,7 @@ class MemeCrawlCommand extends CConsoleCommand
         $my_file = Yii::app()->params['storage'].DS.'meme_page.txt';
         $handle = fopen($my_file, 'r');
         $page = fread($handle,filesize($my_file));
+        $page = intval($page);
         for($i=$page; $i<($page+2); $i++){
             echo $url = 'http://www.lolhappens.com/page/'.$i;
             echo "\n";
