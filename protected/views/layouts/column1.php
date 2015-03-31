@@ -9,6 +9,7 @@
                         <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'music'));?>">Music</a></li>
                         <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'game'));?>">Game</a></li>
                         <li><a href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'tv'));?>">Movie & TV</a></li>
+                        <li><a href="http://fan2meme.com/" target="_blank">Meme</a></li>
                     </ul>
                 </div>
             </div>
