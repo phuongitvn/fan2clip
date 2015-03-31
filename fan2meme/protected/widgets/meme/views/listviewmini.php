@@ -15,12 +15,12 @@ if(!empty($data)){
         $image = Meme::model()->getAvatarUrl($video->content);
 ?>
         <li class="video-item-list <?php if($i==count($data)) echo 'last_item';?>">
-            <div class="vil-thumb col-3">
+            <div class="vil-thumb col-100">
                 <div class="wrr-thumb">
                     <a href="<?php echo $link;?>"><img alt="<?php echo $video->title;?>" width="100%" src="<?php echo $image;?>" /></a>
                 </div>
             </div>
-            <div class="vil-info col-7">
+            <div class="vil-info col-100">
                 <h1><a href="<?php echo $link;?>"><?php echo $video->title;?></a></h1>
                 <div>
                     <span class="author"><?php

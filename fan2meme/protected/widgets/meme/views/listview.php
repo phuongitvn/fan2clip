@@ -15,12 +15,7 @@ if(!empty($data)){
         $image = Meme::model()->getAvatarUrl($video->content);
 ?>
         <li class="video-item-list <?php if($i==count($data)) echo 'last_item';?>">
-            <div class="vil-thumb col-66">
-                <div class="wrr-thumb">
-                    <a target="_blank" href="<?php echo $link;?>"><img alt="<?php echo $video->title;?>" width="100%" src="<?php echo $image;?>" /></a>
-                </div>
-            </div>
-            <div class="vil-info col-33">
+            <div class="vil-info col-100">
                 <h1><a href="<?php echo $link;?>" target="_blank"><?php echo $video->title;?></a></h1>
                 <div>
                     <span class="author"><?php
@@ -29,7 +24,7 @@ if(!empty($data)){
                         if(array_key_exists($video->created_by,$users)){
                             echo $users[$video->created_by]['first_name'].' '.$users[$video->created_by]['last_name'];
                         }else{
-                            echo 'Fan2Clip';
+                            echo 'Fan2Meme';
                         }
                         echo '</span>';
                         ?></span>
@@ -45,6 +40,11 @@ if(!empty($data)){
                             <img style="vertical-align: top;height: 28px" src="/images/facebook.png" />
                         </a>
                     </span>
+                </div>
+            </div>
+            <div class="vil-thumb col-100">
+                <div class="wrr-thumb">
+                    <a target="_blank" href="<?php echo $link;?>"><img alt="<?php echo $video->title;?>" width="100%" src="<?php echo $image;?>" /></a>
                 </div>
             </div>
         </li>
