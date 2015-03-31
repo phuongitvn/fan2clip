@@ -6,7 +6,10 @@ class MemeCrawlCommand extends CConsoleCommand
     //#php E:\source\gcms\fan2clip\trunk\console.php MemeCrawl
     public function actionIndex()
     {
-        for($i=1; $i<2; $i++){
+        $my_file = Yii::app()->params['storage'].DS.'meme_page.txt';
+        $handle = fopen($my_file, 'r');
+        $page = fread($handle,filesize($my_file));
+        for($i=$page; $i<($page+2); $i++){
             echo $url = 'http://www.lolhappens.com/page/'.$i;
             echo "\n";
             $html = file_get_html($url);
@@ -69,10 +72,15 @@ class MemeCrawlCommand extends CConsoleCommand
                 }
                 echo 'File source:'.$img."<br />";
                 echo 'File dest:'.$fileDesc."<br />";
-                exit;
                 $j++;
             }
         }
+
+        //write page end
+        $data = $i;
+        $handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
+        fwrite($handle, $data);
+        fclose($handle);
     }
     public function actionView()
     {
