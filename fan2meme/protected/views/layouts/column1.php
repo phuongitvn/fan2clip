@@ -4,8 +4,7 @@
             <div id="menu">
                 <div class="wr-menu wrr-s">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('/site/index', array('genre_key'=>'funny'));?>">Hot</a></li>
+                        <li><a href="/">Top</a></li>
                         <li><a href="http://fan2clip.com/" target="_blank">Movie & TV</a></li>
                     </ul>
                 </div>
