@@ -1,7 +1,7 @@
 <?php
 class MemeController extends Controller
 {
-    public $layout = 'column1';
+    public $layout = '2column';
     public function actionIndex()
     {
         die('dcm');
