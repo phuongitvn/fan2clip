@@ -1,7 +1,7 @@
 <?php
 $image = Meme::model()->getAvatarUrl($meme->content);
 $cs = Yii::app()->getClientScript();
-$cs->registerMetaTag('Fan2Clip', NULL, NULL, array('property'=>'og:site_name'));
+$cs->registerMetaTag('Fan2Meme', NULL, NULL, array('property'=>'og:site_name'));
 //$cs->registerMetaTag('https://www.facebook.com/pages/Fan2Clip/1571931466409541', NULL, NULL, array('property'=>'fb:admins'));
 $cs->registerMetaTag('417326001770427', NULL, NULL, array('property'=>'fb:app_id'));
 $cs->registerMetaTag(SITE_URL.Yii::app()->request->url, NULL, NULL, array('property' =>'og:url'));
@@ -10,7 +10,7 @@ $cs->registerMetaTag('blog', NULL, NULL, array('property'=>'og:type'));
 $cs->registerMetaTag($image, NULL, NULL, array('property'=>'og:image'));
 $cs->registerMetaTag(time(), NULL, NULL, array('property'=>'og:updated_time'));
 $cs->registerMetaTag($meme->title.Yii::app()->params['metaTags']['description'], NULL, NULL, array('property'=>'og:description'));
-$link = Yii::app()->createUrl('/video/view', array('id'=>$meme->_id, 'url_key'=>Common::makeFriendlyUrl($meme->title)));
+$link = Yii::app()->createUrl('/meme/view', array('id'=>$meme->_id, 'url_key'=>Common::makeFriendlyUrl($meme->title)));
 ?>
 <div class="video-detail">
     <h1><?php echo $meme->title;?></h1>
