@@ -1,5 +1,5 @@
 <?php
-
+define('SITE_URL', 'http://fan2meme.com');
 // change the following paths if necessary
 include_once '../define.php';
 $config=dirname(__FILE__).'/protected/config/web.php';
