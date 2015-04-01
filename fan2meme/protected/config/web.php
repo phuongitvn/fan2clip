@@ -1,5 +1,5 @@
 <?php
-
+define('SITE_URL', 'http://fan2meme.com');
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
