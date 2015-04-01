@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
     <meta name="MobileOptimized" content="100" />
 
-    <link rel="canonical" href="<?php echo SITE_URL.Yii::app()->request->url;?>" />
+    <link rel="canonical" href="<?php echo SITE_MEME_URL.Yii::app()->request->url;?>" />
     <meta name="robots" content="follow, index" />
 	<title><?php echo CHtml::encode($this->pageTitle)." | ".Yii::app()->name; ?></title>
     <link rel="icon" href="/images/favicon.ico">
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="/js/core.js"></script>
     <?php
     $cs = Yii::app()->getClientScript();
-    $cs->registerMetaTag('Video Hot, Video News, Funny', 'title', NULL);
+    $cs->registerMetaTag('Funny pics, GIFs, videos, memes, cute', 'title', NULL);
     $cs->registerMetaTag('You are looking at the Fan2Meme.com! Fan2Meme.com is the easiest way to have fun!', 'description', NULL);
     $cs->registerMetaTag('fan2meme,jokes,interesting,cool,fun collection, prank, admire,fun,humor,humour,just for fun.', 'keywords', NULL);
     ?>

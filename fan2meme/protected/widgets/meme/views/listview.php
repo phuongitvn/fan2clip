@@ -32,11 +32,11 @@ if(!empty($data)){
                 </div>
                 <div class="social">
                     <span class="twitter">
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo SITE_URL.$link;?>" data-text="<?php echo CHtml::encode($video->title);?>" data-size="large" data-count="none">Tweet</a>
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo SITE_MEME_URL.$link;?>" data-text="<?php echo CHtml::encode($video->title);?>" data-size="large" data-count="none">Tweet</a>
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                     </span>
                     <span>
-                        <a title="<?php echo CHtml::encode($video->title);?>" href="http://www.facebook.com/sharer.php?u=<?php echo urlencode(SITE_URL.$link);?>&amp;t=<?php echo urlencode($video->title);?>" target="_blank">
+                        <a title="<?php echo CHtml::encode($video->title);?>" href="http://www.facebook.com/sharer.php?u=<?php echo urlencode(SITE_MEME_URL.$link);?>&amp;t=<?php echo urlencode($video->title);?>" target="_blank">
                             <img style="vertical-align: top;height: 28px" src="/images/facebook.png" />
                         </a>
                     </span>
