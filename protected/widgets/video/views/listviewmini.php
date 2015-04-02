@@ -18,7 +18,7 @@ if(!empty($data)){
             $thumb = 'https://i.ytimg.com/vi/'.$video->code.'/hqdefault.jpg';
         }
 ?>
-        <li class="video-item-list <?php if($i==count($data)) echo 'last_item';?>">
+        <li class="video-item-list <?php if($i==10) echo 'last_item';?>">
             <div class="vil-thumb col-3">
                 <div class="wrr-thumb">
                     <a href="<?php echo $link;?>"><img alt="<?php echo $video->name;?>" width="100%" src="<?php echo $thumb;?>" /></a>

@@ -25,6 +25,19 @@ $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id, 'url_key'=
         <?php }?>
     </div>
     <h1><?php echo $video->name;?></h1>
+    <div>
+        <span class="author"><?php
+            $users = WebUsers::model()->getAllUsers();
+            echo 'post by ';
+            echo '<span class="author-name">';
+            if(array_key_exists($video->created_by,$users)){
+                echo $users[$video->created_by]['first_name'].' '.$users[$video->created_by]['last_name'];
+            }else{
+                echo 'Fan2Meme';
+            }
+            echo '</span>';
+            ?></span>
+    </div>
     <div class="extra-info"><span class="see" style="float: right"><?php echo $video->views;?></span>
     <!--<div class="fb-like" data-href="<?php /*echo SITE_URL.Yii::app()->request->url;*/?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
         <span class="twitter">
