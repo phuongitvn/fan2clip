@@ -13,8 +13,8 @@ class SiteController extends Controller
         );
         $total = Meme::model()->count($c);
         $pager = new CPagination($total);
-        $itemOnPaging = 5;
-        $pager->pageSize = 15;
+        $itemOnPaging = 3;
+        $pager->pageSize = 10;
         $curr_page = $pager->getCurrentPage();
 
         $limit = $pager->getLimit();
