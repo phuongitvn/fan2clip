@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: phuongnv
- * Date: 3/8/2015
- * Time: 8:22 PM
- */
 if(!empty($data)){
     echo '<div class="listview">';
     echo '<ul class="items-listview items-listview-'.$this->layout.'">';
@@ -14,7 +8,7 @@ if(!empty($data)){
         $link = Yii::app()->createUrl('/meme/view', array('id'=>$video->_id,'url_key'=>Common::makeFriendlyUrl($video->title)));
         $image = Meme::model()->getAvatarUrl($video->content);
 ?>
-        <li class="video-item-list <?php if($i==count($data)) echo 'last_item';?>">
+        <li class="video-item-list <?php if($i==10) echo 'last_item';?>">
             <div class="vil-thumb col-100">
                 <div class="wrr-thumb">
                     <a href="<?php echo $link;?>"><img alt="<?php echo $video->title;?>" width="100%" src="<?php echo $image;?>" /></a>
