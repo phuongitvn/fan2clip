@@ -29,7 +29,7 @@ p{
     overflow: hidden;
 }
 .wrr-s{
-    width: 960px;
+    width: 1080px;
     margin: 0 auto;
 }
 #menu{
@@ -87,6 +87,16 @@ p{
     float: left;
     min-height: 100px;
 }
+.col-60{
+    width: 60%;
+    float: left;
+    min-height: 100px;
+}
+.col-40{
+    width: 40%;
+    float: left;
+    min-height: 100px;
+}
 .wr-col-r{
     padding: 10px;
 }
@@ -125,7 +135,7 @@ ul.items-listview{
 ul.items-listview .last_item{
     border-bottom: 0;
 }
-ul.items-listview li{
+ul.items-listview>li{
     list-style-type: none;
     overflow: hidden;
     width: 100%;
@@ -339,4 +349,7 @@ ul.social-like li{
 }
 .share-info{
     margin-bottom: 10px;
+}
+.share-twitter{
+    width: 80px;
 }
