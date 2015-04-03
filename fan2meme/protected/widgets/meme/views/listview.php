@@ -28,18 +28,15 @@ if(!empty($data)){
                         }
                         echo '</span>';
                         ?></span>
-                    <span class="see"><?php echo $video->views;?></span>
                 </div>
-                <div class="social">
-                    <span class="twitter">
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo SITE_MEME_URL.$link;?>" data-text="<?php echo CHtml::encode($video->title);?>" data-size="large" data-count="none">Tweet</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                    </span>
-                    <span>
-                        <a title="<?php echo CHtml::encode($video->title);?>" href="http://www.facebook.com/sharer.php?u=<?php echo urlencode(SITE_MEME_URL.$link);?>&amp;t=<?php echo urlencode($video->title);?>" target="_blank">
-                            <img style="vertical-align: top;height: 28px" src="/images/facebook.png" />
-                        </a>
-                    </span>
+                <div class="pos">
+                    <span class="see pos-l" style="margin: 3px 10px 0 0;"><?php echo $video->views;?></span>
+                    <div class="social pos-r">
+                        <?php $this->widget('common.widgets.social.ShareButtonWidget', array(
+                            'url_share'=>SITE_MEME_URL.$link,
+                            'title_share'=>$video->title
+                        ));?>
+                    </div>
                 </div>
             </div>
             <div class="vil-thumb col-100">
