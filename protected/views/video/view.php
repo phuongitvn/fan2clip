@@ -17,6 +17,7 @@ $cs->registerMetaTag('Clip video hot, funny, news on World '.$video->name, NULL,
 $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id, 'url_key'=>Common::makeFriendlyUrl($video->name)));
 ?>
 <div class="video-detail">
+    <h1><?php echo $video->name;?></h1>
     <div class="video-info">
         <?php if(isset($video->type) && $video->type=='vimeo'){?>
             <iframe id="media-player" src="https://player.vimeo.com/video/<?php echo $video->code;?>?autoplay=1&color=ffffff&title=0&byline=0&portrait=0" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -24,9 +25,8 @@ $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id, 'url_key'=
         <iframe width="100%" id="media-player" frameborder="0" allowfullscreen="1" src="http://www.youtube.com/embed/<?php echo $video->code;?>?theme=light&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&nologo=1&vq=large&autoplay=0&ps=docs" ></iframe>
         <?php }?>
     </div>
-    <h1><?php echo $video->name;?></h1>
-    <div>
-        <span class="author"><?php
+    <div class="extra-info pos">
+        <span class="author pos-l"><?php
             $users = WebUsers::model()->getAllUsers();
             echo 'post by ';
             echo '<span class="author-name">';
@@ -37,18 +37,19 @@ $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id, 'url_key'=
             }
             echo '</span>';
             ?></span>
+        <div class="pos-r">
+            <span class="see fl" style="margin: 3px 10px 0 0;"><?php echo $video->views;?></span>
+            <?php $this->widget('common.widgets.social.LikeButtonWidget', array(
+                'url_like'=>SITE_URL.$link,
+                'class'=>'fl'
+            ));?>
+        </div>
     </div>
-    <div class="extra-info"><span class="see" style="float: right"><?php echo $video->views;?></span>
-    <!--<div class="fb-like" data-href="<?php /*echo SITE_URL.Yii::app()->request->url;*/?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
-        <span class="twitter">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo SITE_URL.$link;?>" data-text="<?php echo CHtml::encode($video->name);?>" data-size="large" data-count="none">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        </span>
-        <span>
-            <a title="<?php echo CHtml::encode($video->name);?>" href="http://www.facebook.com/sharer.php?u=<?php echo urlencode(SITE_URL.$link);?>&amp;t=<?php echo urlencode($video->name);?>" target="_blank">
-                <img style="vertical-align: top;height: 28px" src="/images/facebook.png" />
-            </a>
-        </span>
+    <div class="share-info">
+        <?php $this->widget('common.widgets.social.ShareButtonWidget', array(
+            'url_share'=>SITE_URL.$link,
+            'title_share'=>$video->name
+        ));?>
     </div>
     <div class="fb-comments" data-href="<?php echo SITE_URL.Yii::app()->request->url;?>" data-numposts="5" data-colorscheme="light" width="100%" data-width="100%"></div>
 </div>
