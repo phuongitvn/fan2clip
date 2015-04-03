@@ -138,16 +138,20 @@ ul.items-listview{
 ul.items-listview .last_item{
     border-bottom: 0;
 }
-ul.items-listview li{
+ul.items-listview>li{
     list-style-type: none;
     overflow: hidden;
     width: 100%;
     margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
 }
-ul.items-listview li h1{
+ul.items-listview>li h1{
     margin-bottom: 5px;
     margin-top: 0;
+}
+ul.items-listview>li .social{
+    text-align: right;
+    margin-bottom: 5px;
 }
 ul.items-listview li h1 a{
     font-size: 16px;
@@ -318,6 +322,7 @@ span.icon-arr-l{
 .extra-info{
     margin-bottom: 20px;
     margin-top: 10px;
+    height: 25px;
 }
 .author{
     font-size: 11px;
@@ -325,4 +330,34 @@ span.icon-arr-l{
 .author-name{
     color: #2F61AE;
     font-weight: bold;
+}
+.pos{
+    position: relative;
+    min-height: 25px;
+}
+.pos-r{
+    position: absolute;
+    right: 0;
+}
+.pos-l{
+    position: absolute;
+    left: 0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+ul.social-share,
+ul.social-like{
+    margin: 0;
+    padding: 0;
+}
+.social-share li,
+ul.social-like li{
+    display: inline-block;
+}
+.share-info{
+    margin-bottom: 10px;
 }
