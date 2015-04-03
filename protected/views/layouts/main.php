@@ -35,10 +35,10 @@
         .mobile-screen .wrr-s{
             width: 100%
         }
-        .mobile-screen .items-listview .video-item-list .col-66{
+        .mobile-screen .items-listview .video-item-list .col-60{
             width: 40%
         }
-        .mobile-screen .items-listview .video-item-list .col-33{
+        .mobile-screen .items-listview .video-item-list .col-40{
             width: 58%
         }
         .col-f{
