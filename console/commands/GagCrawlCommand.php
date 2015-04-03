@@ -59,7 +59,8 @@ class GagCrawlCommand extends CConsoleCommand
                 foreach($main->find(".badge-grid-item") as $e){
                     $etitle = $e->find(".item div.info a.title h4",0);
                     if($etitle){
-                        $title = $etitle->innertext;
+                        //$title = $etitle->innertext;
+                        $title = $etitle->plaintext;
                         $url = $e->find(".item div.info a",0)->href;
                     }else{
                         continue;
