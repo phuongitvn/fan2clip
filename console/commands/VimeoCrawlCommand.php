@@ -20,7 +20,7 @@ class VimeoCrawlCommand extends CConsoleCommand
                     $link = $e->find("a", 0)->href;
                     $thumb = $e->find("a img", 0)->src;
                     //$title = $e->find("a div.data p.title", 0)->innertext;
-                    $title = $e->find("a div.data p.title", 0)->plaintext;
+                    $title = html_entity_decode($e->find("a div.data p.title", 0)->plaintext);
                     $vimeoId = $e->id;
                     $vimeoId = str_replace('clip_', '', $vimeoId);
                     if (!empty($vimeoId) && !$this->isExistsCode($vimeoId)) {
