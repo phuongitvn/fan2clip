@@ -5,20 +5,8 @@ class SiteController extends Controller
     {
         $page = Yii::app()->request->getParam('page',1);
 
-        $c = array(
-            'conditions'=>array(
-                'status'=>array('==' => 1),
-                //'genre'=>array('notExists'),
-            ),
-        );
-        $total = Meme::model()->count($c);
-        $pager = new CPagination($total);
-        $itemOnPaging = 3;
-        $pager->pageSize = 10;
-        $curr_page = $pager->getCurrentPage();
-
-        $limit = $pager->getLimit();
-        $offset = $pager->getOffset();
+        $limit = 10;
+        $offset = ($page-1)*$limit;
         $c = array(
             'conditions'=>array(
                 'status'=>array('==' => 1),
@@ -30,9 +18,6 @@ class SiteController extends Controller
         $meme = Meme::model()->findAll($c);
         $this->render('index', array(
             'data'=>$meme,
-            'pager'=>$pager,
-            'total'=>$total,
-            'itemOnPaging'=>$itemOnPaging,
             'page'=>$page
         ));
     }
