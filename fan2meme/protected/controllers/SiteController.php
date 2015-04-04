@@ -28,12 +28,12 @@ class SiteController extends Controller
             'offset'=> $offset
         );
         $meme = Meme::model()->findAll($c);
-        $memeHot = Meme::model()->getHotMeme();
         $this->render('index', array(
             'data'=>$meme,
             'pager'=>$pager,
-            'dataHot'=>$memeHot,
-            'itemOnPaging'=>$itemOnPaging
+            'total'=>$total,
+            'itemOnPaging'=>$itemOnPaging,
+            'page'=>$page
         ));
     }
     public function actionChecktimeliked(){
