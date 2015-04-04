@@ -278,8 +278,10 @@ span.icon-arr-l{
     left: 10px;
     top: 10px;
 }
-.loadmore{
+.loadmore a{
     width: 100%;
+    text-align: center;
+    padding: 10px 0;
 }
 .wr-paging{
     text-align: center;
