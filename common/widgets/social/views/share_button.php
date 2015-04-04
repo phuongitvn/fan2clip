@@ -3,7 +3,7 @@
         <div class="fb-share-button" data-href="<?php echo $url_share;?>" data-layout="button_count"></div>
     </li>
     <li class="share-google">
-        <g:plus action="share" annotation="bubble" data-href="<?php echo $url_share;?>"></g:plus>
+        <g:plus action="share" annotation="bubble" href="<?php echo $url_share;?>"></g:plus>
     </li>
     <li class="share-twitter">
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_share;?>" data-text="<?php echo CHtml::encode($title_share);?>" data-size="small" data-count="box">Tweet</a>
