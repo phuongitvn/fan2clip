@@ -21,6 +21,10 @@ class SiteController extends Controller
             'page'=>$page
         ));
     }
+    public function actionContact()
+    {
+        $this->render('contact');
+    }
     public function actionChecktimeliked(){
         $timeLiked = Yii::app()->session['last_time_liked'];
         if($timeLiked < (time() - 5)){
