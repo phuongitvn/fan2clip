@@ -61,7 +61,7 @@ class GoogleController extends Controller
         else
         {
             //For Guest user, get google login url
-            $authUrl = $gClient->createAuthUrl();
+            echo $authUrl = $gClient->createAuthUrl();
         }
         if(isset($user)){
             echo '<pre>';print_r($user);
