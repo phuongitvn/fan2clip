@@ -3,7 +3,7 @@ include_once SITE_PATH.DS.'common'.DS.'extensions'.DS.'google-sdk'.DS.'Google_Cl
 include_once SITE_PATH.DS.'common'.DS.'extensions'.DS.'google-sdk'.DS.'contrib'.DS.'Google_Oauth2Service.php';
 class GoogleController extends Controller
 {
-    public function actionOauth2callback()
+    public function actionLogin()
     {
         $authUrl='';
         $google_client_id = Yii::app()->params['google']['google_client_id'];
@@ -68,6 +68,6 @@ class GoogleController extends Controller
         }else{
             echo 'fail';
         }
-        exit;
+        $this->render('login',compact('authUrl'));
     }
 }
