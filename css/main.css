@@ -425,13 +425,13 @@ ul.social-like li{
 .icon-app{
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 0;
 }
 .icon-app i{
     display: block;
-    width: 35px;
-    height: 25px;
-    background: url(../images/app.png) no-repeat;
+    width: 46px;
+    height: 46px;
+    background: url(../images/app.png) no-repeat center center;
 }
 .show{
     display: block!important;
