@@ -83,7 +83,7 @@ return CMap::mergeArray(
         'google'=>array(
             'google_client_id'=>'948402294570-j7n1ka7lmpro0hsmem6vid0gr335eom5.apps.googleusercontent.com',
             'google_client_secret'=>'wPUfdCqwR7s7kPXVWUPwxO19',
-            'google_redirect_url'=>'http://fan2meme.com/google/oauth2callback',
+            'google_redirect_url'=>'http://fan2meme.com/google/login',
             'google_developer_key'=>'AIzaSyAXBSAj7G_AYd03AJwS8OilfRRPPWnZysA'
         ),
 		// this is used in contact page
