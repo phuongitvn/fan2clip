@@ -1,7 +1,7 @@
 <?php
 class FacebookController extends Controller
 {
-    public $layout='main2';
+    public $layout='//layouts/main2';
     public function actionChannel()
     {
         $this->layout=false;
