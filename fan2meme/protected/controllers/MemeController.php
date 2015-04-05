@@ -20,15 +20,7 @@ class MemeController extends Controller
                 Yii::app()->session['visit.' . $id] = time();
             }
         }
-        $c = array(
-            'conditions'=>array(
-                'status'=>array('equals' => 1)
-            ),
-            'sort'=>array('_id'=>EMongoCriteria::SORT_DESC),
-            'limit'=>10
-        );
-        $data = Meme::model()->findAll($c);
-        $this->render('view', compact('meme','data'));
+        $this->render('view', compact('meme'));
     }
     public function actionGenre()
     {
