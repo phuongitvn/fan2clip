@@ -5,35 +5,6 @@ $action = Yii::app()->controller->action->id;
 $genre_key = Yii::app()->request->getParam('genre_key');
 ?>
     <div id="wrr-main">
-        <!--<div id="header">
-            <div id="menu">
-                <div class="wr-menu wrr-s">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="<?php /*echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'funny'));*/?>">Funny</a></li>
-                        <li><a href="<?php /*echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'music'));*/?>">Music</a></li>
-                        <li><a href="<?php /*echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'game'));*/?>">Game</a></li>
-                        <li><a href="<?php /*echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'tv'));*/?>">Movie & TV</a></li>
-                        <li><a href="http://fan2meme.com/" target="_blank">Meme</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="logo">
-                <div class="wrr-header wrr-s">
-                    <div class="logo col-3">
-                        <a href="/"><img width="155" src="/images/logo.png" /></a>
-                    </div>
-                    <div class="search col-7">
-                        <div class="wrr-search">
-                            <form action="/search" method="get">
-                                <input type="text" id="keyword" name="key" value="<?php /*echo isset($_GET['key'])?$_GET['key']:'';*/?>" />
-                                <input type="submit" value="Search" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
         <header>
             <div class="wrr-header  wrr-s">
                 <div id="logo">
@@ -51,6 +22,7 @@ $genre_key = Yii::app()->request->getParam('genre_key');
                         </ul>
                     </div>
                 </div>
+                <span id="sb-mn" class="icon-app"><i></i></span>
             </div>
         </header>
         <div id="main-body">
