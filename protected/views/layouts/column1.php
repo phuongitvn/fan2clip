@@ -8,7 +8,7 @@ $genre_key = Yii::app()->request->getParam('genre_key');
         <header>
             <div class="wrr-header  wrr-s">
                 <div id="logo">
-                    <h1><a href="/"><img style="margin-top: 10px" width="155" src="/images/logo.png" /></a></h1>
+                    <h1><a href="/"><img style="margin-top: 10px;margin-left: 5px;" width="155" src="/images/logo.png" /></a></h1>
                 </div>
                 <div id="menu">
                     <div class="wr-menu">
