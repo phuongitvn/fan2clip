@@ -56,7 +56,7 @@ class GoogleController extends Controller
                 $_SESSION['token'] = $gClient->getAccessToken();
             } else {
                 //For Guest user, get google login url
-                echo $authUrl = $gClient->createAuthUrl();
+                $authUrl = $gClient->createAuthUrl();
             }
             if (isset($user)) {
                 echo '<pre>';
