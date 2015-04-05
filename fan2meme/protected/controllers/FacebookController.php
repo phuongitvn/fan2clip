@@ -1,4 +1,6 @@
 <?php
+Yii::import('common.extensions.facebook-php-sdk-master.src.base_facebook');
+Yii::import('common.extensions.facebook-php-sdk-master.src.facebook');
 class FacebookController extends Controller
 {
     public $layout='//layouts/main2';
