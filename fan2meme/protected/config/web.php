@@ -36,7 +36,7 @@ return CMap::mergeArray(
 			'urlFormat'=>'path',
 			'rules'=>array(
 				'home'=>'site/index',
-				'<action:(login|logout|about|index|checktimeliked|yahoo)>' => 'site/<action>',
+				'<action:(login|logout|about|index|checktimeliked|contact)>' => 'site/<action>',
                 'meme/<genre_key:[a-zA-Z0-9-]+>' => 'meme/genre',
                 '<_c:\w+>/<url_key:[a-zA-Z0-9-]+>,<id:\w+>' => '<_c>/view',
                 '<_c:\w+>' => '<_c>/index',
