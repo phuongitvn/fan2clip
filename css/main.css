@@ -368,3 +368,69 @@ ul.social-like li{
 .share-twitter{
     width: 80px;
 }
+/*css for mobile*/
+@media (min-width: 0px) and (max-width: 600px)  {
+    .col-f{
+        width: 100%;
+    }
+    .col-hide{
+        display: none;
+    }
+}
+#sb-mn{
+    display: none;
+ }
+@media only screen and (min-device-width: 240px) and (max-device-width: 568px){
+    /* Styles */
+    .mobile-screen .wrr-s{
+        width: 100%
+    }
+    .mobile-screen .items-listview .video-item-list .col-60{
+        width: 40%
+    }
+    .mobile-screen .items-listview .video-item-list .col-40{
+        width: 58%
+    }
+    .col-f{
+        width: 100%;
+    }
+    .col-hide{
+        display: none;
+    }
+    .mobile-screen #menu{
+        position: fixed;
+        right: 0;
+        top: 46px;
+        bottom:0;
+        background: #333;
+        display: none;
+    }
+    .mobile-screen #menu ul li{
+        float: none;
+        border-bottom: 1px solid #3C3C3C;
+        padding-right: 50px;
+    }
+    .mobile-screen #sb-mn{
+        display: block;
+    }
+    .mobile-screen #menu ul li a.active{
+        border-bottom: 0;
+        background: none;
+        font-weight: normal;
+    }
+}
+/*css for mobile*/
+.icon-app{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.icon-app i{
+    display: block;
+    width: 35px;
+    height: 25px;
+    background: url(../images/app.png) no-repeat;
+}
+.show{
+    display: block!important;
+}
