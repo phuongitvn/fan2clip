@@ -165,6 +165,9 @@ ul.items-listview li .wrr-thumb{
     padding-top: 0;
     padding-bottom: 10px;
 }
+ul.items-listview li .wrr-thumb img{
+    max-width: 500px;
+}
 ul.items-listview li .vil-info{
     font-size: 13px;
 }
