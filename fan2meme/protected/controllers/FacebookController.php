@@ -1,6 +1,6 @@
 <?php
-include_once SITE_PATH.'common'.DS.'extensions'.DS.'facebook-php-sdk-master'.DS.'src'.DS.'base_facebook.php';
-include_once SITE_PATH.'common'.DS.'extensions'.DS.'facebook-php-sdk-master'.DS.'src'.DS.'facebook.php';
+include_once SITE_PATH.DS.'common'.DS.'extensions'.DS.'facebook-php-sdk-master'.DS.'src'.DS.'base_facebook.php';
+include_once SITE_PATH.DS.'common'.DS.'extensions'.DS.'facebook-php-sdk-master'.DS.'src'.DS.'facebook.php';
 class FacebookController extends Controller
 {
     public $layout='//layouts/main2';
