@@ -1,3 +1,7 @@
+<?php
+$controller = Yii::app()->controller->id;
+$action = Yii::app()->controller->action->id;
+?>
 <?php $this->beginContent('//layouts/main'); ?>
     <div id="wrr-main">
         <header>
@@ -8,7 +12,7 @@
                 <div id="menu">
                     <div class="wr-menu">
                         <ul>
-                            <li><a href="/" class="active">Hot</a></li>
+                            <li><a href="/" <?php if($controller=='site' && $action=='index'){?>class="active"<?php }?>>Hot</a></li>
                             <li><a href="http://fan2clip.com/" target="_blank">Movie & TV</a></li>
                         </ul>
                     </div>
