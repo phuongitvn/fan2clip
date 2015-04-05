@@ -78,7 +78,7 @@ return CMap::mergeArray(
             'appId'=>'1378047459169699',
             'appSecret'=>'e40e73cf1353003fb16f64f7f2a898ed',
             'return_url'=>'http://fan2meme.com/user/profile',
-            'fbPermissions'=>'publish_actions,email,user_friends'
+            'fbPermissions'=>'publish_actions,email'
         ),
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
