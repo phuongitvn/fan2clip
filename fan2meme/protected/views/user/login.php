@@ -76,3 +76,5 @@ else
     }
 
 </script>
+
+<a class="login" href="http://fan2meme.com/google/oauth2callback"><img src="/images/google_share.png" /></a>
