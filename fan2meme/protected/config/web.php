@@ -75,10 +75,10 @@ return CMap::mergeArray(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
         'facebook'=>array(
-            'appId'=>'1378047459169699',
-            'appSecret'=>'e40e73cf1353003fb16f64f7f2a898ed',
+            'appId'=>'318193994923328',
+            'appSecret'=>'b20bd1f388b8da69c279bf3f97d9d064',
             'return_url'=>'http://fan2meme.com/user/profile',
-            'fbPermissions'=>'publish_actions,email'
+            'fbPermissions'=>'public_profile,email'
         ),
         'google'=>array(
             'google_client_id'=>'948402294570-j7n1ka7lmpro0hsmem6vid0gr335eom5.apps.googleusercontent.com',
