@@ -77,7 +77,7 @@ return CMap::mergeArray(
         'facebook'=>array(
             'appId'=>'318193994923328',
             'appSecret'=>'b20bd1f388b8da69c279bf3f97d9d064',
-            'return_url'=>'http://fan2meme.com/user/profile',
+            'return_url'=>'http://fan2meme.com/user/login',
             'fbPermissions'=>'public_profile,email'
         ),
         'google'=>array(
