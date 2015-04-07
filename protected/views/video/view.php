@@ -13,7 +13,7 @@ $cs->registerMetaTag(preg_replace("/&#?[a-z0-9]+;/i","",$video->name), NULL, NUL
 $cs->registerMetaTag('blog', NULL, NULL, array('property'=>'og:type'));
 $cs->registerMetaTag($thumb, NULL, NULL, array('property'=>'og:image'));
 $cs->registerMetaTag(time(), NULL, NULL, array('property'=>'og:updated_time'));
-$cs->registerMetaTag('Clip video hot, funny, news on World '.$video->name, NULL, NULL, array('property'=>'og:description'));
+$cs->registerMetaTag('Clip video hot, funny, news on World '.strip_tags($video->name), NULL, NULL, array('property'=>'og:description'));
 $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id, 'url_key'=>Common::makeFriendlyUrl($video->name)));
 ?>
 <div class="video-detail">
