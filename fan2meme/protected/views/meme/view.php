@@ -5,11 +5,11 @@ $cs->registerMetaTag('Fan2Meme', NULL, NULL, array('property'=>'og:site_name'));
 //$cs->registerMetaTag('https://www.facebook.com/pages/Fan2Clip/1571931466409541', NULL, NULL, array('property'=>'fb:admins'));
 $cs->registerMetaTag('417326001770427', NULL, NULL, array('property'=>'fb:app_id'));
 $cs->registerMetaTag(SITE_MEME_URL.Yii::app()->request->url, NULL, NULL, array('property' =>'og:url'));
-$cs->registerMetaTag($meme->title, NULL, NULL, array('property'=>'og:title'));
+$cs->registerMetaTag(preg_replace("/&#?[a-z0-9]+;/i","",$meme->title), NULL, NULL, array('property'=>'og:title'));
 $cs->registerMetaTag('blog', NULL, NULL, array('property'=>'og:type'));
 $cs->registerMetaTag($image, NULL, NULL, array('property'=>'og:image'));
 $cs->registerMetaTag(time(), NULL, NULL, array('property'=>'og:updated_time'));
-$cs->registerMetaTag($meme->title.Yii::app()->params['metaTags']['description'], NULL, NULL, array('property'=>'og:description'));
+$cs->registerMetaTag(strip_tags($meme->title).' '.Yii::app()->params['metaTags']['description'], NULL, NULL, array('property'=>'og:description'));
 $link = Yii::app()->createUrl('/meme/view', array('id'=>$meme->_id, 'url_key'=>Common::makeFriendlyUrl($meme->title)));
 ?>
 <div class="video-detail">
