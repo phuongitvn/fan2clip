@@ -16,7 +16,7 @@ if(!empty($data)){
 ?>
         <li class="video-item-list <?php if($i==count($data)) echo 'last_item';?>">
             <div class="vil-info col-100">
-                <h1><a href="<?php echo $link;?>" target="_blank"><?php echo $video->title;?></a></h1>
+                <h1><a href="<?php echo $link;?>"><?php echo $video->title;?></a></h1>
                 <div>
                     <span class="author"><?php
                         echo 'post by ';
@@ -41,7 +41,7 @@ if(!empty($data)){
             </div>
             <div class="vil-thumb col-100">
                 <div class="wrr-thumb">
-                    <a target="_blank" href="<?php echo $link;?>"><img alt="<?php echo $video->title;?>" width="100%" src="<?php echo $image;?>" /></a>
+                    <a href="<?php echo $link;?>"><img alt="<?php echo $video->title;?>" width="100%" src="<?php echo $image;?>" /></a>
                 </div>
             </div>
         </li>
