@@ -29,12 +29,13 @@ $genre_key = Yii::app()->request->getParam('genre_key');
             <div class="wrap-inner container wrr-s">
                 <div class="wrr-page-content">
                     <div class="col-66 col-f">
-						<div class="wrr-search">
+						<!--<div class="wrr-search">
                             <form action="/search" method="get">
-                                <input type="text" id="keyword" name="key" value="<?php echo isset($_GET['key'])?$_GET['key']:'';?>" />
+                                <input type="text" id="keyword" name="key" value="<?php //echo isset($_GET['key'])?$_GET['key']:'';?>" />
                                  <input type="submit" value="Search" />
                              </form>
                         </div>
+						-->
                         <div class="wr-col-c">
                             <?php echo $content; ?>
                         </div>
