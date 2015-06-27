@@ -67,6 +67,7 @@ class RedditCrawlCommand extends CConsoleCommand
     //php E:\source\gcms\fan2clip\trunk\console.php RedditCrawl view
     public function actionView()
     {
+        $log = new Klogger('log_getvideo',KLogger::INFO);
         try{
             $array = array(
                 'conditions'=>array(
@@ -82,6 +83,7 @@ class RedditCrawlCommand extends CConsoleCommand
             $f=0;
             foreach ($tubeLink as $tube) {
                 if($tube->code!='') {
+                    $log->LogInfo("start with tube code:".$tube->code, false);
                     echo $link = 'https://www.youtube.com/watch?v=' . $tube->code;
                     $html = file_get_html($link);
                     if(is_object($html)) {
@@ -124,13 +126,23 @@ class RedditCrawlCommand extends CConsoleCommand
                         $author = rand(1,20);
                         $tubeVideo->created_by = $author;
                         $res = $tubeVideo->save();
+                        $log->LogInfo("update video res:".json_encode($res), false);
                         if($res){
                             $i++;
+                            //update tube link
+                            $tubeLinkUpdate = TubeVideoLink::model()->findByPk($tube->_id);
+                            $tubeLinkUpdate->status = 1;
+                            $tubeLinkUpdate->updated_datetime = date('Y-m-d H:i:s');
+                            $res2 = $tubeLinkUpdate->save();
+                            var_dump($res2);
+                            $log->LogInfo("update tube link res:".json_encode($res2), false);
                         }else{
                             $f++;
+                            $errors = $tubeVideo->getErrors();
+                            echo '<pre>';print_r($errors);
+                            $log->LogInfo("update fail ".json_encode($errors), false);
                         }
-                        $errors = $tubeVideo->getErrors();
-                        echo '<pre>';print_r($errors);
+
                         echo "\n";
                         var_dump($res);
 
@@ -138,12 +150,6 @@ class RedditCrawlCommand extends CConsoleCommand
                         echo "\n";
                     }
                 }
-                //update tube link
-                $tubeLinkUpdate = TubeVideoLink::model()->findByPk($tube->_id);
-                $tubeLinkUpdate->status = 1;
-                $tubeLinkUpdate->updated_datetime = date('Y-m-d H:i:s');
-                $res2 = $tubeLinkUpdate->save();
-                var_dump($res2);
             }
             echo $i.' videos added success, '.$f.' videos fail';
 
