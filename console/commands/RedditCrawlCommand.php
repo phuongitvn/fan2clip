@@ -72,7 +72,7 @@ class RedditCrawlCommand extends CConsoleCommand
             $array = array(
                 'conditions'=>array(
                     // field name => operator definition
-                    'status'=>array('equals' => 0), // Or 'FieldName1'=>array('>=', 10)
+                    'status'=>array('==' => (int) 0), // Or 'FieldName1'=>array('>=', 10)
                 ),
                 'limit'=>10,
                 'offset'=>0,
