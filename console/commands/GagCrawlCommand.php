@@ -77,7 +77,7 @@ class GagCrawlCommand extends CConsoleCommand
 					if($html2){
 						$checkCode = $this->isExistsCode($tubeCode);
 						echo 'Tube Code: '.$tubeCode."\n";
-						if(!empty($tubeCode) && !$checkCode) {
+						if(!empty($tubeCode) && $checkCode==false) {
 							$model = new TubeVideoLink();
 							$model->title = trim($title);
 							$model->link = trim($url);
@@ -109,11 +109,11 @@ class GagCrawlCommand extends CConsoleCommand
     {
         $c = array(
             'conditions'=>array(
-                'code'=>array('equals' => $code)
+                'code'=>array('==' => string($code))
             ),
             'limit'=>1,
         );
         $video = TubeVideoLink::model()->find($c);
-        return $video?true:false;
+        return !empty($video)?true:false;
     }
 }
