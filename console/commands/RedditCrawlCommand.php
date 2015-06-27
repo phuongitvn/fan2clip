@@ -1,4 +1,5 @@
 <?php
+include_once _APP_PATH_.'/common/components/Klogger.php';
 /**
  * Created by PhpStorm.
  * User: NGUYEN NGOC BAO AN
