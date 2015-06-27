@@ -15,6 +15,7 @@ $genre_key = Yii::app()->request->getParam('genre_key');
                         <ul>
                             <li><a <?php if($controller=='site' && $action=='index') echo 'class="active"'?> href="/">Hot</a></li>
                             <li><a <?php if($controller=='video' && $action=='genre' && $genre_key =='funny') echo 'class="active"'?> href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'funny'));?>">Funny</a></li>
+                            <li><a <?php if($controller=='video' && $action=='genre' && $genre_key =='nsfw') echo 'class="active"'?> href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'nsfw'));?>">NSFW</a></li>
                             <li><a <?php if($controller=='video' && $action=='genre' && $genre_key =='music') echo 'class="active"'?> href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'music'));?>">Music</a></li>
                             <li><a <?php if($controller=='video' && $action=='genre' && $genre_key =='game') echo 'class="active"'?> href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'game'));?>">Game</a></li>
                             <li><a <?php if($controller=='video' && $action=='genre' && $genre_key =='tv') echo 'class="active"'?> href="<?php echo Yii::app()->createUrl('/video/genre', array('genre_key'=>'tv'));?>">Movie & TV</a></li>
