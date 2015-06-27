@@ -86,7 +86,7 @@ class RedditCrawlCommand extends CConsoleCommand
                     $log->LogInfo("start with tube code:".$tube->code, false);
                     $link = 'https://www.youtube.com/watch?v=' . $tube->code;
                     $html = file_get_html($link);
-                    if(is_object($html)) {
+                    if($html) {
                         echo 'name:'.$name = $html->find('#eow-title', 0)->plaintext;
                         echo "\n";
                         //echo 'desc:'.$description = $html->find('#eow-description', 0)->innertext;
@@ -149,7 +149,7 @@ class RedditCrawlCommand extends CConsoleCommand
                         echo '-----------' . "\n";
                         echo "\n";
                     }else{
-                        $log->LogInfo("tube not object:", false);
+                        $log->LogInfo("tube not object:".json_encode($html), false);
                     }
                 }
             }
