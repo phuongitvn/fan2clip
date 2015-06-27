@@ -1,5 +1,4 @@
 <?php
-include_once _APP_PATH_.'/common/components/Klogger.php';
 /**
  * Created by PhpStorm.
  * User: NGUYEN NGOC BAO AN
@@ -68,7 +67,7 @@ class RedditCrawlCommand extends CConsoleCommand
     //php E:\source\gcms\fan2clip\trunk\console.php RedditCrawl view
     public function actionView()
     {
-        $log = new Klogger('log_getvideo',KLogger::INFO);
+        $log = new KLogger('log_getvideo',KLogger::INFO);
         try{
             $array = array(
                 'conditions'=>array(
