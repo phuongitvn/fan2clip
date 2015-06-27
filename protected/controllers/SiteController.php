@@ -72,6 +72,11 @@ class SiteController extends FrontendController
 	 */
 	public function actionIndex()
 	{
+        if(YII_DEBUG){
+		$html = file_get_html('https://www.youtube.com/watch?v=p4_YeAP9lac');
+        var_dump($html);
+        die('dcm');
+		}
         $page = Yii::app()->request->getParam('page',1);
 
         $c = array(
