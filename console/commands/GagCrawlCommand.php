@@ -109,7 +109,7 @@ class GagCrawlCommand extends CConsoleCommand
     {
         $c = array(
             'conditions'=>array(
-                'code'=>array('==' => string($code))
+                'code'=>array('==' => (string) $code)
             ),
             'limit'=>1,
         );
