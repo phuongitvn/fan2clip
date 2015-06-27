@@ -41,7 +41,17 @@ $genre_key = Yii::app()->request->getParam('genre_key');
                         </div>
                     </div>
                     <div class="col-33 col-hide">
-                        <div class="wr-col-r"><?php echo $this->clips['sidebar-r'];?></div>
+                        <div class="wr-col-r">
+                            <div class="search">
+                                <div class="wrr-search">
+                                    <form action="/search" method="get">
+                                        <input type="text" id="keyword" name="key" value="<?php echo isset($_GET['key'])?CHtml::encode($_GET['key']):'';?>" />
+                                        <input type="submit" value="Search" />
+                                    </form>
+                                </div>
+                            </div>
+                            <?php echo $this->clips['sidebar-r'];?>
+                        </div>
                     </div>
                     <div class="clear"></div>
                 </div>
