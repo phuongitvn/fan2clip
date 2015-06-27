@@ -85,10 +85,11 @@ class RedditCrawlCommand extends CConsoleCommand
                 if($tube->code!='') {
                     $log->LogInfo("start with tube code:".$tube->code, false);
                     $link = 'https://www.youtube.com/watch?v=' . $tube->code;
-                    $html = file_get_html($link);
-                    if($html) {
-                        echo 'name:'.$name = $html->find('#eow-title', 0)->plaintext;
-                        echo "\n";
+                    //$html = file_get_html($link);
+                    if(true) {
+                        /*echo 'name:'.$name = $html->find('#eow-title', 0)->plaintext;
+                        echo "\n";*/
+                        $name =strip_tags($tube->title);
                         //echo 'desc:'.$description = $html->find('#eow-description', 0)->innertext;
                         // The Regular Expression filter
                         /*$reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
