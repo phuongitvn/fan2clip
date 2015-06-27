@@ -149,7 +149,7 @@ class RedditCrawlCommand extends CConsoleCommand
                         echo '-----------' . "\n";
                         echo "\n";
                     }else{
-                        $log->LogInfo("tube not object:".json_encode($res2), false);
+                        $log->LogInfo("tube not object:", false);
                     }
                 }
             }
