@@ -14,43 +14,23 @@ class GagCrawlCommand extends CConsoleCommand
     {
         try{
             $links = array(
-                0=>array(
-                    'link'=>'http://9gag.tv/channel/prank',
+                array(
+                    'link'=>'http://9gag.com/tv/channel/prank',
                     'genre'=>'funny',
                     'tags'=>'funny,fail,prank'
                 ),
-                1=>array(
+                array(
                     'link'=>'http://9gag.tv/channel/comedy',
                     'genre'=>'funny',
                     'tags'=>'comedy,cute,funny'
                 ),
-                2=>array(
-                    'link'=>'http://9gag.tv/channel/game',
-                    'genre'=>'game',
-                    'tags'=>'game,funny'
-                ),
-                3=>array(
-                    'link'=>'http://9gag.tv/channel/music',
-                    'genre'=>'music',
-                    'tags'=>'music,funny'
-                ),
-                4=>array(
+                array(
                     'link'=>'http://9gag.tv/channel/movie-and-tv',
                     'genre'=>'tv',
                     'tags'=>'movie,tv,film,trailer'
                 ),
-				5=>array(
-                    'link'=>'http://9gag.tv/channel/cute',
-                    'genre'=>'funny',
-                    'tags'=>'comedy,cute,funny'
-                ),
-				6=>array(
-                    'link'=>'http://9gag.tv',
-                    'genre'=>'hot',
-                    'tags'=>'funny,trailer,tv,comedy,cute,music'
-                ),
-				7=>array(
-                    'link'=>'http://9gag.tv/channel/nsfw',
+				array(
+                    'link'=>'http://9gag.com/tv/channel/nsfw',
                     'genre'=>'nsfw',
                     'tags'=>'hot,sock,tv,comedy,cute,nsfw'
                 ),
