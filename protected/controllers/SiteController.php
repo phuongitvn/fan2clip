@@ -73,35 +73,40 @@ class SiteController extends FrontendController
 	public function actionIndex()
 	{
         $page = Yii::app()->request->getParam('page',1);
-        $c = array(
-            'conditions'=>array(
-                'status'=>array('==' => 1),
-                //'genre'=>array('notExists'),
-            ),
-        );
-        $total = TubeVideo::model()->count($c);
-        $pager = new CPagination($total);
-        $itemOnPaging = 5;
-        $pager->pageSize = 15;
-        $curr_page = $pager->getCurrentPage();
+        $cacheId = 'site_index_'.$page;
+        if($this->beginCache($cacheId, array('duration'=>10000))) {
+            $c = array(
+                'conditions'=>array(
+                    'status'=>array('==' => 1),
+                    //'genre'=>array('notExists'),
+                ),
+            );
+            $total = TubeVideo::model()->count($c);
+            $pager = new CPagination($total);
+            $itemOnPaging = 5;
+            $pager->pageSize = 15;
+            $curr_page = $pager->getCurrentPage();
 
-        $limit = $pager->getLimit();
-        $offset = $pager->getOffset();
-        $c = array(
-            'conditions'=>array(
-                'status'=>array('==' => 1),
-                //'genre'=>array('notExists'),
-            ),
-            'sort'=>array('_id'=>EMongoCriteria::SORT_DESC),
-            'limit'=> $limit,
-            'offset'=> $offset
-        );
-		$video = TubeVideo::model()->findAll($c);
-		$this->render('index', array(
-            'data'=>$video,
-            'pager'=>$pager,
-            'itemOnPaging'=>$itemOnPaging
-        ));
+            $limit = $pager->getLimit();
+            $offset = $pager->getOffset();
+            $c = array(
+                'conditions'=>array(
+                    'status'=>array('==' => 1),
+                    //'genre'=>array('notExists'),
+                ),
+                'sort'=>array('_id'=>EMongoCriteria::SORT_DESC),
+                'limit'=> $limit,
+                'offset'=> $offset
+            );
+            $video = TubeVideo::model()->findAll($c);
+
+            $this->render('index', array(
+                'data'=>$video,
+                'pager'=>$pager,
+                'itemOnPaging'=>$itemOnPaging
+            ));
+            $this->endCache();
+        }
 	}
 	/**
 	 * page html dynamic
