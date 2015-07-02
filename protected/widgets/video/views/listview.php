@@ -42,12 +42,12 @@ if(!empty($data)){
                     <span class="see pos-l" style="margin: 3px 10px 0 0;"><?php echo $video->views;?></span>
 
                 </div>
-                <div class="social">
-                    <?php $this->widget('common.widgets.social.ShareButtonWidget', array(
+                <!--<div class="social">
+                    <?php /*$this->widget('common.widgets.social.ShareButtonWidget', array(
                         'url_share'=>SITE_URL.$link,
                         'title_share'=>$video->name
-                    ));?>
-                </div>
+                    ));*/?>
+                </div>-->
             </div>
         </li>
 <?php
