@@ -27,7 +27,10 @@ return CMap::mergeArray(
 
 	// application components
 	'components'=>array(
-		'user'=>array(
+        'cache' => array(
+            'class' => 'system.caching.CFileCache'
+        ),
+        'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
