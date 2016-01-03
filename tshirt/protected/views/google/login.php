@@ -1,0 +1,1 @@
+<a class="login" href="<?php echo $authUrl;?>"><img src="images/google-login-button.png" /></a>
