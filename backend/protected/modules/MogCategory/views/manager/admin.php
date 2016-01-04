@@ -21,7 +21,7 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('application.widgets.iGridView', array(
 	'id'=>'admin-category-model-grid',
 	'dataProvider'=>new EMongoDocumentDataProvider($model->search(), array(
 		'sort'=>array(
