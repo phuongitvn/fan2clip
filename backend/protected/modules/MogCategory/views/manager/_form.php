@@ -35,7 +35,7 @@
 		<?php
 		$status = array(
 			0=>'Un Published',
-			1=>'Un Published'
+			1=>'Published'
 		);
 		$form->dropDownList($model,'status', $status);
 		?>
