@@ -1260,7 +1260,6 @@ abstract class EMongoDocument extends EMongoEmbeddedDocument
 	public function search($caseSensitive = false)
 	{
 		$criteria = $this->getDbCriteria();
-
 		foreach($this->getSafeAttributeNames() as $attribute)
 		{
 			if($this->$attribute !== null && $this->$attribute !== '')
@@ -1284,7 +1283,8 @@ abstract class EMongoDocument extends EMongoEmbeddedDocument
 
 		$this->setDbCriteria($criteria);
 
-		return new EMongoDocumentDataProvider($this);
+		//return new EMongoDocumentDataProvider($this);
+        return new $this;
 	}
 
 	/**
