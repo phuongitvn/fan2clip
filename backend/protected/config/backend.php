@@ -29,6 +29,7 @@ array(
 	),
 	'modules'=>array(
 		'MogCategory',
+		'MogTshirt',
 		'settings',
 		'contact',
 		'dashboard',
