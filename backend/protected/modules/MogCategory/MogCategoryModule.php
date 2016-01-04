@@ -9,6 +9,7 @@ class MogCategoryModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
+			'MogCategory.models._base.*',
 			'MogCategory.models.*',
 			'MogCategory.components.*',
 		));
