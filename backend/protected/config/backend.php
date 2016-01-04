@@ -28,6 +28,7 @@ array(
 		'application.helpers.*'
 	),
 	'modules'=>array(
+		'MogCategory',
 		'settings',
 		'contact',
 		'dashboard',
