@@ -37,7 +37,7 @@
 			0=>'Un Published',
 			1=>'Published'
 		);
-		$form->dropDownList($model,'status', $status);
+		echo $form->dropDownList($model,'status', $status);
 		?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
