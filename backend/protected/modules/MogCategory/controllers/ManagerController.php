@@ -116,7 +116,7 @@ class ManagerController extends Controller
      */
     public function actionAdmin()
     {
-        $model = new AdminUserModel('search');
+        $model = new AdminCategoryModel('search');
         $model->unsetAttributes();
 
         if(isset($_GET['AdminCategoryModel']))
