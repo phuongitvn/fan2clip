@@ -4,10 +4,10 @@
 		'_id',
 		'name',
 		'code',
-		'parent',
+		'price',
 		'ordering',
 		'status',
 		'created_time',
-		'updated_time'
+		'updated_time',
 	),
 )); ?>
