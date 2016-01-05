@@ -53,7 +53,6 @@ class ManagerController extends Controller
         if(isset($_POST['AdminCategoryModel']))
         {
             $model->attributes=$_POST['AdminCategoryModel'];
-            $model->updated_time = date('Y-m-d H:i:s');
             if($model->save())
                 $this->redirect(array('view','id'=>$model->_id));
         }

@@ -28,7 +28,7 @@ class BaseCategoryModel extends EMongoDocument
         // will receive user inputs.
         return array(
             array('name', 'required'),
-            array('name,code,description,parent,created_time,updated_time,status', 'safe'),
+            array('name,code,description,parent,ordering,created_time,updated_time,status', 'safe'),
             array('name,code,description,parent', 'safe', 'on'=>'search'),
         );
     }
