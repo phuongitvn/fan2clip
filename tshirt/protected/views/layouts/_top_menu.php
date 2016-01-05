@@ -1,5 +1,5 @@
 <?php
-/*$menuObjects = array(
+$menuObjects = array(
     array(
         'label'=>'Best Sellers',
         'code'=>'best-sellers',
@@ -31,8 +31,8 @@
             )
         )
     )
-);*/
-$menuObjects = WebCategoryModel::model()->getCategory();
+);
+//$menuObjects = WebCategoryModel::model()->getCategory();
 function menuGen($menuObjects)
 {
     if($menuObjects){

@@ -12,6 +12,7 @@
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/nice-select.css" />
     <link rel="stylesheet" type="text/css" href="/css/verticalmenu.css" />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
@@ -79,6 +80,7 @@
     </div>
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/verticalmenu.js"></script>
+<script type="text/javascript" src="/js/jquery.nice-select.min.js"></script>
 <script>
 
     jQuery(function(){
@@ -86,7 +88,9 @@
             menuid: 'mysidebarmenu'
         })
     })
-
+    $(document).ready(function() {
+        $('select').niceSelect();
+    });
 </script>
 <!--<script type="text/javascript" src="/js/core.js"></script>-->
 </body>

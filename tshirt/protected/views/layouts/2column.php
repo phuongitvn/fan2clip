@@ -15,8 +15,41 @@ $action = Yii::app()->controller->action->id;
             </div>
             <div id="header-main">
                 <div class="container">
-                    <div id="logo">
+                    <!--<div id="logo">
                         <h1><i class="fa fa-thumbs-o-up"></i>&nbsp; The Best T-Shirt on SunFrog</h1>
+                    </div>-->
+                    <div id="nav-search">
+                        <?php $form = $this->beginWidget('GxActiveForm', array(
+                            'id' => 'search-form',
+                        ));
+                        ?>
+                            <div class="nav-left">
+                                <?php
+                                $categories = WebCategoryModel::model()->getAllCategories();
+                                ?>
+                                <select>
+                                    <option value="">All</option>
+                                    <?php foreach($categories as $cat){?>
+                                        <option value="<?php echo $cat->id;?>"><?php echo $cat->name;?></option>
+                                    <?php }?>
+                                </select>
+                            </div>
+                            <div class="nav-right">
+                                <div class="nav-search-submit nav-sprite">
+
+                                    <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite"><i class="fa fa-search"></i></span>
+                                    <input type="submit" class="nav-input" value="Go" tabindex="20">
+                                </div>
+                            </div>
+                            <div class="nav-fill">
+                                <div class="nav-search-field">
+                                    <input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" class="nav-input" tabindex="19">
+                                </div>
+                                <div id="nav-iss-attach"></div>
+                            </div>
+                        <?php
+                        $this->endWidget();
+                        ?>
                     </div>
                 </div>
             </div>

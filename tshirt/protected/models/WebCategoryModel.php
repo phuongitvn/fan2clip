@@ -6,6 +6,17 @@ class WebCategoryModel extends CategoryModel
     {
         return parent::model($className);
     }
+    public function getAllCategories()
+    {
+        $c = array(
+            'conditions'=>array(
+                'status'=>array('==' => 1),
+            ),
+            'sort'=>array('ordering'=>EMongoCriteria::SORT_ASC),
+        );
+        $category = self::model()->findAll($c);
+        return $category;
+    }
     public function getCategory()
     {
         $c = array(
