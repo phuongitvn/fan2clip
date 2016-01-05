@@ -22,6 +22,7 @@ class WebCategoryModel extends CategoryModel
                     $result[] = array(
                         'label'=>$cat->name,
                         'code'=>$cat->code,
+                        'parent'=>$cat->parent,
                         'hassub'=>true,
                         'subs'=>$this->getSubsMenuItem($cat, $category)
                     );
@@ -29,6 +30,7 @@ class WebCategoryModel extends CategoryModel
                     $result[] = array(
                         'label'=>$cat->name,
                         'code'=>$cat->code,
+                        'parent'=>$cat->parent,
                         'hassub'=>false
                     );
                 }
@@ -45,6 +47,7 @@ class WebCategoryModel extends CategoryModel
                     $allSubs[] = array(
                         'label'=>$menu->name,
                         'code'=>$menu->code,
+                        'parent'=>$menu->parent,
                         'hassub'=>$menu->parent!=''?true:false,
                         'subs'=>$this->getSubsMenuItem($menu,$allMenu)
                     );
@@ -54,6 +57,7 @@ class WebCategoryModel extends CategoryModel
             $allSubs = array(
                 'label'=>$menuObject->name,
                 'code'=>$menuObject->code,
+                'parent'=>$menuObject->parent,
                 'hassub'=>false
             );
         }
