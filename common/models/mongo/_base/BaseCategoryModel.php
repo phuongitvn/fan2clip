@@ -7,6 +7,9 @@ class BaseCategoryModel extends EMongoDocument
     public $description;
     public $parent;
     public $ordering;
+    public $meta_title;
+    public $meta_keywords;
+    public $meta_description;
     public $created_time;
     public $updated_time;
     public $status;
@@ -28,7 +31,7 @@ class BaseCategoryModel extends EMongoDocument
         // will receive user inputs.
         return array(
             array('name', 'required'),
-            array('name,code,description,parent,ordering,created_time,updated_time,status', 'safe'),
+            array('name,code,description,parent,ordering,meta_title,meta_keywords,meta_description,created_time,updated_time,status', 'safe'),
             array('name,code,description,parent', 'safe', 'on'=>'search'),
         );
     }
@@ -41,6 +44,9 @@ class BaseCategoryModel extends EMongoDocument
             'parent'=>Yii::t('admin','Chủ đề cha'),
             'ordering'=>Yii::t('admin','Thứ tự'),
             'status'=>Yii::t('admin','Trạng thái'),
+            'meta_title'=>Yii::t('admin','Thẻ meta Title'),
+            'meta_keywords'=>Yii::t('admin','Thẻ meta Keywords'),
+            'meta_description'=>Yii::t('admin','Thẻ meta Description'),
         );
     }
 }
