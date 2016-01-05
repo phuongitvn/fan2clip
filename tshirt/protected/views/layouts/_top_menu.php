@@ -1,5 +1,5 @@
 <?php
-$menuObjects = array(
+/*$menuObjects = array(
     array(
         'label'=>'Best Sellers',
         'code'=>'best-sellers',
@@ -27,16 +27,16 @@ $menuObjects = array(
             )
         )
     )
-);
-$menuA = WebCategoryModel::model()->getCategory();
-echo '<pre>';print_r($menuA);exit;
+);*/
+$menuObjects = WebCategoryModel::model()->getCategory();
 function menuGen($menuObjects)
 {
     if($menuObjects){
         foreach($menuObjects as $object){
-            $class=$object['hassub']?'class="has-sub"':"";
+            $hasSubs = count($object['subs'])>0?true:false;
+            $class=$hasSubs?'class="has-sub"':"";
             echo '<li '.$class.'><a href="/">'.$object['label'].'</a>';
-            if($object['hassub']){
+            if($hasSubs){
                 echo '<ul>';
                 menuGen($object['subs']);
                 echo '</ul>';
@@ -54,34 +54,6 @@ function menuGen($menuObjects)
             <?php
             menuGen($menuObjects);
             ?>
-            <li><a href="/">Best Sellers</a></li>
-            <li class="has-sub"><a href="http://fan2clip.com/">Sports</a>
-                <ul>
-                    <li class='has-sub'><a href='#'><span>Product 1</span></a>
-                        <ul>
-                            <li><a href='#'><span>Product 1 - 1</span></a></li>
-                            <li class='last'><a href='#'><span>Product 1 - 2</span></a></li>
-                            <li class='last'><a href='#'><span>Product 1 - 3</span></a></li>
-                            <li class='last'><a href='#'><span>Product 1 - 4</span></a></li>
-                            <li class='last'><a href='#'><span>Product 1 - 5</span></a></li>
-                            <li class='last'><a href='#'><span>Product 1 - 6</span></a></li>
-                            <li class='last'><a href='#'><span>Product 1 - 7</span></a></li>
-                            <li class='last'><a href='#'><span>Product 1 - 8</span></a></li>
-                            <li class='last'><a href='#'><span>Product 1 - 9</span></a></li>
-                            <li class='last'><a href='#'><span>Product 1 - 10</span></a></li>
-                        </ul>
-                    </li>
-                    <li><a href='#'><span>Product 2</span></a></li>
-                    <li><a href='#'><span>Product 3</span></a></li>
-                    <li><a href='#'><span>Product 4</span></a></li>
-                </ul>
-            </li>
-            <li><a href="http://fan2clip.com/">Jobs</a></li>
-            <li><a href="http://fan2clip.com/">Life Style</a></li>
-            <li><a href="http://fan2clip.com/">Political</a></li>
-            <li><a href="http://fan2clip.com/">Gamer</a></li>
-            <li><a href="http://fan2clip.com/">Hobby</a></li>
-            <li><a href="http://fan2clip.com/">Pets</a></li>
         </ul>
     </div>
 </div>
