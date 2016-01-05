@@ -30,7 +30,7 @@ $action = Yii::app()->controller->action->id;
                                 <select>
                                     <option value="">All</option>
                                     <?php foreach($categories as $cat){?>
-                                        <option value="<?php echo $cat->id;?>"><?php echo $cat->name;?></option>
+                                        <option value="<?php echo $cat->code;?>"><?php echo $cat->name;?></option>
                                     <?php }?>
                                 </select>
                             </div>
