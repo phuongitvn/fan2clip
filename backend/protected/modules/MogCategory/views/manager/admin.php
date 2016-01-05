@@ -48,7 +48,7 @@ $('.search-form form').submit(function(){
 		'created_time',
 		'updated_time',
 		array(
-			'class'=>'webroot.widgets.iButtonColumn',
+			'class'=>'application.widgets.iButtonColumn',
 			'htmlOptions'=>array('style'=>'width: 50px'),
 		),
 	),
