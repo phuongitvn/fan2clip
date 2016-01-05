@@ -30,6 +30,24 @@
 		<?php echo $form->textField($model,'ordering'); ?>
 		<?php echo $form->error($model,'ordering'); ?>
 	</div>
+	<fieldset>
+		<legend>Seo Meta</legend>
+		<div class="row">
+			<?php echo $form->labelEx($model,'meta_title'); ?>
+			<?php echo $form->textField($model,'meta_title'); ?>
+			<?php echo $form->error($model,'meta_title'); ?>
+		</div>
+		<div class="row">
+			<?php echo $form->labelEx($model,'meta_keywords'); ?>
+			<?php echo $form->textArea($model,'meta_keywords'); ?>
+			<?php echo $form->error($model,'meta_keywords'); ?>
+		</div>
+		<div class="row">
+			<?php echo $form->labelEx($model,'meta_description'); ?>
+			<?php echo $form->textArea($model,'meta_description'); ?>
+			<?php echo $form->error($model,'meta_description'); ?>
+		</div>
+	</fieldset>
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php
