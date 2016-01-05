@@ -66,7 +66,7 @@
     <div id="footer">
         <div class="wrr-footer bggreen">
             <div class="container">
-                <div class="wr-ftl">Fan2Meme &#169;2015</div>
+                <div class="wr-ftl">&#169; COPYRIGHT HOTTSHIRTUSA.COM 2016</div>
                 <div class="wr-ftr">
                     <ul class="term op">
                         <li><a href="<?php echo Yii::app()->createUrl('/site/contact')?>">Contacts</a></li>
@@ -79,6 +79,6 @@
     </div>
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/menu.js"></script>
-<script type="text/javascript" src="/js/core.js"></script>
+<!--<script type="text/javascript" src="/js/core.js"></script>-->
 </body>
 </html>
