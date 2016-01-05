@@ -18,20 +18,13 @@ class WebCategoryModel extends CategoryModel
         $result = array();
         if($category){
             foreach($category as $cat){
-                if($cat->parent!=''){
+                if(empty($cat->parent)){
                     $result[] = array(
                         'label'=>$cat->name,
                         'code'=>$cat->code,
                         'parent'=>$cat->parent,
                         'hassub'=>true,
                         'subs'=>$this->getSubsMenuItem($cat, $category)
-                    );
-                }else {
-                    $result[] = array(
-                        'label'=>$cat->name,
-                        'code'=>$cat->code,
-                        'parent'=>$cat->parent,
-                        'hassub'=>false
                     );
                 }
             }
