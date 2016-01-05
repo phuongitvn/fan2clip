@@ -33,26 +33,17 @@ class WebCategoryModel extends CategoryModel
     }
     private function getSubsMenuItem($menuObject, $allMenu)
     {
-        if($menuObject->parent!=''){
-            $allSubs = array();
-            foreach($allMenu as $menu){
-                if($menu->parent==$menuObject->code){
-                    $allSubs[] = array(
-                        'label'=>$menu->name,
-                        'code'=>$menu->code,
-                        'parent'=>$menu->parent,
-                        'hassub'=>$menu->parent!=''?true:false,
-                        'subs'=>$this->getSubsMenuItem($menu,$allMenu)
-                    );
-                }
+        $allSubs = array();
+        foreach($allMenu as $menu){
+            if($menu->parent==$menuObject->code){
+                $allSubs[] = array(
+                    'label'=>$menu->name,
+                    'code'=>$menu->code,
+                    'parent'=>$menu->parent,
+                    'hassub'=>$menu->parent!=''?true:false,
+                    'subs'=>$this->getSubsMenuItem($menu,$allMenu)
+                );
             }
-        }else{
-            $allSubs = array(
-                'label'=>$menuObject->name,
-                'code'=>$menuObject->code,
-                'parent'=>$menuObject->parent,
-                'hassub'=>false
-            );
         }
         return $allSubs;
     }
