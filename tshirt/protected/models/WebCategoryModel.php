@@ -34,6 +34,7 @@ class WebCategoryModel extends CategoryModel
                 }
             }
         }
+        return $result;
     }
     private function getSubsMenuItem($menuObject, $allMenu)
     {
