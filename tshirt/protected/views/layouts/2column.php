@@ -14,10 +14,10 @@ $action = Yii::app()->controller->action->id;
                 </div>
             </div>
             <div id="header-main">
-                <div class="container">
-                    <!--<div id="logo">
-                        <h1><i class="fa fa-thumbs-o-up"></i>&nbsp; The Best T-Shirt on SunFrog</h1>
-                    </div>-->
+                <div class="wrr-header-main container">
+                    <div id="logo">
+                        <h1><i class="fa fa-thumbs-o-up"></i>&nbsp;<span>hottshirtusa.com</span></h1>
+                    </div>
                     <div id="nav-search">
                         <?php $form = $this->beginWidget('GxActiveForm', array(
                             'id' => 'search-form',
@@ -26,10 +26,11 @@ $action = Yii::app()->controller->action->id;
                             <div class="nav-left">
                                 <?php
                                 $categories = WebCategoryModel::model()->getAllCategories();
+                                //$categories=null;
                                 ?>
                                 <select>
                                     <option value="">All</option>
-                                    <?php foreach($categories as $cat){?>
+                                    <?php if($categories) foreach($categories as $cat){?>
                                         <option value="<?php echo $cat->code;?>"><?php echo $cat->name;?></option>
                                     <?php }?>
                                 </select>
