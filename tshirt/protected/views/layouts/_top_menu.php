@@ -42,6 +42,7 @@ function menuGen($menuObjects)
             echo '<li '.$class.'><a href="/">'.$object['label'].'</a>';
             if($hasSubs){
                 echo '<ul>';
+                echo '<li class="lead-subs"><a href="/">'.$object['label'].'</a>';
                 menuGen($object['subs']);
                 echo '</ul>';
             }else{
