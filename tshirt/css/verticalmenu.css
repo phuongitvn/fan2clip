@@ -1,0 +1,122 @@
+.amazonmenu ul{
+	font-family: arial,sans-serif;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+.amazonmenu ul li{
+	position: static; /* menu li items should have position set to static */
+}
+
+.amazonmenu > ul > li.selected > a{
+	z-index: 1009;
+	background-color: #fff;
+	background-image: url(data:image/gif;base64,R0lGODlhBwAKAMIEAICAgJmZmbOzs/f39////////////////yH5BAEKAAcALAAAAAAHAAoAAAMWSDPUGoE5AaIj1M4qMW+ZFDYD1ClnAgA7);
+}
+.amazonmenu > ul{
+	#width: 200px; /* width of main menu */
+	height: 400px; /* height of main menu */
+	position: relative;
+}
+
+.amazonmenu > ul li a{
+	color: #444;
+	display: block;
+	overflow: auto;
+	padding: 9px 0;
+	position: relative;
+	text-decoration: none;
+	text-indent: 10px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+/*.amazonmenu > ul li.hassub > a::after{ /!* Arrow to indicate this item has sub menu (LI elements with sub menus have a ".hassub" class). *!/
+	border: 5px solid transparent;
+	border-left-color: gray; /!* Default color of arrow *!/
+	content: '';
+	height: 0;
+	position: absolute;
+	right: 5px;
+	top: 35%;
+	width: 0;
+}*/
+
+.amazonmenu > ul li.hassub.selected > a::after{ /* Style of arrow when corresponding sub menu is open (LI element has a "selected" class during this state */
+	border-left-color: red;
+}
+
+.amazonmenu ul li a:hover, .amazonmenu ul li.hassub.selected > a{ /* style of hover and selected menu item links */
+	font-weight: bold;
+	color: #DA8519;
+}
+.amazonmenu ul li ul li a:hover {
+	text-decoration: underline;
+	color: #DA8519;
+}
+.amazonmenu > ul > li:hover > a {
+	box-shadow: 10px 0 0 0 #fff,1px 1px 4px 0 rgba(0,0,0,.25);
+}
+.amazonmenu > ul > li > a:hover{
+	box-shadow: 10px 0 0 0 #fff,1px 1px 4px 0 rgba(0,0,0,.25);
+}
+
+.amazonmenu ul li > div, .amazonmenu ul li > ul{ /* Sub menus (Could be a DIV or UL wrapper) style */
+	background: white;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,.25);
+	display: none;
+	font-weight: normal;
+	width: 210px;
+	height: 400px; /* height of sub menu */
+	left: 100%;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 1000;
+}
+.amazonmenu h3{
+	background: #ADECD8;
+	color: #333;
+	padding: 5px;
+	font-size: 17px;
+	margin-bottom: 8px;
+}
+.amazonmenu h3 i{
+	margin-right: 8px;
+}
+.hassub > a{
+	background-image: url(data:image/gif;base64,R0lGODlhBwAKAMIEAObm5uvr6/Dw8P39/f///////////////yH5BAEKAAcALAAAAAAHAAoAAAMWSDPUGoE5AaIj1M4qMW+ZFDYD1ClnAgA7);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+/* ###### CSS Media queries ###### */
+
+@media screen and (max-width: 480px){ /* When screen size is 480px */
+	.amazonmenu ul li > div, .amazonmenu ul li > ul{
+		left: 30px; /* Stack the sub menus so they take up less space */
+	}
+
+	.amazonmenu > ul li.hassub.selected::after{ /* Add "veil" to parent menus */
+		background: #eee;
+		content: '';
+		height: 100%;
+		left: 0;
+		opacity: .8;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+}
