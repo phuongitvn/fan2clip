@@ -2,6 +2,7 @@
     box-shadow: 2px 2px 3px rgba(0,0,0,.1);
     -moz-box-shadow: 2px 2px 3px rgba(0,0,0,.1);
     -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.1);
+    height: 95px;
 }
 .over-text{
     white-space: nowrap;
@@ -170,4 +171,122 @@ ul.prod-list-view li.prod-item:hover .prod-act{
     float: left;
     width: 194px;
     margin-left: -100%;
+}
+#nav-search .nav-searchbar .nav-fill, #nav-search .nav-searchbar .nav-left, #nav-search .nav-searchbar .nav-right{
+    position: relative;
+    height: 35px;
+}
+.nav-left {
+    position: relative;
+    float: left;
+    width: auto;
+    display: inline-block;
+}
+.nav-right {
+    position: relative;
+    float: right;
+    width: auto;
+    display: inline-block;
+}
+.nav-fill {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#nav-search {
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    border-radius: 0\9;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+#nav-search .nav-fill {
+    height: 35px;
+    zoom: 1;
+}
+#nav-search .nav-search-field {
+    position: relative;
+    height: 35px;
+    background: #fff;
+}
+#nav-search .nav-search-submit {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 35px;
+    width: 42px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: #485059 #2c3137 #363c43 #485059;
+    background-color: #5b626a;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    border-radius: 0\9;
+    background-position: 0 -381px;
+}
+#navbar.nav-bluebeacon #nav-search .nav-search-submit {
+    background-color: #febd69;
+    background-image: none;
+    border: none;
+    width: 45px;
+}
+#nav-search .nav-search-field .nav-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    line-height: 15px;
+    padding: 6px 10px 6px 0;
+    margin: 0;
+    border: 0;
+    height: 33px;
+    font-family: arial,sans-serif;
+    font-size: 15px;
+    background: 0 0;
+    color: #111;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    text-indent: 8px;
+}
+#nav-search .nav-search-submit .nav-input {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background: 0 0;
+    border: none;
+    text-indent: -1000px;
+    line-height: 1px;
+}
+#nav-search .nav-search-submit {
+    background-color: #febd69;
+    background-image: none;
+    border: none;
+    width: 45px;
+}
+#nav-search-submit-text{
+    position: absolute;
+    left: 13px;
+    top: 8px;
+}
+#nav-search-submit-text i{
+    font-size: 18px;
 }
