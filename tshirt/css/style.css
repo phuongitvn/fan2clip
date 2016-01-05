@@ -151,11 +151,19 @@ ul.prod-list-view li.prod-item:hover .prod-act{
     letter-spacing: -2px;
     line-height: 1;
     margin: 10px 0 15px;
-    font-size: 80px;
+    font-size: 65px;
 }
 #logo h1{
     text-shadow: 4px 3px 0px #1d9d74, 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
+#logo h1 span{
+    font-size: 12px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    vertical-align: middle;
+    text-shadow: none!important;
+ }
 .col-md-2{
     padding-right: 5px;
     padding-left: 5px;
@@ -289,4 +297,7 @@ ul.prod-list-view li.prod-item:hover .prod-act{
 }
 #nav-search-submit-text i{
     font-size: 18px;
+}
+.wrr-header-main{
+    position: relative;
 }

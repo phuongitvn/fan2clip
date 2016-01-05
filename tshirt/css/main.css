@@ -99,9 +99,13 @@ header{
     line-height: 35px;
     background: #1b926c;
 }
-#logo,#menu{
+#menu{
     float: left;
     margin-right: 10px;
+}
+#logo{
+    position: absolute;
+    left: 5px;
 }
 #logo h1{
     margin: 0
