@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>new EMongoDocumentDataProvider($model->search(), array(
 		'sort'=>array(
 			'attributes'=>array(
-				'_id',
+				//'_id',
 				'name',
 				'code',
 				'parent',
@@ -37,9 +37,9 @@ $('.search-form form').submit(function(){
 			),
 		),
 	)),
-	'filter'=>$model,
+	//'filter'=>$model,
 	'columns'=>array(
-		'_id',
+		//'_id',
 		'name',
 		'code',
 		'parent',
