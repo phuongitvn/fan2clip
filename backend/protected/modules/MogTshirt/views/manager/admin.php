@@ -37,7 +37,7 @@ $('.search-form form').submit(function(){
 			),
 		),
 	)),
-	'filter'=>$model,
+	//'filter'=>$model,
 	'columns'=>array(
 		'_id',
 		'name',
@@ -48,7 +48,8 @@ $('.search-form form').submit(function(){
 		'created_time',
 		'updated_time',
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'application.widgets.iButtonColumn',
+			'htmlOptions'=>array('style'=>'width: 50px'),
 		),
 	),
 )); ?>
