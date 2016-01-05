@@ -12,7 +12,7 @@
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="/css/verticalmenu.css" />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -78,7 +78,16 @@
         </div>
     </div>
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/menu.js"></script>
+<script type="text/javascript" src="/js/verticalmenu.js"></script>
+<script>
+
+    jQuery(function(){
+        amazonmenu.init({
+            menuid: 'mysidebarmenu'
+        })
+    })
+
+</script>
 <!--<script type="text/javascript" src="/js/core.js"></script>-->
 </body>
 </html>

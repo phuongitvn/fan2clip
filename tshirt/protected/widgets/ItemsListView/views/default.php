@@ -18,6 +18,10 @@ if($data){
                 <div class="prod-control">
                     <a class="checkout" target="_blank" href="<?php echo $link;?>">Buy it now!</a>
                 </div>
+                <div class="prod-act">
+                    <a href="javascript:;"><i class="fa fa-thumbs-o-up"></i></a>&nbsp;<span>47</span>
+                    <a href="javascript:;"><i class="fa fa-shopping-basket"></i></a>&nbsp;<span>532</span>
+                </div>
                 <span class="sale_gbr"></span>
             </div>
         </li>

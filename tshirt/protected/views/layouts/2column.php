@@ -4,31 +4,38 @@ $action = Yii::app()->controller->action->id;
 ?>
 <?php $this->beginContent('//layouts/main'); ?>
     <div id="wrr-main">
-        <header>
-            <div class="wrr-header  wrr-s">
-                <div id="logo">
-                    <h1><a href="/"><img style="margin-top: 10px" width="155" src="/images/logo.png" /></a></h1>
-                </div>
-                <div id="menu">
-                    <div class="wr-menu">
-                        <ul>
-                            <li><a href="/" <?php if($controller=='site' && $action=='index'){?>class="active"<?php }?>>Hot</a></li>
-                            <li><a href="http://fan2clip.com/" target="_blank">Movie & TV</a></li>
-                        </ul>
+        <div class="wrr-header bggreen">
+            <div id="header-top">
+                <div class="container">
+                    <div class="top-bar-social"><a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-pinterest"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a></div>
+                    <div class="top-bar-account">
+                        <a href="#">My Account</a>
                     </div>
                 </div>
             </div>
-        </header>
+            <div id="header-main">
+                <div class="container">
+                    <div id="logo">
+                        <h1><i class="fa fa-thumbs-o-up"></i>&nbsp; The Best T-Shirt on SunFrog</h1>
+                    </div>
+                </div>
+            </div>
+            <!--<header>
+                <div class="wrr-header container">
+                    <?php /*include_once '_top_menu.php'*/?>
+                </div>
+            </header>-->
+        </div>
         <div id="main-body">
-            <div class="wrap-inner container wrr-s">
+            <div class="wrap-inner container">
                 <div class="wrr-page-content">
-                    <div class="col-66 col-f">
+                    <div class="col-pre-main">
                         <div class="wr-col-c">
                             <?php echo $content; ?>
                         </div>
                     </div>
-                    <div class="col-33 col-hide">
-                        <div class="wr-col-r"><?php echo $this->clips['sidebar-r'];?></div>
+                    <div class="col-left">
+                        <?php include_once '_top_menu.php'?>
                     </div>
                     <div class="clear"></div>
                 </div>
