@@ -28,6 +28,8 @@ $menuObjects = array(
         )
     )
 );
+$menuA = CategoryModel::model()->getCategory();
+echo '<pre>';print_r($menuA);exit;
 function menuGen($menuObjects)
 {
     if($menuObjects){
