@@ -4,6 +4,7 @@ class BaseTshirtModel extends EMongoDocument
     public $_id;
     public $name;
     public $code;
+    public $price;
     public $url;
     public $thumb_image;
     public $large_image;
@@ -31,7 +32,7 @@ class BaseTshirtModel extends EMongoDocument
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('name', 'required'),
+            array('name','required'),
             array('name,code,price,url,thumb_image,large_image,site,ordering,description,views,created_time,updated_time,status', 'safe'),
             array('name,code,description', 'safe', 'on'=>'search'),
         );
