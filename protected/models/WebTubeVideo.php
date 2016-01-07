@@ -30,7 +30,7 @@ class WebTubeVideo extends TubeVideo
         }
         return $regexPattern;
     }
-    public function getHotVideo($genre='',$limit=10)
+    public function getHotVideo($genre='',$limit=10, $fromTime='', $toTime='')
     {
         $c = array(
             'conditions'=>array(
@@ -41,6 +41,10 @@ class WebTubeVideo extends TubeVideo
         );
         if($genre!=''){
             $c['conditions']['genre']=array('equals'=>$genre);
+        }
+        if(!empty($fromTime) && !empty($toTime)){
+            $c['conditions']['created_datetime']=array('greatereq'=>$fromTime);
+            $c['conditions']['created_datetime']=array('lesseq'=>$toTime);
         }
         return self::model()->findAll($c);
     }
