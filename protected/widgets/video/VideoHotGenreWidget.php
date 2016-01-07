@@ -12,7 +12,7 @@ class VideoHotGenreWidget extends CWidget
     public $title='Video Hot';
     public function run()
     {
-        if($this->beginCache('video_hot_week', array('duration'=>86400))) {
+        if($this->beginCache('video_hot_week_'.$this->genre, array('duration'=>86400))) {
             $week = date('W');
             $year = date('Y');
             $time = Common::getFirstDayOfWeek($year,$week);
