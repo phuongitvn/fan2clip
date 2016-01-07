@@ -38,12 +38,4 @@ class Common{
     	$string = preg_replace( array($regExpression, "`[-]+`",) , "-", $string);
     	return trim($string, '-');
     }
-    public static function getFirstDayOfWeek($year, $weeknr)
-    {
-        $offset = date('w', mktime(0,0,0,1,1,$year));
-        $offset = ($offset < 5) ? 1-$offset : 8-$offset;
-        $monday = mktime(0,0,0,1,1+$offset,$year);
-        $date = strtotime('+' . ($weeknr - 1) . ' weeks', $monday);
-        return $date;
-    }
 }
