@@ -19,6 +19,9 @@ class VideoHotGenreWidget extends CWidget
             $endTime = date('Y-m-d 23:59:59', strtotime("+7 day", $time));
             $startTime = date('Y-m-d 00:00:00', $time);
             $videoHot = WebTubeVideo::model()->getHotVideo($this->genre, $this->limit, $startTime, $endTime);
+            if(!$videoHot){
+                $videoHot = WebTubeVideo::model()->getHotVideo($this->genre, $this->limit);
+            }
             $title = $this->title;
             $this->render('video_hot_by_genre', compact('videoHot','title'));
             $this->endCache();
