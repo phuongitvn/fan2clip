@@ -43,8 +43,7 @@ class WebTubeVideo extends TubeVideo
             $c['conditions']['genre']=array('equals'=>$genre);
         }
         if(!empty($fromTime) && !empty($toTime)){
-            $c['conditions']['created_datetime']=array('greatereq'=>$fromTime);
-            $c['conditions']['created_datetime']=array('lesseq'=>$toTime);
+            $c['conditions']['created_datetime']=array('greatereq'=>$fromTime, 'lesseq'=>$toTime);
         }
         return self::model()->findAll($c);
     }
