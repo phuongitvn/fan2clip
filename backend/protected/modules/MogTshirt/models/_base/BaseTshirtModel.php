@@ -15,6 +15,9 @@ class BaseTshirtModel extends EMongoDocument
     public $created_time;
     public $updated_time;
     public $status;
+    public $meta_title;
+    public $meta_keywords;
+    public $meta_description;
     public static function model($className=__CLASS__)
     {
         return parent::model($className);
@@ -33,7 +36,7 @@ class BaseTshirtModel extends EMongoDocument
         // will receive user inputs.
         return array(
             array('name','required'),
-            array('name,code,price,url,thumb_image,large_image,site,ordering,description,views,created_time,updated_time,status', 'safe'),
+            array('name,code,price,url,thumb_image,large_image,site,meta_title,meta_keywords,meta_description,ordering,description,views,created_time,updated_time,status', 'safe'),
             array('name,code,description', 'safe', 'on'=>'search'),
         );
     }
