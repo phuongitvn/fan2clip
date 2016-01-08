@@ -10,21 +10,21 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="wrr-col">
-                    <a href="#"><i class="fa fa-truck"></i></a>
+                    <a class="thumb" href="#"><i class="fa fa-truck"></i></a>
                     <h3>Worldwide Delivery</h3>
                     <p>We ship to over 200 countries & regions.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="wrr-col">
-                    <a href="#"><i class="fa fa-credit-card"></i></a>
+                    <a class="thumb" href="#"><i class="fa fa-credit-card"></i></a>
                     <h3>Safe Payment</h3>
                     <p>Pay with the world’s most popular and secure payment methods.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="wrr-col">
-                    <a href="#"><i class="fa fa-users"></i></a>
+                    <a class="thumb" href="#"><i class="fa fa-users"></i></a>
                     <h3>24/7 Help Center</h3>
                     <p>Round-the-clock assistance for a smooth shopping experience.</p>
                 </div>
