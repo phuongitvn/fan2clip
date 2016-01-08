@@ -301,6 +301,14 @@ ul.prod-list-view li.prod-item:hover .prod-act{
 .wrr-header-main{
     position: relative;
 }
+#feature .row{
+    background: #D2F2F1;
+}
 #feature .row .wrr-col{
-    border: 1px solid #333;
+    padding: 10px;
+    height: 100px;
+}
+#feature .row .wrr-col a.thumb i{
+    font-size: 30px;
+    color: #333;
 }
