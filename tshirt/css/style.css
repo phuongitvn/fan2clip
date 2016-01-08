@@ -316,3 +316,9 @@ ul.prod-list-view li.prod-item:hover .prod-act{
     font-size: 30px;
     color: #333;
 }
+#partner ul.logo-list li{
+    display: inline-block;
+}
+#partner ul.logo-list li img{
+    height: 100px;
+}
