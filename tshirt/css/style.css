@@ -338,4 +338,11 @@ ul.prod-list-view li.prod-item:hover .prod-act{
     left: 0;
     right: 0;
     z-index: 9999;
+    height: 60px;
+}
+#header-main.fixed #nav-search{
+    margin-top: 10px;
+}
+#header-main.fixed #logo{
+
 }
