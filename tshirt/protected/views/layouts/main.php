@@ -64,6 +64,7 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 <?php include_once("analyticstracking.php") ?>
 	<div id="main"><?php echo $content;?></div>
+    <?php echo $this->clips['bottom'];?>
     <div id="footer">
         <div class="wrr-footer bggreen">
             <div class="container">

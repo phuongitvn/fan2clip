@@ -4,7 +4,7 @@
     <a class="btn btn-blue" href="<?php echo Yii::app()->createUrl('/site/index', array('page'=>$page+1))?>">Load More</a>
 </div>
     <?php endif;?>
-<?php $this->beginWidget('system.web.widgets.CClipWidget', array('id'=>'sidebar-r')); ?>
+<?php $this->beginWidget('system.web.widgets.CClipWidget', array('id'=>'bottom')); ?>
 <div id="feature">
     <div class="wrr-feature container">
         <div class="row">
