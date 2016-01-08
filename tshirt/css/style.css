@@ -348,7 +348,7 @@ ul.prod-list-view li.prod-item:hover .prod-act{
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: block;
+    display: none;
 }
 .crolltop i{
     font-size: 50px;
