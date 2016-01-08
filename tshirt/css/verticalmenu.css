@@ -54,7 +54,7 @@
 }
 
 .amazonmenu ul li a:hover, .amazonmenu ul li.hassub.selected > a{ /* style of hover and selected menu item links */
-	font-weight: bold;
+	font-weight: 800;
 	color: #DA8519;
 }
 .amazonmenu ul li ul li a:hover {
