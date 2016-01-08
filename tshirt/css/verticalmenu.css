@@ -127,3 +127,7 @@
 .lead-subs a:hover{
 	text-decoration: none;
 }
+#mysidebarmenu{
+	border: 1px solid ##efefe6;
+	border-right: 0;
+}
