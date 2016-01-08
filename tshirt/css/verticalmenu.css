@@ -38,7 +38,7 @@
 	text-transform: uppercase;
 	border-bottom: 1px solid #efefe6;
 }
-.amazonmenu > ul li:last-child a{
+.amazonmenu > ul > li:last-child > a{
 	border-bottom: 0;
 }
 /*.amazonmenu > ul li.hassub > a::after{ /!* Arrow to indicate this item has sub menu (LI elements with sub menus have a ".hassub" class). *!/
