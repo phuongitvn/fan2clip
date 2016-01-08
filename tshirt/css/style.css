@@ -329,9 +329,13 @@ ul.prod-list-view li.prod-item:hover .prod-act{
 #partner ul.logo-list li img{
     height: 55px;
 }
+#header-main{
+    background: #1fa67a;
+}
 #header-main.fixed{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 9999;
 }
