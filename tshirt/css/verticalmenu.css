@@ -32,9 +32,11 @@
 	position: relative;
 	text-decoration: none;
 	text-indent: 10px;
-	font-weight: 400;
+	font-weight: 800;
 	font-size: 14px;
 	line-height: 20px;
+	font-size: 16px;
+	text-transform: uppercase;
 }
 
 /*.amazonmenu > ul li.hassub > a::after{ /!* Arrow to indicate this item has sub menu (LI elements with sub menus have a ".hassub" class). *!/
