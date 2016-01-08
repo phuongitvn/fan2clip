@@ -78,11 +78,11 @@
 	display: none;
 	font-weight: normal;
 	width: 210px;
-	height: 400px; /* height of sub menu */
+	height: 392px; /* height of sub menu */
 	left: 100%;
 	padding: 10px;
 	position: absolute;
-	top: 0;
+	top: -47;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
