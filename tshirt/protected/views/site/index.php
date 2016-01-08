@@ -39,6 +39,7 @@
                 <li><a href="#"><img alt="SunFrog Shirt" src="<?php echo Yii::app()->request->baseUrl;?>/images/SunFrog-Logo.png" /></a></li>
                 <li><a href="#"><img alt="ViralStyle Shirt" src="<?php echo Yii::app()->request->baseUrl;?>/images/virallogo.png" /></a></li>
                 <li><a href="#"><img alt="TeeSpring Shirt" src="<?php echo Yii::app()->request->baseUrl;?>/images/Teespring_Logo.png" /></a></li>
+                <li><a href="#"><img alt="Paypal" src="<?php echo Yii::app()->request->baseUrl;?>/images/ppcom.png" /></a></li>
             </ul>
         </div>
     </div>
