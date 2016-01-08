@@ -301,12 +301,13 @@ ul.prod-list-view li.prod-item:hover .prod-act{
 .wrr-header-main{
     position: relative;
 }
-#feature .row{
+#feature{
     background: #D2F2F1;
 }
 #feature .row .wrr-col{
     padding: 10px;
     height: 100px;
+    text-align: center;
 }
 #feature .row .wrr-col a.thumb i{
     font-size: 30px;
