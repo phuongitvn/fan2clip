@@ -23,7 +23,7 @@ $('.search-form form').submit(function(){
 
 <?php $this->widget('application.widgets.iGridView', array(
 	'id'=>'admin-category-model-grid',
-	'dataProvider'=>new EMongoDocumentDataProvider($model->search(), array(
+	'dataProvider'=>new EMongoDocumentDataProvider($model->search(array('order'=>'ordering ASC')), array(
 		'sort'=>array(
 			'attributes'=>array(
 				//'_id',
