@@ -48,6 +48,7 @@ ul.prod-list-view li.prod-item .prod-title a:hover{
 }
 ul.prod-list-view li.prod-item a:hover{
     text-decoration: underline;
+    color: #fe7000!important;
 }
 ul.prod-list-view li.prod-item .prod-container{
     border-bottom: 1px solid #ccc;
