@@ -304,6 +304,9 @@ ul.prod-list-view li.prod-item:hover .prod-act{
 #feature{
     background: #D2F2F1;
 }
+#feature .wrr-feature{
+    padding: 20px 0;
+}
 #feature .row .wrr-col{
     padding: 10px;
     height: 100px;
