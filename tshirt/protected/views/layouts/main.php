@@ -83,7 +83,6 @@
 <script type="text/javascript" src="/js/verticalmenu.js"></script>
 <script type="text/javascript" src="/js/jquery.nice-select.min.js"></script>
 <script>
-
     jQuery(function(){
         amazonmenu.init({
             menuid: 'mysidebarmenu'
@@ -91,6 +90,13 @@
     })
     $(document).ready(function() {
         $('select').niceSelect();
+    });
+    $(window).scroll(function(){
+        var sticky = $('#header-main'),
+            scroll = $(window).scrollTop();
+
+        if (scroll >= 100) sticky.addClass('fixed');
+        else sticky.removeClass('fixed');
     });
 </script>
 <!--<script type="text/javascript" src="/js/core.js"></script>-->
