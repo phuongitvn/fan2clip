@@ -100,7 +100,6 @@
         else sticky.removeClass('fixed');
     });
 
-    $('#scroller').hide();
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
             $('#scroller').fadeIn();
