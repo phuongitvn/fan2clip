@@ -79,7 +79,7 @@
             </div>
         </div>
     </div>
-<a id="scroller" class="crolltop" href="#top"><i class="fa fa-arrow-circle-up"></i></a>
+<a id="scroller" class="crolltop" href="#top"><i class="fa fa-arrow-circle-o-up"></i></a>
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/verticalmenu.js"></script>
 <script type="text/javascript" src="/js/jquery.nice-select.min.js"></script>
