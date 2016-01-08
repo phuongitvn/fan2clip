@@ -79,6 +79,7 @@
             </div>
         </div>
     </div>
+<a id="scroller" class="crolltop" href="#top"><i class="fa arrow-circle-up"></i></a>
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/verticalmenu.js"></script>
 <script type="text/javascript" src="/js/jquery.nice-select.min.js"></script>
@@ -97,6 +98,23 @@
 
         if (scroll >= 100) sticky.addClass('fixed');
         else sticky.removeClass('fixed');
+    });
+
+    $('#scroller').hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('#scroller').fadeIn();
+        } else {
+            $('#scroller').fadeOut();
+        }
+    });
+
+    // scroll body to 0px on click
+    $('#scroller').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
     });
 </script>
 <!--<script type="text/javascript" src="/js/core.js"></script>-->
