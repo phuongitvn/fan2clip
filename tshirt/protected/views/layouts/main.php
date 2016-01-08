@@ -68,7 +68,7 @@
     <div id="footer">
         <div class="wrr-footer bggreen">
             <div class="container">
-                <div class="wr-ftl">&#169; Copyright HOTTSHIRTUSA.COM 2016</div>
+                <div class="wr-ftl">&#169; 2016 HOTTSHIRTUSA.COM All Rights Reserved</div>
                 <div class="wr-ftr">
                     <ul class="term op">
                         <li><a href="<?php echo Yii::app()->createUrl('/site/contact')?>">Contacts</a></li>
