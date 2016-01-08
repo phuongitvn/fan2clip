@@ -127,10 +127,11 @@
 }
 .lead-subs a{
 	font-size: 18px;
-	color: #0897D0;
+	color: #009688!important;
+	text-align: center;
 }
 .lead-subs a:hover{
-	text-decoration: none;
+	text-decoration: none!important;
 }
 #mysidebarmenu{
 	border: 1px solid #efefe6;
