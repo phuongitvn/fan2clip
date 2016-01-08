@@ -347,3 +347,8 @@ ul.prod-list-view li.prod-item:hover .prod-act{
 #header-main.fixed #logo{
 
 }
+.uptop{
+    display: block;
+    width: 40px;
+    height: 32px;
+}
