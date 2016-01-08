@@ -97,7 +97,7 @@ header{
 #header-top{
     height: 35px;
     line-height: 35px;
-    background: #1b926c;
+    background: #333;
 }
 #menu{
     float: left;
@@ -295,10 +295,10 @@ span.icon-arr-l{
 }
 #footer .wrr-footer{
     padding: 10px;
-    background: #1b926c;
+    background: #333;
     border-top: 1px solid #1b926c;
     overflow: hidden;
-    color: #a5d8c7;
+    color: #aaaaaa;
 }
 .wrr-footer .wr-ftl,
 .wrr-footer .wr-ftr{
@@ -312,7 +312,7 @@ ul.op li{
 }
 ul.op li a{
     margin: 0 10px;
-    color: #a5d8c7;
+    color: #aaaaaa;
 }
 ul.op li a:hover{
     text-decoration: underline;

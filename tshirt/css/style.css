@@ -331,7 +331,7 @@ ul.prod-list-view li.prod-item:hover .prod-act{
     height: 55px;
 }
 #header-main{
-    background: #1fa67a;
+    background: #fff;
 }
 #header-main.fixed{
     position: fixed;
@@ -353,4 +353,8 @@ ul.prod-list-view li.prod-item:hover .prod-act{
 .crolltop i{
     font-size: 50px;
     color: #333;
+}
+#search-form{
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
