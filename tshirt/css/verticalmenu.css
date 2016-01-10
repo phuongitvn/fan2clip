@@ -89,12 +89,16 @@
 	z-index: 1000;
 }
 .amazonmenu h3{
-	background: #efefe6;
 	color: #009688;
-	padding: 8px 5px;
+	padding: 14px 5px;
 	font-size: 14px;
 	margin-bottom: 8px;
 	font-weight: 800;
+	background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAiCAYAAADRcLDBAAAAGXRFW…z%2FCUD6D%2ByM%2BoFUfEWcgEY%2FRR9DRPIjwABvzZyQJ2w5CwAAAABJRU5ErkJggg%3D%3D);
+	background-repeat: no-repeat;
+	padding-left: 50px;
+	background-position: 5px 5px;
+	border-bottom: 1px solid #eee;
 }
 .amazonmenu h3 i{
 	margin-right: 8px;
