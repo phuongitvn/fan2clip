@@ -5,14 +5,14 @@ $action = Yii::app()->controller->action->id;
 <?php $this->beginContent('//layouts/main'); ?>
     <div id="wrr-main">
         <div class="wrr-header bggreen">
-            <div id="header-top">
+            <!--<div id="header-top">
                 <div class="container">
                     <div class="top-bar-social"><a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-pinterest"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a></div>
                     <div class="top-bar-account">
                         <a href="#">My Account</a>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <div id="header-main">
                 <div class="wrr-header-main container">
                     <div id="logo">
