@@ -16,7 +16,7 @@ $action = Yii::app()->controller->action->id;
             <div id="header-main">
                 <div class="wrr-header-main container">
                     <div id="logo">
-                        <h1><i class="fa fa-thumbs-o-up"></i>&nbsp;<span>hottshirtusa.com</span></h1>
+                        <h1><img src="/images/logo.png" width="175" /></h1>
                     </div>
                     <div id="nav-search">
                         <?php $form = $this->beginWidget('GxActiveForm', array(
