@@ -63,7 +63,7 @@ function menuGen($menuObjects)
     </div>
 </div>-->
 <nav id="mysidebarmenu" class="amazonmenu">
-    <h3><i class="fa fa-navicon"></i>CATEGORIES</h3>
+    <h3><!--<i class="fa fa-navicon"></i>-->CATEGORIES</h3>
     <ul>
         <?php
             menuGen($menuObjects);
