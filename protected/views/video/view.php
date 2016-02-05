@@ -24,7 +24,9 @@ $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id, 'url_key'=
         <?php }else{?>
         <!--<iframe width="100%" id="media-player" frameborder="0" allowfullscreen="1" src="http://www.youtube.com/embed/<?php /*echo $video->code;*/?>?theme=light&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&nologo=1&vq=large&autoplay=0&ps=docs" ></iframe>-->
             <?php $this->widget('application.widgets.jwplayer.jwplayerWidget', array(
-                'url'=>'https://www.youtube.com/watch?v='.$video->code
+                'url'=>'https://www.youtube.com/watch?v='.$video->code,
+                'width'=>'700',
+                'height'=>'394'
             ));?>
         <?php }?>
 
