@@ -23,7 +23,7 @@ class jwplayerWidget extends CWidget
                 //image: 'bg.jpg',
                 width: $width,
               });
-        ");
+        ",CClientScript::POS_END);
         parent::init();
     }
     public function run()
