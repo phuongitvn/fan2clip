@@ -51,6 +51,17 @@ $genre_key = Yii::app()->request->getParam('genre_key');
                                     </form>
                                 </div>
                             </div>
+							<div>
+								<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ads_fan2clip_336x280 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-8229138506806587"
+     data-ad-slot="1644656151"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+							</div>
                             <?php echo $this->clips['sidebar-r'];?>
                         </div>
                     </div>
