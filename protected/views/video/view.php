@@ -17,7 +17,6 @@ $cs->registerMetaTag('Clip video hot, funny, news on World '.strip_tags($video->
 $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id, 'url_key'=>Common::makeFriendlyUrl($video->name)));
 ?>
 <div class="video-detail">
-    <h1><?php echo $video->name;?></h1>
     <div class="video-info">
         <?php if(isset($video->type) && $video->type=='vimeo'){?>
             <iframe id="media-player" src="https://player.vimeo.com/video/<?php echo $video->code;?>?autoplay=1&color=ffffff&title=0&byline=0&portrait=0" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -29,7 +28,7 @@ $link = Yii::app()->createUrl('/video/view', array('id'=>$video->_id, 'url_key'=
                 'height'=>'394'
             ));?>
         <?php }?>
-
+        <h1><?php echo $video->name;?></h1>
     </div>
     <div class="extra-info pos">
         <span class="author pos-l"><?php
