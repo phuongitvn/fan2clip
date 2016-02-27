@@ -17,11 +17,18 @@ class jwplayerWidget extends CWidget
         $height = $this->height;
         $id = $this->id;
         $cs->registerScript('play_video',"
+            var wbody = $(document).width();
+            var w_player=$width;
+            var h_player=$height;
+            if(wbody<=600){
+                w_player = wbody;
+                h_player = (wbody*213)/360;
+            }
             jwplayer('$id').setup({
                 file: '{$url}',
-                height: $height,
+                height: h_player,
                 //image: 'bg.jpg',
-                width: $width,
+                width: w_player,
               });
         ",CClientScript::POS_END);
         parent::init();
