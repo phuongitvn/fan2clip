@@ -22,7 +22,7 @@ p{
     top: 0;
 }
 #main-body{
-    margin-top: 75px;
+    padding-top: 75px;
     min-height: 200px;
 }
 .wrr-header{
@@ -107,7 +107,7 @@ header{
     height: 45px;
     top: 0px;
     position: fixed;
-    z-index: 3;
+    z-index: 991;
     right: 0;
     left: 0;
 }
@@ -401,6 +401,9 @@ ul.social-like li{
  }
 @media only screen and (min-device-width: 240px) and (max-device-width: 568px){
     /* Styles */
+    #footer{
+        display: none;
+    }
     .mobile-screen .wrr-s{
         width: 100%
     }
@@ -433,11 +436,19 @@ ul.social-like li{
     }
     .mobile-screen #sb-mn{
         display: block;
+        left: 0;
     }
     .mobile-screen #menu ul li a.active{
         border-bottom: 0;
         background: none;
         font-weight: normal;
+    }
+    #logo{
+        display: none;
+    }
+    .logo2 img{
+        margin-left: 40px;
+        margin-top: 10px;
     }
 }
 /*css for mobile*/
@@ -454,4 +465,35 @@ ul.social-like li{
 }
 .show{
     display: block!important;
+}
+#menu-1{
+    background: #fff;
+    z-index: 991;
+}
+#menu-1 ul{
+    margin:0;
+    padding: 0;
+}
+#menu-1 ul li {
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+#menu-1 ul li a {
+    font-size: 14px;
+    display: block;
+    color: #333;
+    float: none;
+    padding-left: 20px;
+}
+#menu-1 ul li a.active,
+#menu-1 ul li a:focus,
+#menu-1 ul li a:active{
+    background: #EC732A;
+    color: #fff;
+}
+nav .top_nav {
+    height: 45px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #6C6C6C;
 }
