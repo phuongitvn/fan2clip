@@ -74,7 +74,7 @@ class SiteController extends FrontendController
 	{
         $page = Yii::app()->request->getParam('page',1);
         $cacheId = 'site_index_'.$page;
-        if($this->beginCache($cacheId, array('duration'=>10000))) {
+        //if($this->beginCache($cacheId, array('duration'=>10000))) {
             $c = array(
                 'conditions'=>array(
                     'status'=>array('==' => 1),
@@ -105,8 +105,8 @@ class SiteController extends FrontendController
                 'pager'=>$pager,
                 'itemOnPaging'=>$itemOnPaging
             ));
-            $this->endCache();
-        }
+            //$this->endCache();
+        //}
 	}
 	/**
 	 * page html dynamic
