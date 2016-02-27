@@ -6,7 +6,7 @@ $genre_key = Yii::app()->request->getParam('genre_key');
 ?>
     <div id="wrr-main">
         <header>
-            <div class="wrr-header  wrr-s">
+            <div class="wrr-header wrr-s">
                 <div id="logo">
                     <h1><a href="/"><img style="margin-top: 10px;margin-left: 5px;" width="155" src="/images/logo.png" /></a></h1>
                 </div>
@@ -23,7 +23,7 @@ $genre_key = Yii::app()->request->getParam('genre_key');
                         </ul>
                     </div>
                 </div>
-                <span id="sb-mn" class="icon-app"><i></i></span>
+                <span id="sb-mn" class="icon-app menu-btn-1"><i></i></span>
             </div>
         </header>
         <div id="main-body">
@@ -51,17 +51,19 @@ $genre_key = Yii::app()->request->getParam('genre_key');
                                     </form>
                                 </div>
                             </div>
+                            <?php if(!Yii::app()->params['local_mode']){?>
 							<div>
 								<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ads_fan2clip_336x280 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-8229138506806587"
-     data-ad-slot="1644656151"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+                                <!-- ads_fan2clip_336x280 -->
+                                <ins class="adsbygoogle"
+                                     style="display:inline-block;width:336px;height:280px"
+                                     data-ad-client="ca-pub-8229138506806587"
+                                     data-ad-slot="1644656151"></ins>
+                                <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
 							</div>
+                            <?php }?>
                             <?php echo $this->clips['sidebar-r'];?>
                         </div>
                     </div>
