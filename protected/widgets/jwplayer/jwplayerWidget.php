@@ -17,7 +17,7 @@ class jwplayerWidget extends CWidget
         $height = $this->height;
         $id = $this->id;
         $cs->registerScript('play_video',"
-            var wbody = $(document).width();
+            var wbody = $(document).width()-20;
             var w_player=$width;
             var h_player=$height;
             if(wbody<=600){
