@@ -20,7 +20,6 @@ class SearchController extends FrontendController
             $data=null;
         }else {
             $regexObj = new MongoRegex($keyRegexPattern);
-
             $c = array(
                 'conditions' => array(
                     'status' => array('equals' => 1),
@@ -31,7 +30,6 @@ class SearchController extends FrontendController
             );
             $data = WebTubeVideo::model()->findAll($c);
         }
-        $videoHot = WebTubeVideo::model()->getHotVideo();
-        $this->render('index', compact('data','page','videoHot','keyword','limit'));
+        $this->render('index', compact('data','page','keyword','limit'));
     }
 }
