@@ -17,7 +17,7 @@ class VideoController extends FrontendController
         $id = Yii::app()->request->getParam('id');
         $id = new MongoId($id);
         $video = TubeVideo::model()->findByPk($id);
-        if(!$video){
+        if(!$video || $video->status!=1){
             throw new CHttpException('404','Your request is not found');
         }
         if(!isset(Yii::app()->session['visit.'.$id]) || (time() - Yii::app()->session['visit.'.$id])>300) {
