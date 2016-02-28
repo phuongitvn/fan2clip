@@ -17,4 +17,11 @@ class AdminVideoModel extends BaseVideoModel
         }
         else return false;
     }
+    public function search() {
+        $criteria = new CDbCriteria;
+        $criteria->order="_id DESC";
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
 }
