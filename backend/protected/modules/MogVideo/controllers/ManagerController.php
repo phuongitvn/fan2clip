@@ -27,8 +27,7 @@ class ManagerController extends Controller
         if(isset($_POST['AdminVideoModel']))
         {
             $model->attributes=$_POST['AdminVideoModel'];
-            $model->created_time = date('Y-m-d H:i:s');
-            $model->updated_time = date('Y-m-d H:i:s');
+            $model->created_datetime = date('Y-m-d H:i:s');
             if($model->save())
                 $this->redirect(array('view','id'=>$model->_id));
         }
@@ -53,7 +52,6 @@ class ManagerController extends Controller
         if(isset($_POST['AdminVideoModel']))
         {
             $model->attributes=$_POST['AdminVideoModel'];
-            $model->updated_time = date('Y-m-d H:i:s');
             if($model->save())
                 $this->redirect(array('view','id'=>$model->_id));
         }
