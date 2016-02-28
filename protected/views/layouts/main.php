@@ -19,12 +19,13 @@
     $cs->registerMetaTag('Video Hot, Video News, Funny', 'title', NULL);
     $cs->registerMetaTag('You are looking at the Fan2Clip.com! Fan2Clip.com is the easiest way to have fun!', 'description', NULL);
     $cs->registerMetaTag('fan2clip,tv,video,jokes,interesting,cool,fun collection, prank, admire,fun,humor,humour,just for fun.', 'keywords', NULL);
+    $controller = Yii::app()->controller->id;
+    $action = Yii::app()->controller->action->id;
+    include_once '_facebook.php';
     ?>
 </head>
 <body class="mobile-screen">
 <?php
-$controller = Yii::app()->controller->id;
-$action = Yii::app()->controller->action->id;
 $genre_key = Yii::app()->request->getParam('genre_key');
 ?>
 <div id="fb-root"></div>
