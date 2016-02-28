@@ -17,7 +17,7 @@ class WebTubeVideo extends TubeVideo
         $keyRegexPattern = explode(' ',$keyFilter);
         $keyArr = array();
         foreach($keyRegexPattern as $key){
-            if(strlen($key)>4){
+            if(strlen($key)>=4){
                 $keyArr[]=$key;
             }
         }
