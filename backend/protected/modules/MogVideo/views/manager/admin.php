@@ -24,8 +24,8 @@ $('.search-form form').submit(function(){
 <?php $this->widget('application.widgets.iGridView', array(
 	'id'=>'admin-video-model-grid',
 	'dataProvider'=>new EMongoDocumentDataProvider($model->search(), array(
-		'criteria'=>array('order'=>'_id DESC'),
 		'sort'=>array(
+			'defaultOrder'=>'_id DESC',
 			'attributes'=>array(
 				'_id',
 				'name',
