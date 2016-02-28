@@ -22,18 +22,19 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <?php $this->widget('application.widgets.iGridView', array(
-	'id'=>'admin-tshirt-model-grid',
+	'id'=>'admin-video-model-grid',
 	'dataProvider'=>new EMongoDocumentDataProvider($model->search(), array(
 		'sort'=>array(
 			'attributes'=>array(
 				'_id',
 				'name',
 				'code',
-				'price',
-				'ordering',
+				'type',
+				'genre',
+				'views',
 				'status',
-				'created_time',
-				'updated_time',
+				'created_datetime',
+				'updated_datetime',
 			),
 		),
 	)),
@@ -42,11 +43,11 @@ $('.search-form form').submit(function(){
 		'_id',
 		'name',
 		'code',
-		'price',
-		'ordering',
+		'genre',
+		'views',
 		'status',
-		'created_time',
-		'updated_time',
+		'created_datetime',
+		'updated_datetime',
 		array(
 			'class'=>'application.widgets.iButtonColumn',
 			'htmlOptions'=>array('style'=>'width: 50px'),
