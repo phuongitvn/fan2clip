@@ -11,8 +11,7 @@ class AdminVideoModel extends BaseVideoModel
         if(parent::beforeSave())
         {
             $this->status = !empty($this->status)?(int) $this->status:0;
-            $this->ordering = !empty($this->ordering)?(int) $this->ordering:0;
-            $this->updated_time = (string) date('Y-m-d H:i:s');
+            $this->updated_datetime = (string) date('Y-m-d H:i:s');
             return true;
         }
         else return false;
