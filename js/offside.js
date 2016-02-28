@@ -324,7 +324,7 @@
                     }
 
                     if( !slidingElements.length ) {
-                        console.error( 'Offside alert: "slidingElements" selector could not match any element' );
+                        //console.error( 'Offside alert: "slidingElements" selector could not match any element' );
                     }
                 };
 
