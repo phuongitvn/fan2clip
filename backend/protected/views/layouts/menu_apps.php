@@ -39,6 +39,7 @@ $controller = Yii::app()->controller->getId();
 			</li>
 			<li><a class="yt-valign <?php if($module=='MogCategory') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/MogCategory/manager/admin');?>"><i class="glyphicon glyphicon-globe"></i>&nbsp;<?php echo Yii::t('main','TShirt Category')?></a></li>
 			<li><a class="yt-valign <?php if($module=='MogTshirt') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/MogTshirt/manager/admin');?>"><i class="glyphicon glyphicon-globe"></i>&nbsp;<?php echo Yii::t('main','TShirt Items')?></a></li>
+			<li><a class="yt-valign <?php if($module=='MogVideo') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/MogVideo/manager/admin');?>"><i class="glyphicon glyphicon-globe"></i>&nbsp;<?php echo Yii::t('main','Quản lý Video')?></a></li>
 		</ul>
 		</div>
 	</li>
