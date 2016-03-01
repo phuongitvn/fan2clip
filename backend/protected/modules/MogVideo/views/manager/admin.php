@@ -45,7 +45,7 @@ $('.search-form form').submit(function(){
 		'name',
 		array(
 			'name'=>'name',
-			'value'=>'CHtml::link($data->name,Yii::app()->createUrl("/MogVideo/manager/update",array("id"=>$data->id)))',
+			'value'=>'CHtml::link($data->name,Yii::app()->createUrl("/MogVideo/manager/update",array("id"=>$data->_id)))',
 			'type'=>'raw'
 		),
 		'code',
