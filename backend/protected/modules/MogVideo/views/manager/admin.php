@@ -51,7 +51,7 @@ $('.search-form form').submit(function(){
 		'genre',
 		array(
 			'name'=>'views',
-			'value'=>'CHtml::tag(\'span\',array(\'class\'=>\'label label-info\'),\'$data->views\')',
+			'value'=>'CHtml::tag(\'span\',array(\'class\'=>\'label label-info\'),$data->views)',
 			'type'=>'raw'
 		),
 		array(
