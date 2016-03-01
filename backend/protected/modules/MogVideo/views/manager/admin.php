@@ -56,7 +56,7 @@ $('.search-form form').submit(function(){
 		),
 		array(
 			'name'=>'status',
-			'value'=>'$data->status==1?"<span class=\"label label-success\">Published</span>":"<span class=\"label label-danger\">Not Published</span>"',
+			'value'=>'$data->status==1?CHtml::tag(\'span\',array(\'class\'=>\'label label-success\'),\'Published\'):CHtml::tag(\'span\',array(\'class\'=>\'label label-success\'),\'Not Published\')',
 			'type'=>'raw'
 		),
 		'created_datetime',
