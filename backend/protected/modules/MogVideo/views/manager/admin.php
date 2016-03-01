@@ -43,6 +43,11 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'_id',
 		'name',
+		array(
+			'name'=>'name',
+			'value'=>'CHtml::link($data->name,Yii::app()->createUrl("/MogVideo/manager/update",array("id"=>$data->id)))',
+			'type'=>'raw'
+		),
 		'code',
 		'genre',
 		'views',
