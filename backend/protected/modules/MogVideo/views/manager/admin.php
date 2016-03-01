@@ -42,7 +42,6 @@ $('.search-form form').submit(function(){
 	//'filter'=>$model,
 	'columns'=>array(
 		'_id',
-		'name',
 		array(
 			'name'=>'name',
 			'value'=>'CHtml::link($data->name,Yii::app()->createUrl("/MogVideo/manager/update",array("id"=>$data->_id)))',
@@ -50,8 +49,16 @@ $('.search-form form').submit(function(){
 		),
 		'code',
 		'genre',
-		'views',
-		'status',
+		array(
+			'name'=>'views',
+			'value'=>'<span class="label label-info">$data->views</span>',
+			'type'=>'raw'
+		),
+		array(
+			'name'=>'status',
+			'value'=>'$data->status==1?"<span class=\"label label-success\">Published</span>":"<span class=\"label label-danger\">Not Published</span>"',
+			'type'=>'raw'
+		),
 		'created_datetime',
 		'updated_datetime',
 		array(
